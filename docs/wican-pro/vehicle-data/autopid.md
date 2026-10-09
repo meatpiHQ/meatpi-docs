@@ -77,7 +77,7 @@ The OBD chip needs about 53 ms per request. Three parameters every second are co
 
 ## Where the values go
 
-- The [Dashboard](../getting-started/web-interface.md#dashboard): one tile per parameter, a sparkline, the age of the value.
+- The [Dashboard](../getting-started/web-interface.md#the-device-pages): one tile per parameter, a sparkline, the age of the value.
 - [Home Assistant](../send-data/home-assistant.md): one entity per parameter, pushed every few seconds.
 - [MQTT](../send-data/mqtt.md) and [Data destinations](../send-data/data-destinations.md): the snapshot of all values, on a cycle.
 - The [Data logger](data-logger.md): every value, or only changes, to the SD card.

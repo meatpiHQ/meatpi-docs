@@ -27,7 +27,71 @@ const sets = {
   "quick-setup": { product: "wican-pro", run: quickSetup },
   "quick-setup-2": { product: "wican-pro", run: quickSetupAfterRestart },
   "pages": { product: "wican-pro", run: pages },
+  "chapters": { product: "wican-pro", run: chapters },
 };
+
+/* ---- screens the chapters need beyond the plain page list: sub-pages,
+   expanded sections, dialogs, a device with a trouble-code report ---- */
+async function chapters(browser) {
+  const { ctx, page } = await boot(browser, { apDefaultPassword: false, staConnected: true, dtc: "obd" }, "#/status");
+  const h = H(page);
+  const clickText = (sel, re) => page.evaluate(([s, src]) => {
+    const r = new RegExp(src);
+    const b = [...document.querySelectorAll(s)].find((x) => r.test((x.textContent || "").trim()) && !x.disabled);
+    if (b) { b.click(); return (b.textContent || "").trim(); } return null;
+  }, [sel, re.source]);
+  const list = [
+    ["usb-settings", "#/usb/settings"],
+    ["usb-console", "#/usb/console"],
+    /* the Settings page is one page of cards; the MQTT card's toggle is the last one */
+    ["settings-mqtt-advanced", "#/settings/mqtt", async () => { await page.evaluate(() => { const b = [...document.querySelectorAll("#view button")].filter((x) => /Show advanced/.test(x.textContent)).pop(); if (b) b.click(); }); }],
+    ["dtc-report", "#/dtc/codes"],
+    ["dtc-databases", "#/dtc/databases"],
+    ["dtc-settings", "#/dtc/settings", async () => {
+      /* the full card only shows with scanning on: flip the mock setting and reload the page */
+      await page.evaluate(() => { try { window.__mockSettings.autopid.values.dtc_enabled = true; } catch (_) {} });
+      await page.evaluate(() => { location.hash = "#/dtc/codes"; }); await sleep(600);
+      await page.evaluate(() => { location.hash = "#/dtc/settings"; }); await sleep(1500);
+    }],
+    ["parameters-vehicle", "#/automate/parameters", async () => { await clickText("#view button", /^Vehicle Specific$/); }],
+    ["profile-picker", "#/automate/parameters", async () => { await clickText("#view button", /^Vehicle Specific$/); await sleep(400); await clickText("#view button", /Choose profile/); await sleep(1200); }],
+    ["destinations-row", "#/automate/destinations", async () => { for (let i = 0; i < 3; i++) { await clickText('#view button[title="Options"]', /^▸$/); await sleep(300); } }],
+    ["automate-homeassistant", "#/automate/homeassistant"],
+    ["logger-on", "#/logger", async () => {
+      /* the full settings card shows with logging on */
+      await page.evaluate(() => { try { const v = window.__mockSettings.data_logger.values; v.enabled = true; v.autopid_log = "changed"; v.can_log = true; } catch (_) {} });
+      await page.evaluate(() => { location.hash = "#/status"; }); await sleep(600);
+      await page.evaluate(() => { location.hash = "#/logger"; }); await sleep(1500);
+    }],
+    ["j2534-on", "#/j2534", async () => {
+      await page.evaluate(() => { try { window.__mockSettings.j2534_server.values.enabled = true; } catch (_) {} });
+      await page.evaluate(() => { location.hash = "#/status"; }); await sleep(600);
+      await page.evaluate(() => { location.hash = "#/j2534"; }); await sleep(1500);
+    }],
+    ["settings-can", "#/settings/can"],
+    ["parameters-custom-pgn", "#/automate/parameters", async () => { await clickText("#view button", /^Custom PIDs$/); await sleep(400); await clickText("#view button", /Add PGN/); }],
+    ["system-firmware", "#/system/firmware"],
+    ["system-certificates", "#/system/certificates"],
+    ["status-fault", "#/status", async () => {
+      /* a device carrying one fault, for the troubleshooting chapter */
+      await page.evaluate(() => { try { window.__MOCK_SETTINGS__.__faults = [{ code: "boot_errors", detail: "83 error lines at boot", count: 2, first_time: 1791600700, last_time: 1791687100 }]; } catch (_) {} });
+      await page.evaluate(() => { location.hash = "#/about"; }); await sleep(600);
+      await page.evaluate(() => { location.hash = "#/status"; }); await sleep(2000);
+    }],
+  ];
+  await page.waitForTimeout(1500);
+  let n = 0;
+  for (const [name, hash, act] of list) {
+    await page.evaluate((h) => { location.hash = h; }, hash);
+    await page.waitForTimeout(1800);
+    if (act) { await act(); await page.waitForTimeout(900); }
+    const title = await page.evaluate(() => ((document.querySelector("#view h1") || document.querySelector("#view h2") || {}).textContent || "").trim());
+    await shot(page, n++, name, { full: true, wait: 300 });
+    console.log("   " + hash + " -> " + title);
+    if (/picker/.test(name)) await page.keyboard.press("Escape");
+  }
+  await ctx.close();
+}
 
 /* ---- the pages of the web interface on a configured device, whole page
    with the sidebar (for the tour and the chapters) ---- */
@@ -41,7 +105,7 @@ async function pages(browser) {
     ["system-maintenance", "#/system/maintenance"], ["usb-status", "#/usb/status"], ["terminal", "#/terminal"], ["dtc-codes", "#/dtc/codes"],
     ["events-rules", "#/events/rules"], ["scripts-editor", "#/scripts/editor"], ["uds", "#/uds"], ["j2534", "#/j2534"], ["about", "#/about"],
     ["vpn", "#/vpn"], ["monitor", "#/monitor/monitor"], ["dbc", "#/dbc"], ["logs", "#/logs"],
-    ["automate-destinations", "#/automate/destinations"], ["automate-ha", "#/automate/ha"],
+    ["automate-destinations", "#/automate/destinations"], ["automate-homeassistant", "#/automate/homeassistant"],
   ];
   const { ctx, page } = await boot(browser, { apDefaultPassword: false, staConnected: true }, "#/status");
   await page.waitForTimeout(1500);

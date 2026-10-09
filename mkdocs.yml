@@ -135,7 +135,7 @@ nav:
           - Automate rules: wican-pro/tools/automate-rules.md
           - Files: wican-pro/tools/files.md
           - Logs and system monitor: wican-pro/tools/logs-and-monitor.md
-      - Power:
+      - Power Saving:
           - Sleep and wake: wican-pro/power/sleep-and-wake.md
       - Firmware:
           - Update: wican-pro/firmware/update.md
