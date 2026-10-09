@@ -1,0 +1,100 @@
+{
+  "groups": [
+    {
+      "name": "default",
+      "enabled": true,
+      "period_ms": 5000
+    }
+  ],
+  "params": [
+    {
+      "name": "EngineCoolantTemp",
+      "unit": "degC",
+      "value": 90,
+      "ts_us": 4468562430
+    },
+    {
+      "name": "EngineRPM",
+      "unit": "rpm",
+      "value": 800,
+      "ts_us": 4468615488
+    },
+    {
+      "name": "VehicleSpeed",
+      "unit": "km/h",
+      "value": 0,
+      "ts_us": 4468660630
+    },
+    {
+      "name": "gps_latitude",
+      "unit": "°",
+      "value": -37.9051209,
+      "ts_us": 321552108,
+      "external": true
+    },
+    {
+      "name": "gps_longitude",
+      "unit": "°",
+      "value": 145.1450692,
+      "ts_us": 321552148,
+      "external": true
+    },
+    {
+      "name": "gps_altitude",
+      "unit": "m",
+      "value": 86.563,
+      "ts_us": 321552156,
+      "external": true
+    },
+    {
+      "name": "gps_speed",
+      "unit": "km/h",
+      "value": 0,
+      "ts_us": 321552168,
+      "external": true
+    },
+    {
+      "name": "gps_heading",
+      "unit": "°",
+      "value": 0,
+      "ts_us": 321552177,
+      "external": true
+    },
+    {
+      "name": "gps_satellites",
+      "unit": "",
+      "value": 14,
+      "ts_us": 321552187,
+      "external": true
+    }
+  ],
+  "stats": {
+    "running": true,
+    "paused_voltage": false,
+    "paused_client": false,
+    "paused_diag": false,
+    "paused_bus": false,
+    "polls_ok": 2661,
+    "polls_failed": 0,
+    "passive_ok": 0,
+    "passive_failed": 0,
+    "passive_published": 0,
+    "passive_requested": 0,
+    "passive_refused": 0,
+    "j1939_listening": false,
+    "j1939_active": false,
+    "pids": 3,
+    "filters": 0,
+    "period_floor_ms": 50,
+    "sub_floor_pids": 0,
+    "now_us": 4469363488
+  },
+  "bus_guard": {
+    "bus": "silent",
+    "bus_kbps": 0,
+    "verdict": "allow",
+    "parked": false,
+    "reason": "vehicle bus silent",
+    "refused": 0
+  }
+}

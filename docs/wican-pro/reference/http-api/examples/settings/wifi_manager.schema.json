@@ -1,0 +1,357 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "off",
+        "sta",
+        "ap",
+        "apsta"
+      ],
+      "default": "apsta"
+    },
+    "sta_ssid": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "sta_password": {
+      "type": "string",
+      "maxLength": 64,
+      "default": ""
+    },
+    "sta_trusted": {
+      "type": "boolean",
+      "default": true
+    },
+    "hostname": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "sta_auto_reconnect": {
+      "type": "boolean",
+      "default": true
+    },
+    "sta_max_retry": {
+      "type": "integer",
+      "minimum": -1,
+      "maximum": 1000,
+      "default": -1
+    },
+    "sta_ip_mode": {
+      "type": "string",
+      "enum": [
+        "dhcp",
+        "static"
+      ],
+      "default": "dhcp"
+    },
+    "sta_static_ip": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "sta_static_netmask": {
+      "type": "string",
+      "maxLength": 15,
+      "default": "255.255.255.0"
+    },
+    "sta_static_gw": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "sta_dns": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback1_ip_mode": {
+      "type": "string",
+      "enum": [
+        "dhcp",
+        "static"
+      ],
+      "default": "dhcp"
+    },
+    "fallback1_static_ip": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback1_static_netmask": {
+      "type": "string",
+      "maxLength": 15,
+      "default": "255.255.255.0"
+    },
+    "fallback1_static_gw": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback2_ip_mode": {
+      "type": "string",
+      "enum": [
+        "dhcp",
+        "static"
+      ],
+      "default": "dhcp"
+    },
+    "fallback2_static_ip": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback2_static_netmask": {
+      "type": "string",
+      "maxLength": 15,
+      "default": "255.255.255.0"
+    },
+    "fallback2_static_gw": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback3_ip_mode": {
+      "type": "string",
+      "enum": [
+        "dhcp",
+        "static"
+      ],
+      "default": "dhcp"
+    },
+    "fallback3_static_ip": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback3_static_netmask": {
+      "type": "string",
+      "maxLength": 15,
+      "default": "255.255.255.0"
+    },
+    "fallback3_static_gw": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback4_ip_mode": {
+      "type": "string",
+      "enum": [
+        "dhcp",
+        "static"
+      ],
+      "default": "dhcp"
+    },
+    "fallback4_static_ip": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback4_static_netmask": {
+      "type": "string",
+      "maxLength": 15,
+      "default": "255.255.255.0"
+    },
+    "fallback4_static_gw": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback5_ip_mode": {
+      "type": "string",
+      "enum": [
+        "dhcp",
+        "static"
+      ],
+      "default": "dhcp"
+    },
+    "fallback5_static_ip": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback5_static_netmask": {
+      "type": "string",
+      "maxLength": 15,
+      "default": "255.255.255.0"
+    },
+    "fallback5_static_gw": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "fallback1_ssid": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "fallback1_password": {
+      "type": "string",
+      "maxLength": 64,
+      "default": ""
+    },
+    "fallback1_trusted": {
+      "type": "boolean",
+      "default": true
+    },
+    "fallback2_ssid": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "fallback2_password": {
+      "type": "string",
+      "maxLength": 64,
+      "default": ""
+    },
+    "fallback2_trusted": {
+      "type": "boolean",
+      "default": true
+    },
+    "fallback3_ssid": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "fallback3_password": {
+      "type": "string",
+      "maxLength": 64,
+      "default": ""
+    },
+    "fallback3_trusted": {
+      "type": "boolean",
+      "default": true
+    },
+    "fallback4_ssid": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "fallback4_password": {
+      "type": "string",
+      "maxLength": 64,
+      "default": ""
+    },
+    "fallback4_trusted": {
+      "type": "boolean",
+      "default": true
+    },
+    "fallback5_ssid": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "fallback5_password": {
+      "type": "string",
+      "maxLength": 64,
+      "default": ""
+    },
+    "fallback5_trusted": {
+      "type": "boolean",
+      "default": true
+    },
+    "ap_ssid": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "ap_password": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 64,
+      "default": "@meatpi#"
+    },
+    "ap_channel": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 13,
+      "default": 6
+    },
+    "ap_max_connections": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "default": 4
+    },
+    "ap_auto_disable": {
+      "type": "boolean",
+      "default": false
+    },
+    "ap_ip": {
+      "type": "string",
+      "maxLength": 15,
+      "default": "192.168.0.10"
+    },
+    "ap_hidden": {
+      "type": "boolean",
+      "default": false
+    },
+    "ap_bandwidth": {
+      "type": "string",
+      "enum": [
+        "ht20",
+        "ht40"
+      ],
+      "default": "ht20"
+    },
+    "ap_auth": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "wpa2",
+        "wpa2wpa3",
+        "wpa3"
+      ],
+      "default": "auto"
+    },
+    "power_save": {
+      "type": "string",
+      "enum": [
+        "none",
+        "min",
+        "max"
+      ],
+      "default": "none"
+    },
+    "sta_roam_interval_s": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 86400,
+      "default": 300
+    },
+    "wifi_ram_profile": {
+      "type": "string",
+      "enum": [
+        "full",
+        "lean",
+        "custom"
+      ],
+      "default": "lean"
+    },
+    "wifi_static_rx": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 25,
+      "default": 10
+    },
+    "wifi_static_tx": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 64,
+      "default": 8
+    },
+    "wifi_cache_tx": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 128,
+      "default": 32
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

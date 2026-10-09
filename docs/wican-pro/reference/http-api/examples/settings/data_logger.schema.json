@@ -1,0 +1,106 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "sqlite",
+        "csv",
+        "binary",
+        "jsonl"
+      ],
+      "default": "sqlite"
+    },
+    "max_file_mb": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 32,
+      "default": 4
+    },
+    "max_files": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 500,
+      "default": 100
+    },
+    "batch_rows": {
+      "type": "integer",
+      "minimum": 16,
+      "maximum": 1024,
+      "default": 256
+    },
+    "flush_ms": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 60000,
+      "default": 5000
+    },
+    "autopid_log": {
+      "type": "string",
+      "enum": [
+        "off",
+        "changed",
+        "all"
+      ],
+      "default": "off"
+    },
+    "can_log": {
+      "type": "boolean",
+      "default": false
+    },
+    "can_format": {
+      "type": "string",
+      "enum": [
+        "binary",
+        "csv",
+        "sqlite",
+        "mf4",
+        "blf",
+        "candump",
+        "asc",
+        "jsonl"
+      ],
+      "default": "binary"
+    },
+    "can_filter": {
+      "type": "string",
+      "maxLength": 10,
+      "default": ""
+    },
+    "can_mask": {
+      "type": "string",
+      "maxLength": 10,
+      "default": "7FF"
+    },
+    "can_ext": {
+      "type": "boolean",
+      "default": false
+    },
+    "can_max_file_mb": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 128,
+      "default": 8
+    },
+    "can_max_files": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 500,
+      "default": 50
+    },
+    "ring_len": {
+      "type": "integer",
+      "minimum": 512,
+      "maximum": 8192,
+      "default": 2048
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "protocol": "0",
+  "protocol_detected": "",
+  "dialect": "j1939",
+  "vin": "1WCANJ1939TRUCK01",
+  "fingerprint": "b84d5512",
+  "supported": [
+    {
+      "pgn": "F004",
+      "spn": 190,
+      "cmd": "PGN:F004",
+      "name": "EngineSpeed",
+      "parameters": [
+        {
+          "name": "EngineSpeed",
+          "expression": "(B3+B4*256)*0.125",
+          "unit": "rpm",
+          "class": "none",
+          "min": 0,
+          "max": 8031.875
+        }
+      ]
+    },
+    {
+      "pgn": "F004",
+      "spn": 513,
+      "cmd": "PGN:F004",
+      "name": "ActualEnginePercentTorque",
+      "parameters": [
+        {
+          "name": "ActualEnginePercentTorque",
+          "expression": "B2-125",
+          "unit": "%",
+          "class": "none",
+          "min": -125,
+          "max": 125
+        }
+      ]
+    },
+    {
+      "pgn": "F003",
+      "spn": 91,
+      "cmd": "PGN:F003",
+      "name": "AccelPedalPosition1",
+      "parameters": [
+        {
+          "name": "AccelPedalPosition1",
+          "expression": "B1*0.4",
+          "unit": "%",
+          "class": "none",
+          "min": 0,
+          "max": 100
+        }
+      ]
+    },
+    {
+      "pgn": "F003",
+      "spn": 92,
+      "cmd": "PGN:F003",
+      "name": "EnginePercentLoad",
+      "parameters": [
+        {
+          "name": "EnginePercentLoad",
+          "expression": "B2",
+          "unit": "%",
+          "class": "power_factor",
+          "min": 0,
+          "max": 250
+        }
+      ]
+    },
+    {
+      "pgn": "F005",
+      "spn": 523,
+      "cmd": "PGN:F005",
+      "name": "TransCurrentGear",
+      "parameters": [
+        {
+          "name": "TransCurrentGear",
+          "expression": "B3-125",
+          "unit": "none",
+          "class": "none",
+          "min": -125,
+          "max": 125
+        }
+      ]
+    },
+    {
+      "pgn": "FEF1",
+      "spn": 84,
+      "cmd": "PGN:FEF1",
+      "name": "WheelBasedVehicleSpeed",
+      "parameters": [
+        {
+          "name": "WheelBasedVehicleSpeed",
+          "expression": "(B1+B2*256)*0.00390625",
+          "unit": "km/h",
+          "class": "speed",
+          "min": 0,
+          "max": 250.99609375
+        }
+      ]
+    },
+    {
+      "pgn": "FEEE",
+      "spn": 110,
+      "cmd": "PGN:FEEE",
+      "name": "EngineCoolantTemperature",
+      "parameters": [
+        {
+          "name": "EngineCoolantTemperature",
+          "expression": "B0-40",
+          "unit": "degC",
+          "class": "temperature",
+          "min": -40,
+          "max": 210
+        }
+      ]
+    },
+    {
+      "pgn": "FEEE",
+      "spn": 175,
+      "cmd": "PGN:FEEE",
+      "name": "EngineOilTemperature",
+      "parameters": [
+        {
+          "name": "EngineOilTemperature",
+          "expression": "(B2+B3*256)*0.03125-273",
+          "unit": "degC",
+          "class": "temperature",
+          "min": -273,
+          "max": 1734.96875
+        }
+      ]
+    },
+    {
+      "pgn": "FEEF",
+      "spn": 100,
+      "cmd": "PGN:FEEF",
+      "name": "EngineOilPressure",
+      "parameters": [
+        {
+          "name": "EngineOilPressure",
+          "expression": "B3*4",
+          "unit": "kPa",
+          "class": "pressure",
+          "min": 0,
+          "max": 1000
+        }
+      ]
+    },
+    {
+      "pgn": "FEF6",
+      "spn": 102,
+      "cmd": "PGN:FEF6",
+      "name": "IntakeManifoldPressure",
+      "parameters": [
+        {
+          "name": "IntakeManifoldPressure",
+          "expression": "B1*2",
+          "unit": "kPa",
+          "class": "pressure",
+          "min": 0,
+          "max": 500
+        }
+      ]
+    },
+    {
+      "pgn": "FEF6",
+      "spn": 105,
+      "cmd": "PGN:FEF6",
+      "name": "IntakeManifoldTemperature",
+      "parameters": [
+        {
+          "name": "IntakeManifoldTemperature",
+          "expression": "B2-40",
+          "unit": "degC",
+          "class": "temperature",
+          "min": -40,
+          "max": 210
+        }
+      ]
+    },
+    {
+      "pgn": "FEF5",
+      "spn": 108,
+      "cmd": "PGN:FEF5",
+      "name": "BarometricPressure",
+      "parameters": [
+        {
+          "name": "BarometricPressure",
+          "expression": "B0*0.5",
+          "unit": "kPa",
+          "class": "atmospheric_pressure",
+          "min": 0,
+          "max": 125
+        }
+      ]
+    },
+    {
+      "pgn": "FEF5",
+      "spn": 171,
+      "cmd": "PGN:FEF5",
+      "name": "AmbientAirTemperature",
+      "parameters": [
+        {
+          "name": "AmbientAirTemperature",
+          "expression": "(B3+B4*256)*0.03125-273",
+          "unit": "degC",
+          "class": "temperature",
+          "min": -273,
+          "max": 1734.96875
+        }
+      ]
+    },
+    {
+      "pgn": "FEF7",
+      "spn": 168,
+      "cmd": "PGN:FEF7",
+      "name": "BatteryPotential",
+      "parameters": [
+        {
+          "name": "BatteryPotential",
+          "expression": "(B4+B5*256)*0.05",
+          "unit": "V",
+          "class": "voltage",
+          "min": 0,
+          "max": 3212.75
+        }
+      ]
+    },
+    {
+      "pgn": "FEF2",
+      "spn": 183,
+      "cmd": "PGN:FEF2",
+      "name": "FuelRate",
+      "parameters": [
+        {
+          "name": "FuelRate",
+          "expression": "(B0+B1*256)*0.05",
+          "unit": "L/h",
+          "class": "none",
+          "min": 0,
+          "max": 3212.75
+        }
+      ]
+    },
+    {
+      "pgn": "FEFC",
+      "spn": 96,
+      "cmd": "PGN:FEFC",
+      "name": "FuelLevel1",
+      "parameters": [
+        {
+          "name": "FuelLevel1",
+          "expression": "B1*0.4",
+          "unit": "%",
+          "class": "none",
+          "min": 0,
+          "max": 100
+        }
+      ]
+    },
+    {
+      "pgn": "FE56",
+      "spn": 1761,
+      "cmd": "PGN:FE56",
+      "name": "DEFTankLevel",
+      "parameters": [
+        {
+          "name": "DEFTankLevel",
+          "expression": "B0*0.4",
+          "unit": "%",
+          "class": "none",
+          "min": 0,
+          "max": 100
+        }
+      ]
+    },
+    {
+      "pgn": "FEC1",
+      "spn": 917,
+      "cmd": "PGN:FEC1",
+      "name": "TotalVehicleDistanceHR",
+      "parameters": [
+        {
+          "name": "TotalVehicleDistanceHR",
+          "expression": "(B0+B1*256+B2*65536+B3*16777216)*0.005",
+          "unit": "km",
+          "class": "distance",
+          "min": 0,
+          "max": 21055406.075
+        }
+      ]
+    },
+    {
+      "pgn": "FEE0",
+      "spn": 245,
+      "cmd": "PGN:FEE0",
+      "name": "TotalVehicleDistance",
+      "parameters": [
+        {
+          "name": "TotalVehicleDistance",
+          "expression": "(B4+B5*256+B6*65536+B7*16777216)*0.125",
+          "unit": "km",
+          "class": "distance",
+          "min": 0,
+          "max": 526385151.875
+        }
+      ]
+    },
+    {
+      "pgn": "FEE5",
+      "spn": 247,
+      "cmd": "PGN:FEE5",
+      "name": "EngineTotalHours",
+      "parameters": [
+        {
+          "name": "EngineTotalHours",
+          "expression": "(B0+B1*256+B2*65536+B3*16777216)*0.05",
+          "unit": "hours",
+          "class": "duration",
+          "min": 0,
+          "max": 210554060.75
+        }
+      ]
+    },
+    {
+      "pgn": "FEE9",
+      "spn": 250,
+      "cmd": "PGN:FEE9",
+      "name": "EngineTotalFuelUsed",
+      "parameters": [
+        {
+          "name": "EngineTotalFuelUsed",
+          "expression": "(B4+B5*256+B6*65536+B7*16777216)*0.5",
+          "unit": "L",
+          "class": "none",
+          "min": 0,
+          "max": 2105540607.5
+        }
+      ]
+    }
+  ],
+  "j1939": true,
+  "j1939_listening": true,
+  "bus_kbps": 250,
+  "found": 21,
+  "ts": 1791486903,
+  "key": "1WCANJ1939TRUCK01",
+  "known": false,
+  "name": "1WC CK01"
+}

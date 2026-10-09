@@ -1,0 +1,36 @@
+{
+  "enabled": false,
+  "connected": false,
+  "secured": false,
+  "pairing_enabled": true,
+  "max_payload": 20,
+  "phy": "1m",
+  "advertising": "legacy",
+  "phy_tx": 0,
+  "phy_rx": 0,
+  "blast": {
+    "running": false,
+    "bytes": 0,
+    "target": 0,
+    "ms": 0
+  },
+  "channels_cap": 4,
+  "channels": [
+    {
+      "name": "http",
+      "uuid_out": "FFF3",
+      "uuid_in": "FFF4",
+      "rx_size": 32768,
+      "rx_bytes": 0,
+      "tx_bytes": 0,
+      "rx_overflow": 0,
+      "tx_timeouts": 0,
+      "tx_link_down": 0,
+      "rx_pending": 0,
+      "out": "none",
+      "out_modes": "both",
+      "tx_notifications": 0,
+      "tx_indications": 0
+    }
+  ]
+}

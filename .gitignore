@@ -1,0 +1,9 @@
+# build output and the local Python environment
+site/
+.venv/
+__pycache__/
+.cache/
+# editor and OS noise
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+{
+  "url": "",
+  "enabled": false,
+  "interval": 60,
+  "manual_override": false,
+  "data_mode": "changed",
+  "gzip": false,
+  "status": "disabled",
+  "last_post": "",
+  "retries": 0,
+  "success_count": 0,
+  "fail_count": 0,
+  "last_error": "",
+  "last_error_time": ""
+}

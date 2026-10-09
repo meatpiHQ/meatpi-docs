@@ -1,0 +1,9 @@
+[
+  "wifi.ssid",
+  "wifi.connected",
+  "time.iso",
+  "time.epoch",
+  "battery.voltage",
+  "autopid.data",
+  "autopid."
+]

@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "idle_mode": "solid",
+  "idle_r": 0,
+  "idle_g": 204,
+  "idle_b": 255,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

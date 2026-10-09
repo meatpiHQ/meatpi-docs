@@ -1,0 +1,6 @@
+{
+  "auth_enabled": false,
+  "auth_password": "",
+  "degraded": false,
+  "pending_reboot": false
+}

@@ -1,0 +1,171 @@
+# MeatPi Docs: user manuals for MeatPi products.
+# Local preview: see README.md (python -m mkdocs serve).
+site_name: MeatPi Docs
+site_description: User manuals and setup guides for MeatPi products
+site_url: https://meatpihq.github.io/meatpi-docs/
+repo_url: https://github.com/meatpiHQ/meatpi-docs
+repo_name: meatpiHQ/meatpi-docs
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; MeatPi
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  # the WiCAN Pro web interface logo (overrides/.icons/meatpi/logo.svg), inlined so
+  # the wordmark takes the header's text colour
+  icon:
+    logo: meatpi/logo
+    repo: fontawesome/brands/github
+  favicon: assets/favicon.ico
+  # system fonts, like the device's web interface: no Google Fonts request
+  font: false
+  # navigation.tabs makes the left sidebar show only the active product's
+  # chapters; the tab bar itself is replaced by the product drop-down
+  # (overrides/main.html, overrides/partials/product-picker.html)
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  # the entries of the product drop-down in the sidebar: top-level nav
+  # sections by title, in this order
+  products:
+    - WiCAN Pro
+    - WiCAN OBD
+    - WiCAN USB
+    - ESPNetLink
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/meatpiHQ
+    - icon: fontawesome/solid/store
+      link: https://www.meatpi.com
+
+plugins:
+  - search
+  # click a screenshot to enlarge it
+  - glightbox:
+      touchNavigation: true
+      effect: zoom
+      zoomable: true
+      skip_classes:
+        - no-lightbox
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        - docs
+      check_paths: true
+  - pymdownx.keys
+  # ==text== renders as a label from the device's web interface (see the writing guide)
+  - pymdownx.mark
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - WiCAN Pro:
+      - wican-pro/index.md
+      - Getting started:
+          - Quick Setup: wican-pro/getting-started/quick-setup.md
+          - After the restart: wican-pro/getting-started/after-the-restart.md
+          - The web interface: wican-pro/getting-started/web-interface.md
+      - Connectivity:
+          - WiFi: wican-pro/connectivity/wifi.md
+          - Bluetooth LE: wican-pro/connectivity/bluetooth.md
+          - USB accessories: wican-pro/connectivity/usb-accessories.md
+      - Vehicle data:
+          - AutoPID: wican-pro/vehicle-data/autopid.md
+          - Vehicle profiles: wican-pro/vehicle-data/vehicle-profiles.md
+          - Trouble codes: wican-pro/vehicle-data/trouble-codes.md
+          - J1939 and WWH-OBD: wican-pro/vehicle-data/j1939-wwh-obd.md
+          - Data logger: wican-pro/vehicle-data/data-logger.md
+      - Send data:
+          - Home Assistant: wican-pro/send-data/home-assistant.md
+          - MQTT: wican-pro/send-data/mqtt.md
+          - Data destinations: wican-pro/send-data/data-destinations.md
+          - Apps over WiFi and BLE: wican-pro/send-data/apps.md
+          - J2534 PassThru: wican-pro/send-data/j2534.md
+      - Tools:
+          - CAN Monitor: wican-pro/tools/can-monitor.md
+          - UDS Tool: wican-pro/tools/uds-tool.md
+          - Scripts: wican-pro/tools/scripts.md
+          - Automate rules: wican-pro/tools/automate-rules.md
+          - Files: wican-pro/tools/files.md
+          - Logs and system monitor: wican-pro/tools/logs-and-monitor.md
+      - Power:
+          - Sleep and wake: wican-pro/power/sleep-and-wake.md
+      - Firmware:
+          - Update: wican-pro/firmware/update.md
+          - Backup and restore: wican-pro/firmware/backup-and-restore.md
+          - Factory reset: wican-pro/firmware/factory-reset.md
+      - Troubleshooting:
+          - LED patterns: wican-pro/troubleshooting/led-patterns.md
+          - Crash report: wican-pro/troubleshooting/crash-report.md
+          - Faults: wican-pro/troubleshooting/faults.md
+      - Reference:
+          - HTTP API:
+              - wican-pro/reference/http-api/index.md
+              - Status and diagnostics: wican-pro/reference/http-api/status.md
+              - Settings: wican-pro/reference/http-api/settings.md
+              - Logs, files, firmware: wican-pro/reference/http-api/logs-files-firmware.md
+              - Device and connectivity: wican-pro/reference/http-api/device.md
+              - Vehicle: wican-pro/reference/http-api/vehicle.md
+              - Data paths and automation: wican-pro/reference/http-api/data.md
+          - BLE API:
+              - wican-pro/reference/ble-api/index.md
+              - HTTP over BLE: wican-pro/reference/ble-api/http-over-ble.md
+  - WiCAN OBD:
+      - wican-obd/index.md
+  - WiCAN USB:
+      - wican-usb/index.md
+  - ESPNetLink:
+      - espnetlink/index.md
+  - Integrations:
+      - integrations/index.md
+  - Contributing:
+      - contributing/index.md
+      - Writing guide: contributing/writing-guide.md
+      - Verification log: contributing/verification.md

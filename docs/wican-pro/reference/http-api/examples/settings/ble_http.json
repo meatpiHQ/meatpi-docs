@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

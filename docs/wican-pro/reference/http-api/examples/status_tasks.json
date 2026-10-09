@@ -1,0 +1,374 @@
+{
+  "cores": 2,
+  "total_us": 4468223812,
+  "tasks": [
+    {
+      "name": "IDLE1",
+      "state": "X",
+      "core": 1,
+      "prio": 0,
+      "stack_hw": 780,
+      "runtime_us": 4464255033
+    },
+    {
+      "name": "IDLE0",
+      "state": "R",
+      "core": 0,
+      "prio": 0,
+      "stack_hw": 772,
+      "runtime_us": 4407565504
+    },
+    {
+      "name": "socket_net",
+      "state": "B",
+      "core": -1,
+      "prio": 10,
+      "stack_hw": 4204,
+      "runtime_us": 11482092
+    },
+    {
+      "name": "wifi",
+      "state": "B",
+      "core": 0,
+      "prio": 23,
+      "stack_hw": 3500,
+      "runtime_us": 8884361
+    },
+    {
+      "name": "usb_obd_rx",
+      "state": "B",
+      "core": -1,
+      "prio": 10,
+      "stack_hw": 2208,
+      "runtime_us": 5430334
+    },
+    {
+      "name": "tcpip",
+      "state": "B",
+      "core": -1,
+      "prio": 18,
+      "stack_hw": 1792,
+      "runtime_us": 5376754
+    },
+    {
+      "name": "autopid",
+      "state": "B",
+      "core": 0,
+      "prio": 5,
+      "stack_hw": 9496,
+      "runtime_us": 4736815
+    },
+    {
+      "name": "imu_detector",
+      "state": "B",
+      "core": -1,
+      "prio": 5,
+      "stack_hw": 1872,
+      "runtime_us": 4722088
+    },
+    {
+      "name": "mqtt_task",
+      "state": "B",
+      "core": -1,
+      "prio": 5,
+      "stack_hw": 3784,
+      "runtime_us": 4467075
+    },
+    {
+      "name": "esp_timer",
+      "state": "B",
+      "core": 0,
+      "prio": 22,
+      "stack_hw": 3172,
+      "runtime_us": 2327463
+    },
+    {
+      "name": "data_dest",
+      "state": "B",
+      "core": -1,
+      "prio": 4,
+      "stack_hw": 5048,
+      "runtime_us": 1906971
+    },
+    {
+      "name": "espnl_link",
+      "state": "B",
+      "core": -1,
+      "prio": 3,
+      "stack_hw": 3448,
+      "runtime_us": 1863889
+    },
+    {
+      "name": "obd_chip_rx",
+      "state": "B",
+      "core": -1,
+      "prio": 12,
+      "stack_hw": 3148,
+      "runtime_us": 1613839
+    },
+    {
+      "name": "sleep_state",
+      "state": "B",
+      "core": 0,
+      "prio": 5,
+      "stack_hw": 1784,
+      "runtime_us": 1332165
+    },
+    {
+      "name": "httpd",
+      "state": "X",
+      "core": 0,
+      "prio": 5,
+      "stack_hw": 4924,
+      "runtime_us": 1234662
+    },
+    {
+      "name": "main",
+      "state": "B",
+      "core": 0,
+      "prio": 1,
+      "stack_hw": 5676,
+      "runtime_us": 1112364
+    },
+    {
+      "name": "br_obd",
+      "state": "B",
+      "core": -1,
+      "prio": 10,
+      "stack_hw": 2760,
+      "runtime_us": 1089068
+    },
+    {
+      "name": "br_tcp_obd",
+      "state": "B",
+      "core": -1,
+      "prio": 10,
+      "stack_hw": 2824,
+      "runtime_us": 888380
+    },
+    {
+      "name": "batt_sampler",
+      "state": "B",
+      "core": 0,
+      "prio": 4,
+      "stack_hw": 1792,
+      "runtime_us": 883410
+    },
+    {
+      "name": "br_usb_obd",
+      "state": "B",
+      "core": -1,
+      "prio": 10,
+      "stack_hw": 2760,
+      "runtime_us": 874019
+    },
+    {
+      "name": "ble_http",
+      "state": "B",
+      "core": -1,
+      "prio": 5,
+      "stack_hw": 7532,
+      "runtime_us": 826717
+    },
+    {
+      "name": "em_dispatch",
+      "state": "B",
+      "core": -1,
+      "prio": 4,
+      "stack_hw": 5188,
+      "runtime_us": 671579
+    },
+    {
+      "name": "log_manager",
+      "state": "B",
+      "core": -1,
+      "prio": 3,
+      "stack_hw": 2672,
+      "runtime_us": 568083
+    },
+    {
+      "name": "usb_presence",
+      "state": "B",
+      "core": -1,
+      "prio": 4,
+      "stack_hw": 924,
+      "runtime_us": 505289
+    },
+    {
+      "name": "iface_arb",
+      "state": "B",
+      "core": -1,
+      "prio": 4,
+      "stack_hw": 3436,
+      "runtime_us": 469435
+    },
+    {
+      "name": "sd_detect",
+      "state": "B",
+      "core": -1,
+      "prio": 5,
+      "stack_hw": 1596,
+      "runtime_us": 426728
+    },
+    {
+      "name": "ipc1",
+      "state": "B",
+      "core": 1,
+      "prio": 24,
+      "stack_hw": 788,
+      "runtime_us": 287623
+    },
+    {
+      "name": "ha_webhook",
+      "state": "B",
+      "core": -1,
+      "prio": 4,
+      "stack_hw": 6624,
+      "runtime_us": 212146
+    },
+    {
+      "name": "button_mgr",
+      "state": "B",
+      "core": -1,
+      "prio": 5,
+      "stack_hw": 3460,
+      "runtime_us": 121067
+    },
+    {
+      "name": "sys_evt",
+      "state": "B",
+      "core": 0,
+      "prio": 20,
+      "stack_hw": 2740,
+      "runtime_us": 72343
+    },
+    {
+      "name": "rtc_sntp",
+      "state": "B",
+      "core": -1,
+      "prio": 3,
+      "stack_hw": 2048,
+      "runtime_us": 66837
+    },
+    {
+      "name": "wm_reconnect",
+      "state": "B",
+      "core": -1,
+      "prio": 5,
+      "stack_hw": 2160,
+      "runtime_us": 36031
+    },
+    {
+      "name": "mqtt_link",
+      "state": "B",
+      "core": -1,
+      "prio": 4,
+      "stack_hw": 1180,
+      "runtime_us": 28762
+    },
+    {
+      "name": "usb_acm_gps",
+      "state": "B",
+      "core": -1,
+      "prio": 3,
+      "stack_hw": 3392,
+      "runtime_us": 22113
+    },
+    {
+      "name": "mdns",
+      "state": "B",
+      "core": 0,
+      "prio": 1,
+      "stack_hw": 1980,
+      "runtime_us": 14650
+    },
+    {
+      "name": "cli_console",
+      "state": "B",
+      "core": -1,
+      "prio": 3,
+      "stack_hw": 4936,
+      "runtime_us": 3693
+    },
+    {
+      "name": "ipc0",
+      "state": "B",
+      "core": 0,
+      "prio": 24,
+      "stack_hw": 876,
+      "runtime_us": 3232
+    },
+    {
+      "name": "usbh_hub0",
+      "state": "B",
+      "core": 0,
+      "prio": 24,
+      "stack_hw": 3124,
+      "runtime_us": 1703
+    },
+    {
+      "name": "batt_events",
+      "state": "B",
+      "core": -1,
+      "prio": 3,
+      "stack_hw": 1536,
+      "runtime_us": 238
+    },
+    {
+      "name": "mqtt_pub",
+      "state": "B",
+      "core": -1,
+      "prio": 5,
+      "stack_hw": 3292,
+      "runtime_us": 24
+    },
+    {
+      "name": "cli_dispatch",
+      "state": "B",
+      "core": -1,
+      "prio": 4,
+      "stack_hw": 4236,
+      "runtime_us": 17
+    },
+    {
+      "name": "fs_writer",
+      "state": "B",
+      "core": -1,
+      "prio": 5,
+      "stack_hw": 3404,
+      "runtime_us": 14
+    },
+    {
+      "name": "em_worker",
+      "state": "B",
+      "core": -1,
+      "prio": 3,
+      "stack_hw": 2980,
+      "runtime_us": 13
+    },
+    {
+      "name": "Tmr Svc",
+      "state": "B",
+      "core": -1,
+      "prio": 1,
+      "stack_hw": 2420,
+      "runtime_us": 13
+    },
+    {
+      "name": "imu_events",
+      "state": "B",
+      "core": -1,
+      "prio": 3,
+      "stack_hw": 1392,
+      "runtime_us": 12
+    },
+    {
+      "name": "em_worker",
+      "state": "B",
+      "core": -1,
+      "prio": 3,
+      "stack_hw": 2980,
+      "runtime_us": 11
+    }
+  ]
+}

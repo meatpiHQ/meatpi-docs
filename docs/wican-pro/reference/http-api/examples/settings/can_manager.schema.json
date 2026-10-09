@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "baud": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "33",
+        "83",
+        "95",
+        "100",
+        "125",
+        "250",
+        "500",
+        "1000"
+      ],
+      "default": "500"
+    },
+    "silent": {
+      "type": "boolean",
+      "default": false
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

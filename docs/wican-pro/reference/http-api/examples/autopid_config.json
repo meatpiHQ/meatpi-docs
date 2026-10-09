@@ -1,0 +1,60 @@
+{
+  "groups": [
+    {
+      "name": "default",
+      "enabled_default": true,
+      "period_ms": 5000
+    }
+  ],
+  "pids": [
+    {
+      "name": "EngineCoolantTemp",
+      "type": "std",
+      "cmd": "0105",
+      "group": "default",
+      "parameters": [
+        {
+          "name": "EngineCoolantTemp",
+          "expression": "B2-40",
+          "unit": "degC",
+          "class": "temperature",
+          "min": -40,
+          "max": 215
+        }
+      ]
+    },
+    {
+      "name": "EngineRPM",
+      "type": "std",
+      "cmd": "010C",
+      "group": "default",
+      "parameters": [
+        {
+          "name": "EngineRPM",
+          "expression": "[B2:B3]*0.25",
+          "unit": "rpm",
+          "class": "speed",
+          "min": 0,
+          "max": 16384
+        }
+      ]
+    },
+    {
+      "name": "VehicleSpeed",
+      "type": "std",
+      "cmd": "010D",
+      "group": "default",
+      "parameters": [
+        {
+          "name": "VehicleSpeed",
+          "expression": "B2",
+          "unit": "km/h",
+          "class": "speed",
+          "min": 0,
+          "max": 255
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "uart": true,
+  "degraded": false,
+  "pending_reboot": false
+}

@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "sta_ble_handover": true,
+  "ap_ble_exclusive": true,
+  "degraded": false,
+  "pending_reboot": false
+}

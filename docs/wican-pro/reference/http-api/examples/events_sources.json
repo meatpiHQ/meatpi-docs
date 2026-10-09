@@ -1,0 +1,364 @@
+[
+  {
+    "event": "status.bit",
+    "description": "a device-status bit changed (sta_connected, ble_connected, mqtt_connected, motion, …)",
+    "keys": [
+      {
+        "key": "bit",
+        "type": "string"
+      },
+      {
+        "key": "set",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "event": "wifi.sta",
+    "description": "the STA link came up (connected=true, ssid) or dropped (connected=false)",
+    "keys": [
+      {
+        "key": "connected",
+        "type": "boolean"
+      },
+      {
+        "key": "ssid",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "obd.response",
+    "description": "answer to an obd.request action (response truncated to 47 chars)",
+    "keys": [
+      {
+        "key": "cmd",
+        "type": "string"
+      },
+      {
+        "key": "response",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "uds.response",
+    "description": "outcome of a uds.request action (data truncated; full payloads via a script's uds() binding)",
+    "keys": [
+      {
+        "key": "ok",
+        "type": "boolean"
+      },
+      {
+        "key": "nrc",
+        "type": "integer"
+      },
+      {
+        "key": "len",
+        "type": "integer"
+      },
+      {
+        "key": "data",
+        "type": "string"
+      },
+      {
+        "key": "req",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "script.done",
+    "description": "emitted by a Berry script via emit('script','done','value',…)",
+    "keys": [
+      {
+        "key": "value",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "imu.motion",
+    "description": "sustained-motion activity changed (state: active|stationary)",
+    "keys": [
+      {
+        "key": "state",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "imu.bump",
+    "description": "wake-on-motion pulse (door slam, knock; axes bit0=Z bit1=Y bit2=X)",
+    "keys": [
+      {
+        "key": "axes",
+        "type": "integer"
+      }
+    ]
+  },
+  {
+    "event": "battery.threshold",
+    "description": "battery crossed 12.0 V down / 12.5 V up (5 s hold; initial state delivered at boot)",
+    "keys": [
+      {
+        "key": "edge",
+        "type": "string"
+      },
+      {
+        "key": "volts",
+        "type": "number"
+      }
+    ]
+  },
+  {
+    "event": "mqtt.rx",
+    "description": "message on a rule-matched topic (payload truncated to 47 chars)",
+    "keys": [
+      {
+        "key": "topic",
+        "type": "string"
+      },
+      {
+        "key": "payload",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "vpn.state",
+    "description": "WireGuard tunnel state changed; {connected} is \"true\" after a verified handshake, \"false\" on teardown",
+    "keys": [
+      {
+        "key": "connected",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "sleep.entering",
+    "description": "the device is about to power down into light sleep; last chance for rules to publish (fired BEFORE radios stop)",
+    "keys": [
+      {
+        "key": "volts",
+        "type": "number"
+      }
+    ]
+  },
+  {
+    "event": "sleep.state",
+    "description": "sleep ladder transition (normal/low_voltage/sleeping/wake_pending)",
+    "keys": [
+      {
+        "key": "state",
+        "type": "string"
+      },
+      {
+        "key": "volts",
+        "type": "number"
+      }
+    ]
+  },
+  {
+    "event": "usb.device",
+    "description": "a USB device was attached to / detached from the host port (debounced ID pin)",
+    "keys": [
+      {
+        "key": "attached",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "usb.eth",
+    "description": "the USB-Ethernet uplink gained/lost an IP address",
+    "keys": [
+      {
+        "key": "connected",
+        "type": "string"
+      },
+      {
+        "key": "ip",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "timer.tick",
+    "description": "settings-defined periodic timers",
+    "keys": [
+      {
+        "key": "timer",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "autopid.param",
+    "description": "a parameter changed (rate-limited by min_event_interval_ms)",
+    "keys": [
+      {
+        "key": "param",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "type": "number"
+      },
+      {
+        "key": "unit",
+        "type": "string"
+      },
+      {
+        "key": "group",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "autopid.pid_failed",
+    "description": "a poll failed (streak = consecutive failures)",
+    "keys": [
+      {
+        "key": "pid",
+        "type": "string"
+      },
+      {
+        "key": "streak",
+        "type": "integer"
+      }
+    ]
+  },
+  {
+    "event": "autopid.scan_done",
+    "description": "the standard-PID support scan finished",
+    "keys": [
+      {
+        "key": "found",
+        "type": "integer"
+      }
+    ]
+  },
+  {
+    "event": "autopid.vehicle_changed",
+    "description": "the current car changed (known = a stored car came back, false = a new car was added; vin empty = none readable)",
+    "keys": [
+      {
+        "key": "vin",
+        "type": "string"
+      },
+      {
+        "key": "name",
+        "type": "string"
+      },
+      {
+        "key": "known",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "event": "autopid.vehicle_evicted",
+    "description": "the vehicle store was full: the least recently seen car was forgotten",
+    "keys": [
+      {
+        "key": "vin",
+        "type": "string"
+      },
+      {
+        "key": "name",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "autopid.dtc",
+    "description": "a NEW trouble code appeared (once per code per scan; re-fires only after a clear/reboot)",
+    "keys": [
+      {
+        "key": "code",
+        "type": "string"
+      },
+      {
+        "key": "status",
+        "type": "string"
+      },
+      {
+        "key": "mil",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "event": "autopid.dtc_scan",
+    "description": "a DTC scan finished (ok=false = no ECU response)",
+    "keys": [
+      {
+        "key": "ok",
+        "type": "boolean"
+      },
+      {
+        "key": "stored",
+        "type": "integer"
+      },
+      {
+        "key": "pending",
+        "type": "integer"
+      },
+      {
+        "key": "permanent",
+        "type": "integer"
+      },
+      {
+        "key": "new",
+        "type": "integer"
+      },
+      {
+        "key": "mil",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "event": "autopid.dtc_clear",
+    "description": "a clear attempt finished (cleared=false = condition not met)",
+    "keys": [
+      {
+        "key": "ok",
+        "type": "boolean"
+      },
+      {
+        "key": "cleared",
+        "type": "boolean"
+      },
+      {
+        "key": "before",
+        "type": "integer"
+      },
+      {
+        "key": "after",
+        "type": "integer"
+      }
+    ]
+  },
+  {
+    "event": "logger.rotated",
+    "description": "a log file reached its size cap and a new one was opened; {file} is the finished file",
+    "keys": [
+      {
+        "key": "file",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "event": "logger.error",
+    "description": "a storage write failed (card yanked / full / corrupt); the writer recovers on its own",
+    "keys": [
+      {
+        "key": "count",
+        "type": "number"
+      }
+    ]
+  }
+]

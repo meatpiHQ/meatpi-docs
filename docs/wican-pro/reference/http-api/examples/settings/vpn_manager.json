@@ -1,0 +1,21 @@
+{
+  "enabled": false,
+  "type": "wireguard",
+  "ts_auth_key": "",
+  "ts_device_name": "wican-pub",
+  "ts_control_url": "203.0.113.10:8080",
+  "private_key": "",
+  "peer_public_key": "<public key>",
+  "preshared_key": "",
+  "address": "10.9.0.2",
+  "allowed_ip": "10.9.0.0",
+  "allowed_ip_mask": "255.255.255.0",
+  "endpoint": "203.0.113.10",
+  "port": 51820,
+  "keepalive_s": 25,
+  "default_route": false,
+  "dns": "",
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

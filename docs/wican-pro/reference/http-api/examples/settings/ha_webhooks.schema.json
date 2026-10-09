@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "url": {
+      "type": "string",
+      "maxLength": 191,
+      "default": ""
+    },
+    "url2": {
+      "type": "string",
+      "maxLength": 191,
+      "default": ""
+    },
+    "interval_s": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3600,
+      "default": 60
+    },
+    "data_mode": {
+      "type": "string",
+      "enum": [
+        "changed",
+        "full"
+      ],
+      "default": "changed"
+    },
+    "gzip": {
+      "type": "boolean",
+      "default": false
+    },
+    "manual_override": {
+      "type": "boolean",
+      "default": false
+    },
+    "cert_set": {
+      "type": "string",
+      "maxLength": 31,
+      "default": ""
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

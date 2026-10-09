@@ -1,0 +1,30 @@
+{
+  "servers": [
+    {
+      "name": "obd0",
+      "proto": "tcp",
+      "port": 35000,
+      "enabled": true
+    },
+    {
+      "name": "slcan0",
+      "proto": "tcp",
+      "port": 3333,
+      "enabled": false
+    },
+    {
+      "name": "gvret0",
+      "proto": "tcp",
+      "port": 23,
+      "enabled": false
+    },
+    {
+      "name": "udp0",
+      "proto": "udp",
+      "port": 17,
+      "enabled": false
+    }
+  ],
+  "degraded": false,
+  "pending_reboot": false
+}

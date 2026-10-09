@@ -1,0 +1,31 @@
+{#-
+  Below the product's chapters: the top-level sections that are not products
+  (Integrations, Contributing). On narrow screens the drawer already lists
+  them, so this block is hidden there (see extra.css).
+-#}
+{% set products = config.extra.products | d([]) %}
+{% set state = namespace(any=false) %}
+{% for item in nav.items %}
+  {% if item.title not in products and not item.is_homepage %}{% set state.any = true %}{% endif %}
+{% endfor %}
+{% if state.any %}
+  <div class="mp-more">
+    <p class="mp-more__title">More</p>
+    {% for item in nav.items %}
+      {% if item.title not in products and not item.is_homepage %}
+        {% set t = namespace(url=item.url) %}
+        {% if not t.url %}
+          {% for child in item.children %}
+            {% if not t.url and child.is_page and child.is_index %}{% set t.url = child.url %}{% endif %}
+          {% endfor %}
+          {% for child in item.children %}
+            {% if not t.url and child.url %}{% set t.url = child.url %}{% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if t.url is not none %}
+          <a href="{{ t.url | url }}"{% if item.active %} class="active"{% endif %}>{{ item.title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

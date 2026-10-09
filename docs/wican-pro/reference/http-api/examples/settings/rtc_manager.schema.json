@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "sntp": {
+      "type": "boolean",
+      "default": true
+    },
+    "ntp_server": {
+      "type": "string",
+      "maxLength": 63,
+      "default": "pool.ntp.org"
+    },
+    "ntp_server2": {
+      "type": "string",
+      "maxLength": 63,
+      "default": ""
+    },
+    "sync_interval_h": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 168,
+      "default": 24
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

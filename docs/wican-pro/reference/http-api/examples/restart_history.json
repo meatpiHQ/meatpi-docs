@@ -1,0 +1,30 @@
+{
+  "boot_count": 1,
+  "unexpected_resets": 0,
+  "elf_sha": "3b63cddd0199a1e8",
+  "brake": {
+    "verdict": "normal",
+    "streak": 0,
+    "limit": 3,
+    "parks": 0,
+    "settled": true,
+    "settle_s": 600,
+    "report_budget": 4
+  },
+  "records": [
+    {
+      "seq": 1,
+      "reason": "poweron",
+      "planned": false,
+      "planned_reason": "none",
+      "source": "unknown",
+      "flags": 0,
+      "boot_time": 0,
+      "time_valid": false,
+      "request_time": 0,
+      "request_uptime_ms": 0,
+      "mode": "normal",
+      "settled": true
+    }
+  ]
+}

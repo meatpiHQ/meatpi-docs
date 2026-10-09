@@ -1,0 +1,41 @@
+{
+  "ready": true,
+  "claim": "none",
+  "client_idle_ms": 4294967295,
+  "eeprom_guard": {
+    "rewrites": 0,
+    "blocked": 0,
+    "protocol_saves": 0
+  },
+  "uart": {
+    "rx_bytes": 34770,
+    "rx_chunks": 5342,
+    "rx_max_chunk": 27,
+    "rx_overflows": 0,
+    "rx_buffered": 0,
+    "tx_bytes": 13450
+  },
+  "subscribers": [
+    {
+      "idx": 0,
+      "name": "bridge",
+      "dropped": 0,
+      "queued": 0,
+      "depth": 64
+    },
+    {
+      "idx": 1,
+      "name": "bridge",
+      "dropped": 0,
+      "queued": 0,
+      "depth": 64
+    },
+    {
+      "idx": 2,
+      "name": "bridge",
+      "dropped": 0,
+      "queued": 0,
+      "depth": 64
+    }
+  ]
+}

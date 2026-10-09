@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "level": {
+      "type": "string",
+      "enum": [
+        "none",
+        "error",
+        "warn",
+        "info",
+        "debug",
+        "verbose"
+      ],
+      "default": "info"
+    },
+    "console_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "ring_enabled": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

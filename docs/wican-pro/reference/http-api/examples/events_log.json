@@ -1,0 +1,333 @@
+{
+  "stats": {
+    "running": true,
+    "published": 5387,
+    "dropped": 0,
+    "fired": 1,
+    "action_errors": 0,
+    "suppressed": 0,
+    "blocking_dropped": 0
+  },
+  "events": [
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4443456048,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4443490064,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4448392037,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4448425943,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4448445772,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4448479366,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4448490779,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4448524183,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4453426043,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4453460124,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4453479801,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4453513330,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4453524822,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4453558362,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4458460906,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4458494208,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4458513848,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4458547498,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4458558767,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4458592427,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4463495038,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4463528348,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4463547942,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4463581611,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4463592780,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4463626614,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4468529069,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4468563140,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4468582155,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4468615956,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4468626857,
+      "data": {
+        "bit": "autopid_idle",
+        "set": false
+      },
+      "fired": []
+    },
+    {
+      "source": "status",
+      "name": "bit",
+      "ts_us": 4468661026,
+      "data": {
+        "bit": "autopid_idle",
+        "set": true
+      },
+      "fired": []
+    }
+  ]
+}

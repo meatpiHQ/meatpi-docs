@@ -1,0 +1,35 @@
+{
+  "enabled": true,
+  "timers": [],
+  "rules": [
+    {
+      "name": "bump_event",
+      "on": "imu.bump",
+      "do": "mqtt.publish",
+      "with": {
+        "topic": "~/events",
+        "payload": "{\"event\":\"bump\",\"axes\":${axes},\"ts\":\"${time.iso}\"}"
+      }
+    },
+    {
+      "name": "motion_event",
+      "on": "imu.motion",
+      "do": "mqtt.publish",
+      "with": {
+        "topic": "~/events",
+        "payload": "{\"event\":\"motion_${state}\",\"ts\":\"${time.iso}\"}"
+      }
+    },
+    {
+      "name": "battery_event",
+      "on": "battery.threshold",
+      "do": "mqtt.publish",
+      "with": {
+        "topic": "~/events",
+        "payload": "{\"event\":\"battery_${edge}\",\"voltage\":${volts},\"ts\":\"${time.iso}\"}"
+      }
+    }
+  ],
+  "degraded": false,
+  "pending_reboot": false
+}

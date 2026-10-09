@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "auth_enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "auth_password": {
+      "type": "string",
+      "maxLength": 64,
+      "default": ""
+    }
+  }
+}

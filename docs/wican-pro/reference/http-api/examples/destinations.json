@@ -1,0 +1,30 @@
+{
+  "running": true,
+  "network": true,
+  "mqtt": true,
+  "enabled": true,
+  "destinations": [
+    {
+      "name": "autopid",
+      "type": "mqtt",
+      "enabled": true,
+      "url": "~/autopid",
+      "period_s": 5,
+      "auth": "none",
+      "has_token": false,
+      "has_api_key": false,
+      "cert_set": "",
+      "success": 708,
+      "fail": 0,
+      "skipped_offline": 61,
+      "consecutive_failures": 0,
+      "backoff_s": 0,
+      "next_in_s": 0,
+      "last_status": 0,
+      "last_error": "",
+      "last_error_time": "",
+      "last_ok_time": "2026-10-09T04:06:55Z",
+      "full_sent": false
+    }
+  ]
+}

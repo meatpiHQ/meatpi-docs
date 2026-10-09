@@ -1,0 +1,26 @@
+[
+  {
+    "name": "bump_event",
+    "enabled": true,
+    "undo": false,
+    "active": false,
+    "fired": 0,
+    "last_fired_age_s": -1
+  },
+  {
+    "name": "motion_event",
+    "enabled": true,
+    "undo": false,
+    "active": false,
+    "fired": 0,
+    "last_fired_age_s": -1
+  },
+  {
+    "name": "battery_event",
+    "enabled": true,
+    "undo": false,
+    "active": false,
+    "fired": 1,
+    "last_fired_age_s": 4460
+  }
+]

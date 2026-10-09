@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "mode": "listen",
+  "address": 249,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

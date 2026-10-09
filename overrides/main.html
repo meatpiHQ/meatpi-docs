@@ -1,0 +1,41 @@
+{#-
+  MeatPi Docs: the product picker in the sidebar.
+
+  navigation.tabs makes Material show only the active top-level section in
+  the left sidebar ("lifted" navigation). The tab bar itself is dropped here,
+  and a product drop-down goes above the navigation instead, with the sections
+  that are not products (Integrations, Contributing) listed below it.
+  The site_nav block is Material's own, with two includes added.
+-#}
+{% extends "base.html" %}
+
+{% block tabs %}{% endblock %}
+
+{% block site_nav %}
+  {% if nav %}
+    {% if page.meta and page.meta.hide %}
+      {% set hidden = "hidden" if "navigation" in page.meta.hide %}
+    {% endif %}
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" {{ hidden }}>
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/product-picker.html" %}
+          {% include "partials/nav.html" %}
+          {% include "partials/sidebar-more.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if "toc.integrate" not in features %}
+    {% if page.meta and page.meta.hide %}
+      {% set hidden = "hidden" if "toc" in page.meta.hide %}
+    {% endif %}
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" {{ hidden }}>
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/toc.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

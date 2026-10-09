@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "smd": {
+      "type": "boolean",
+      "default": true
+    },
+    "wom": {
+      "type": "boolean",
+      "default": false
+    },
+    "smd_sensitivity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4,
+      "default": 0
+    },
+    "wom_threshold": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 255,
+      "default": 32
+    },
+    "stationary_s": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3600,
+      "default": 3
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

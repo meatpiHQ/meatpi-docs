@@ -1,0 +1,15 @@
+{
+  "path": "/data",
+  "entries": [
+    {
+      "name": "autopid",
+      "dir": true,
+      "size": 0
+    },
+    {
+      "name": "certs",
+      "dir": true,
+      "size": 0
+    }
+  ]
+}

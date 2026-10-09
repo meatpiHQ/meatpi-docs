@@ -1,0 +1,16 @@
+{
+  "enabled": false,
+  "pub_topic": "~/can/rx",
+  "sub_topic": "~/can/tx",
+  "qos": 0,
+  "allow_rx": false,
+  "allow_tx": false,
+  "batch_ms": 50,
+  "batch_frames": 24,
+  "filter": "",
+  "mask": "",
+  "filter_ext": false,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

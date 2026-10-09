@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "device_present": true,
+  "host_active": true,
+  "eth_connected": false,
+  "driver": "",
+  "ip": "",
+  "attaches": 1,
+  "vid": "0000",
+  "pid": "0000",
+  "vbus": true,
+  "device": null
+}

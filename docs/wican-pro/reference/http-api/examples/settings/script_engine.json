@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "max_runtime_ms": 10000,
+  "allow_reflash": false,
+  "exclusive": true,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

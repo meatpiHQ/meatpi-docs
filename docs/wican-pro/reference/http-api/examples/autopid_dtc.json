@@ -1,0 +1,21 @@
+{
+  "enabled": false,
+  "allow_clear": false,
+  "scanning": false,
+  "path": "obd",
+  "report": {
+    "valid": false,
+    "ts": 0,
+    "mil": false,
+    "mil_count": 0,
+    "ecus": 0,
+    "protocol": "obd",
+    "j1939": false,
+    "stored": [],
+    "pending": [],
+    "permanent": [],
+    "new": [],
+    "sources": [],
+    "items": []
+  }
+}

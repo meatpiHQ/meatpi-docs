@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "baud": "500",
+  "silent": false,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

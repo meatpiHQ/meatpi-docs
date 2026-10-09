@@ -1,0 +1,72 @@
+{
+  "enabled": false,
+  "state": "off",
+  "bus": "unknown",
+  "mode": "listen",
+  "claim": {
+    "state": "idle",
+    "address": 254,
+    "preferred": 249,
+    "tx_ready": false,
+    "name": "0000000000000000",
+    "claims_sent": 0,
+    "contests": 0,
+    "won": 0,
+    "lost": 0,
+    "held": 0,
+    "requests_answered": 0,
+    "cannot": 0
+  },
+  "tx": {
+    "frames": 0,
+    "failed": 0,
+    "requests": 0,
+    "acks": 0,
+    "nacks": 0,
+    "nacks_sent": 0,
+    "tp_to_me": 0,
+    "tp_cts": 0,
+    "tp_eoma": 0,
+    "tp_aborts": 0,
+    "tp_reply_lost": 0
+  },
+  "vin": null,
+  "can": {
+    "running": false,
+    "baud_kbps": 500,
+    "link": "stopped",
+    "listen_only": true
+  },
+  "stats": {
+    "rx_frames": 0,
+    "rx_data": 0,
+    "rx_tp_cm": 0,
+    "rx_tp_dt": 0,
+    "rx_diag": 0,
+    "rx_foreign": 0,
+    "queue_drops": 0,
+    "messages": 0,
+    "not_kept": 0,
+    "evicted": 0,
+    "long_evicted": 0,
+    "entries": 0,
+    "entries_max": 384,
+    "seq": 0
+  },
+  "tp": {
+    "open": 0,
+    "max": 8,
+    "started": 0,
+    "completed": 0,
+    "seq_errors": 0,
+    "timeouts": 0,
+    "aborted": 0,
+    "replaced": 0,
+    "no_session": 0,
+    "orphan_dt": 0,
+    "bad_cm": 0
+  },
+  "values": [],
+  "sources": [],
+  "dm1": []
+}

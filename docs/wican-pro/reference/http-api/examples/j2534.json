@@ -1,0 +1,16 @@
+{
+  "enabled": false,
+  "port": 6809,
+  "listening": false,
+  "client_connected": false,
+  "device_open": false,
+  "channels": 0,
+  "frames_rx": 0,
+  "frames_tx": 0,
+  "allow_reflash": false,
+  "allow_lan": false,
+  "exclusive": true,
+  "autopid_paused": false,
+  "transport": "none",
+  "phase": "2 (CAN + ISO15765 channels)"
+}

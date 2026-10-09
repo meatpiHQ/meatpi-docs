@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "idle_mode": {
+      "type": "string",
+      "enum": [
+        "off",
+        "solid",
+        "blink_slow"
+      ],
+      "default": "solid"
+    },
+    "idle_r": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "default": 0
+    },
+    "idle_g": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "default": 204
+    },
+    "idle_b": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "default": 255
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

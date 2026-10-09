@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "pub_topic": {
+      "type": "string",
+      "maxLength": 96,
+      "default": "~/can/rx"
+    },
+    "sub_topic": {
+      "type": "string",
+      "maxLength": 96,
+      "default": "~/can/tx"
+    },
+    "qos": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0
+    },
+    "allow_rx": {
+      "type": "boolean",
+      "default": false
+    },
+    "allow_tx": {
+      "type": "boolean",
+      "default": false
+    },
+    "batch_ms": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 1000,
+      "default": 50
+    },
+    "batch_frames": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 24,
+      "default": 24
+    },
+    "filter": {
+      "type": "string",
+      "maxLength": 8,
+      "default": ""
+    },
+    "mask": {
+      "type": "string",
+      "maxLength": 8,
+      "default": ""
+    },
+    "filter_ext": {
+      "type": "boolean",
+      "default": false
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

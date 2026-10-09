@@ -1,0 +1,13 @@
+{
+  "enabled": false,
+  "passkey": 123456,
+  "tx_power_dbm": 9,
+  "pairing_at_boot": true,
+  "bonding": true,
+  "sc_only": true,
+  "conn_profile": "ios",
+  "phy": "1m",
+  "advertising": "legacy",
+  "degraded": false,
+  "pending_reboot": false
+}

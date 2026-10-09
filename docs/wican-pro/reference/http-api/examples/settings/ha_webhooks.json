@@ -1,0 +1,13 @@
+{
+  "enabled": false,
+  "url": "",
+  "url2": "",
+  "interval_s": 60,
+  "data_mode": "changed",
+  "gzip": false,
+  "manual_override": false,
+  "cert_set": "",
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

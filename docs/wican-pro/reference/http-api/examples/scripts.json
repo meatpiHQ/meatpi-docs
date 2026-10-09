@@ -1,0 +1,7 @@
+{
+  "scripts": [],
+  "dir": "/data/scripts",
+  "busy": false,
+  "enabled": false,
+  "max_runtime_ms": 10000
+}

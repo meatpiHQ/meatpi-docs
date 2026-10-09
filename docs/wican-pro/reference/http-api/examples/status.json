@@ -1,0 +1,88 @@
+{
+  "bits": {
+    "awake": true,
+    "sleep": false,
+    "sta_connected": true,
+    "mqtt_connected": true,
+    "ble_connected": false,
+    "sdcard_mounted": true,
+    "ble_enabled": false,
+    "sta_enabled": true,
+    "ap_enabled": false,
+    "autopid_enabled": true,
+    "home_mode": false,
+    "drive_mode": false,
+    "smartconnect": false,
+    "sta_ap_overlap": false,
+    "time_synced": true,
+    "vpn_enabled": false,
+    "wake_voltage_ok": true,
+    "eth_connected": false,
+    "autopid_idle": true,
+    "motion": false,
+    "sta_suspended": false,
+    "ap_suspended": false,
+    "ble_suspended": false
+  },
+  "network_connected": true,
+  "uptime": "01:14:28",
+  "version": "v6.00p_alfa-02-dirty",
+  "partition": "ota_0",
+  "boot_count": 1,
+  "unexpected_resets": 0,
+  "memory": {
+    "internal": {
+      "total": 203827,
+      "free": 66815,
+      "min_free": 60619,
+      "largest_block": 31744
+    },
+    "psram": {
+      "total": 4388152,
+      "free": 3990056,
+      "min_free": 3828296
+    }
+  },
+  "temp_c": 44.6,
+  "health": {
+    "log_errors": 55,
+    "log_warnings": 5,
+    "flash": {
+      "writes": 0,
+      "write_bytes": 0,
+      "erases": 0,
+      "erase_bytes": 0
+    },
+    "caps": {
+      "settings": {
+        "used": 41,
+        "cap": 48
+      },
+      "cmdline": {
+        "used": 38,
+        "cap": 48
+      },
+      "bridge_ep": {
+        "used": 15,
+        "cap": 24
+      },
+      "events_src": {
+        "used": 25,
+        "cap": 32
+      },
+      "events_act": {
+        "used": 14,
+        "cap": 24
+      },
+      "ble_ch": {
+        "used": 1,
+        "cap": 4
+      },
+      "http_routes": {
+        "used": 118,
+        "cap": 144
+      }
+    },
+    "faults": 0
+  }
+}

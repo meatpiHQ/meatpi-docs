@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "wifi_modem",
+        "usb_ncm",
+        "usb_rndis"
+      ],
+      "default": "wifi_modem"
+    },
+    "auto_pair": {
+      "type": "boolean",
+      "default": true
+    },
+    "ssid": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "device_id": {
+      "type": "string",
+      "maxLength": 12,
+      "default": ""
+    },
+    "host": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "gps_poll_s": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 60,
+      "default": 2
+    },
+    "health_poll_s": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 300,
+      "default": 10
+    },
+    "cut_retries": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "default": 2
+    },
+    "apn": {
+      "type": "string",
+      "maxLength": 63,
+      "default": ""
+    },
+    "apn_user": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "apn_password": {
+      "type": "string",
+      "maxLength": 32,
+      "default": ""
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

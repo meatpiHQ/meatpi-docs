@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "sta_connected": true,
+  "ip": "10.42.1.194",
+  "ap_started": false,
+  "ap_default_password": false,
+  "clients": 0,
+  "ap_ip": "192.168.4.1",
+  "dns": [
+    "10.42.1.1",
+    "1.1.1.1"
+  ],
+  "sta_attempt": {
+    "ssid": "WICAN_TEST_AP",
+    "reason": 8,
+    "fail_count": 0,
+    "deprioritised": false
+  }
+}

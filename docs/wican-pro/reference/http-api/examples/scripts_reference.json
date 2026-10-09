@@ -1,0 +1,333 @@
+{
+  "language": "Berry 1.1.0",
+  "enabled": false,
+  "allow_reflash": false,
+  "exclusive": true,
+  "limits": {
+    "src_max": 8192,
+    "file_max": 65536,
+    "out_max": 4096,
+    "sleep_max_ms": 60000,
+    "name_max": 40,
+    "resp_max_bytes": 128,
+    "max_runtime_ms": 10000
+  },
+  "groups": [
+    {
+      "id": "basics",
+      "title": "Output & timing"
+    },
+    {
+      "id": "obd",
+      "title": "OBD-II / UDS, one request at a time"
+    },
+    {
+      "id": "session",
+      "title": "UDS conversation on a claimed bus"
+    },
+    {
+      "id": "dtc",
+      "title": "Trouble codes"
+    },
+    {
+      "id": "can",
+      "title": "Raw CAN"
+    },
+    {
+      "id": "events",
+      "title": "Events & rules"
+    },
+    {
+      "id": "file",
+      "title": "SD-card files & ECU flashing"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "log",
+      "sig": "log(msg)",
+      "group": "basics",
+      "ret": "nil",
+      "doc": "Print a line to the run output and the device log. Numbers need str().",
+      "ex": "log('rpm ' + str(rpm))"
+    },
+    {
+      "name": "sleep_ms",
+      "sig": "sleep_ms(ms)",
+      "group": "basics",
+      "ret": "nil",
+      "doc": "Pause for up to 60 000 ms. The run budget keeps counting while asleep.",
+      "ex": "sleep_ms(500)"
+    },
+    {
+      "name": "millis",
+      "sig": "millis()",
+      "group": "basics",
+      "ret": "int",
+      "doc": "Milliseconds since the WiCAN booted.",
+      "ex": "var t0 = millis()"
+    },
+    {
+      "name": "uds",
+      "sig": "uds(tx, rx, hexreq)",
+      "group": "obd",
+      "ret": "response hex string, or nil",
+      "doc": "One request to an ECU over ISO-TP with 11-bit CAN ids: OBD-II modes ('01 0C') and UDS services ('22 F1 90') alike. Sets uds_ok and uds_nrc; a negative response comes back as its hex ('7F 22 31').",
+      "ex": "var r = uds(0x7E0, 0x7E8, '01 0C')"
+    },
+    {
+      "name": "uds_ext",
+      "sig": "uds_ext(tx, rx, hexreq)",
+      "group": "obd",
+      "ret": "response hex string, or nil",
+      "doc": "Same as uds() with 29-bit CAN ids.",
+      "ex": "var r = uds_ext(0x18DA10F1, 0x18DAF110, '22 F1 90')"
+    },
+    {
+      "name": "uds_nrc_str",
+      "sig": "uds_nrc_str(nrc)",
+      "group": "obd",
+      "ret": "name string ('' if unknown)",
+      "doc": "The ISO 14229 name of a negative response code, e.g. 0x31 -> requestOutOfRange.",
+      "ex": "log(uds_nrc_str(uds_nrc))"
+    },
+    {
+      "name": "obd_claim",
+      "sig": "obd_claim(tx, rx[, ext])",
+      "group": "session",
+      "ret": "1 when claimed, 0 when not",
+      "doc": "Hold the bus for a multi-step conversation with one ECU; the WiCAN sends tester-present so the session stays open between steps. Released by obd_release() or when the script ends.",
+      "ex": "obd_claim(0x7E0, 0x7E8)"
+    },
+    {
+      "name": "obd_release",
+      "sig": "obd_release()",
+      "group": "session",
+      "ret": "nil",
+      "doc": "End the claimed conversation (automatic when the script ends).",
+      "ex": "obd_release()"
+    },
+    {
+      "name": "obd_request",
+      "sig": "obd_request(hexreq[, timeout_ms])",
+      "group": "session",
+      "ret": "response hex string, or nil",
+      "doc": "Send a UDS request on the claimed connection and wait for the final answer (0x78 responsePending is handled). Sets uds_ok, uds_nrc and uds_pending.",
+      "ex": "var r = obd_request('22 F1 90')"
+    },
+    {
+      "name": "obd_isotp_tx",
+      "sig": "obd_isotp_tx(hexbytes[, timeout_ms])",
+      "group": "session",
+      "ret": "1 when sent",
+      "doc": "Send a raw ISO-TP payload on the claimed connection, no UDS handling.",
+      "ex": "obd_isotp_tx('3E 00')"
+    },
+    {
+      "name": "obd_isotp_rx",
+      "sig": "obd_isotp_rx([timeout_ms])",
+      "group": "session",
+      "ret": "payload hex, or nil",
+      "doc": "Receive one raw ISO-TP payload on the claimed connection (default 500 ms).",
+      "ex": "var p = obd_isotp_rx(1000)"
+    },
+    {
+      "name": "dtc_scan",
+      "sig": "dtc_scan()",
+      "group": "dtc",
+      "ret": "report JSON string, or nil",
+      "doc": "Run a trouble-code scan and wait for it (Trouble codes must be enabled). Parse the string with json.load(): valid, mil, stored, pending, permanent, freeze.",
+      "ex": "var rep = json.load(dtc_scan())"
+    },
+    {
+      "name": "dtc_clear",
+      "sig": "dtc_clear([codes[, mode]])",
+      "group": "dtc",
+      "ret": "true when cleared",
+      "doc": "Clear trouble codes (needs Allow clearing). mode: 'always', 'if_any' or 'if_only'; codes: a comma list for a per-code UDS clear, '' for all.",
+      "ex": "dtc_clear('', 'if_any')"
+    },
+    {
+      "name": "dtc_desc",
+      "sig": "dtc_desc(code)",
+      "group": "dtc",
+      "ret": "description string, or nil",
+      "doc": "Look a code up in the uploaded code databases.",
+      "ex": "log(str(dtc_desc('P0420')))"
+    },
+    {
+      "name": "can_tx",
+      "sig": "can_tx(id, ext, hexbytes)",
+      "group": "can",
+      "ret": "true when sent",
+      "doc": "Put one raw CAN frame on the WiCAN's own CAN controller (up to 8 data bytes; ext = 1 for a 29-bit id). Needs the CAN bus setting on; false when it is off or nobody acknowledged. No raw receive: answers come back through uds() or obd_isotp_rx().",
+      "ex": "can_tx(0x7DF, 0, '02 01 0C')"
+    },
+    {
+      "name": "emit",
+      "sig": "emit(source, name, key, value)",
+      "group": "events",
+      "ret": "true when queued",
+      "doc": "Publish an event for the rules engine. The convention is emit('script', 'done', 'value', text): rules select on script.done and read ${value}.",
+      "ex": "emit('script', 'done', 'value', 'vin=' + vin)"
+    },
+    {
+      "name": "obd_file_size",
+      "sig": "obd_file_size(path)",
+      "group": "file",
+      "ret": "byte count, or nil",
+      "doc": "Size of a file on the SD card ('/sd/...' paths only).",
+      "ex": "var n = obd_file_size('/sd/fw/ecu.bin')"
+    },
+    {
+      "name": "obd_file_read",
+      "sig": "obd_file_read(path, offset, len)",
+      "group": "file",
+      "ret": "hex string, or nil",
+      "doc": "Read up to 512 bytes of an SD-card file as hex.",
+      "ex": "var h = obd_file_read('/sd/fw/ecu.bin', 0, 16)"
+    },
+    {
+      "name": "obd_transfer_file",
+      "sig": "obd_transfer_file(path, offset, size, block_len[, bsc])",
+      "group": "file",
+      "ret": "bytes sent, or nil",
+      "doc": "Stream an SD-card file to the ECU as TransferData (0x36) blocks and set uds_xfer_crc / uds_xfer_blocks. Needs Allow ECU flashing.",
+      "ex": "var sent = obd_transfer_file('/sd/fw/ecu.bin', 0, n, 128)"
+    }
+  ],
+  "globals": [
+    {
+      "name": "uds_ok",
+      "doc": "1 when the last uds() / uds_ext() / obd_request() got an answer (positive or negative), 0 when nothing answered."
+    },
+    {
+      "name": "uds_nrc",
+      "doc": "The negative response code of that answer, or -1 when it was positive."
+    },
+    {
+      "name": "uds_pending",
+      "doc": "How many 0x78 responsePending replies the last obd_request() waited through."
+    },
+    {
+      "name": "uds_xfer_crc",
+      "doc": "CRC-32 of the data the last obd_transfer_file() sent."
+    },
+    {
+      "name": "uds_xfer_blocks",
+      "doc": "Blocks the last obd_transfer_file() sent."
+    },
+    {
+      "name": "evt_source",
+      "doc": "Source of the event that triggered this run ('' when run by hand)."
+    },
+    {
+      "name": "evt_name",
+      "doc": "Name of that event, e.g. 'bit' for status.bit."
+    },
+    {
+      "name": "evt_<field>",
+      "doc": "One global per field of the trigger event: evt_bit and evt_set for status.bit, evt_param / evt_value / evt_unit for autopid.param, evt_edge / evt_volts for battery.threshold, evt_timer for timer.tick."
+    }
+  ],
+  "primer": [
+    {
+      "title": "Comments",
+      "code": "# to the end of the line\n#- a block\n   comment -#",
+      "note": ""
+    },
+    {
+      "title": "Variables",
+      "code": "var rpm = 0\nvar name = 'engine'\nrpm += 1",
+      "note": "Declare with var; no types."
+    },
+    {
+      "title": "Text",
+      "code": "'a' + 'b'\nstr(42)\nformat('%02X %d %.1f', 255, 7, 3.14)\nsize('abc')",
+      "note": "Only strings join with +; wrap numbers in str()."
+    },
+    {
+      "title": "Numbers",
+      "code": "0x7E0  3.5  -1\nint('0x1F')  real('2.5')\n7 / 2  ->  3   7.0 / 2  ->  3.5\n10 % 3   1 << 3   x & 0xFF",
+      "note": "Two integers divide to an integer."
+    },
+    {
+      "title": "Conditions",
+      "code": "if rpm > 3000\n  log('high')\nelif rpm > 0\n  log('running')\nelse\n  log('off')\nend\nok = a && b || !c",
+      "note": "Every block ends with end; nil is false."
+    },
+    {
+      "title": "Loops",
+      "code": "for i : 0..4  log(str(i))  end\nfor v : [1, 2, 3]  ...  end\nwhile millis() < t1  ...  end\nbreak   continue",
+      "note": "0..4 is inclusive."
+    },
+    {
+      "title": "Functions",
+      "code": "def add(a, b)\n  return a + b\nend\nvar twice = def (x) return x * 2 end",
+      "note": ""
+    },
+    {
+      "title": "Lists & maps",
+      "code": "var l = [1, 2]\nl.push(3)  l[0]  size(l)\nvar m = {'rpm': 800}\nm['speed'] = 0  m.find('x')  m.keys()",
+      "note": "find() returns nil when the key is missing; [] raises."
+    },
+    {
+      "title": "Bytes & hex",
+      "code": "import string\nvar parts = string.split('62 F1 90 31', ' ')\nint('0x' + parts[3])\nvar b = bytes('3157')  b[0]  b.tohex()  b.asstring()",
+      "note": "Responses are hex bytes separated by spaces."
+    },
+    {
+      "title": "Modules",
+      "code": "import string   # split, find, replace, startswith, toupper, format\nimport json     # json.load(text) -> map/list, json.dump(value)\nimport math     # floor, ceil, round, abs, min, max, pow, sqrt",
+      "note": ""
+    },
+    {
+      "title": "Errors",
+      "code": "try\n  risky()\nexcept .. as e, m\n  log(e + ': ' + m)\nend\nraise 'my_error', 'details'",
+      "note": ""
+    }
+  ],
+  "errors": [
+    {
+      "match": "obd_claim() first",
+      "hint": "Call obd_claim(tx, rx) before obd_request(), obd_isotp_tx() or obd_isotp_rx()."
+    },
+    {
+      "match": "already claimed",
+      "hint": "obd_claim() with other ids while a conversation is open: call obd_release() first."
+    },
+    {
+      "match": "reflash blocked",
+      "hint": "Reprogramming services (0x34-0x37, obd_transfer_file) need Allow ECU flashing. Leave it off unless you are flashing an ECU."
+    },
+    {
+      "match": "exceeded max_runtime_ms",
+      "hint": "The script ran past its budget: shorten loops and sleeps, or raise Max script runtime in the settings below."
+    },
+    {
+      "match": "stopped by request",
+      "hint": "Stopped with the Stop button or the console."
+    },
+    {
+      "match": "syntax_error",
+      "hint": "Every if / for / while / def / try block ends with end, strings are quoted, calls have parentheses. The line number is in the message."
+    },
+    {
+      "match": "bad hex",
+      "hint": "Requests are hex bytes like '22 F1 90' (spaces optional, at most 8 for can_tx)."
+    },
+    {
+      "match": "attribute_error",
+      "hint": "A name or method does not exist: check the spelling, and import string / json / math before using their functions."
+    },
+    {
+      "match": "type_error",
+      "hint": "A value has the wrong type: numbers need str() before + with text, and text needs int() or real() before arithmetic."
+    }
+  ],
+  "rules": {
+    "action": "script.run",
+    "with": "{\"name\": \"<script>\"}",
+    "event": "script.done"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "level": "info",
+  "console_enabled": true,
+  "ring_enabled": true,
+  "degraded": false,
+  "pending_reboot": false
+}

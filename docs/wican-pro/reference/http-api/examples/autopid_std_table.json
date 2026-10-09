@@ -1,0 +1,1956 @@
+[
+  {
+    "pid": 1,
+    "cmd": "0101",
+    "name": "MonitorStatus",
+    "parameters": [
+      {
+        "name": "MonitorStatus",
+        "expression": "[B2:B5]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 2,
+    "cmd": "0102",
+    "name": "FreezeDTC",
+    "parameters": [
+      {
+        "name": "FreezeDTC",
+        "expression": "[B2:B3]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 3,
+    "cmd": "0103",
+    "name": "FuelSystemStatus",
+    "parameters": [
+      {
+        "name": "FuelSystemStatus",
+        "expression": "[B2:B3]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 4,
+    "cmd": "0104",
+    "name": "CalcEngineLoad",
+    "parameters": [
+      {
+        "name": "CalcEngineLoad",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "power_factor",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 5,
+    "cmd": "0105",
+    "name": "EngineCoolantTemp",
+    "parameters": [
+      {
+        "name": "EngineCoolantTemp",
+        "expression": "B2-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 215
+      }
+    ]
+  },
+  {
+    "pid": 6,
+    "cmd": "0106",
+    "name": "ShortFuelTrimBank1",
+    "parameters": [
+      {
+        "name": "ShortFuelTrimBank1",
+        "expression": "B2*0.78125-100",
+        "unit": "%",
+        "class": "volume_storage",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 7,
+    "cmd": "0107",
+    "name": "LongFuelTrimBank1",
+    "parameters": [
+      {
+        "name": "LongFuelTrimBank1",
+        "expression": "B2*0.78125-100",
+        "unit": "%",
+        "class": "volume_storage",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 8,
+    "cmd": "0108",
+    "name": "ShortFuelTrimBank2",
+    "parameters": [
+      {
+        "name": "ShortFuelTrimBank2",
+        "expression": "B2*0.78125-100",
+        "unit": "%",
+        "class": "volume_storage",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 9,
+    "cmd": "0109",
+    "name": "LongFuelTrimBank2",
+    "parameters": [
+      {
+        "name": "LongFuelTrimBank2",
+        "expression": "B2*0.78125-100",
+        "unit": "%",
+        "class": "volume_storage",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 10,
+    "cmd": "010A",
+    "name": "FuelPressure",
+    "parameters": [
+      {
+        "name": "FuelPressure",
+        "expression": "B2*3",
+        "unit": "kPa",
+        "class": "pressure",
+        "min": 0,
+        "max": 765
+      }
+    ]
+  },
+  {
+    "pid": 11,
+    "cmd": "010B",
+    "name": "IntakeManiAbsPress",
+    "parameters": [
+      {
+        "name": "IntakeManiAbsPress",
+        "expression": "B2",
+        "unit": "kPa",
+        "class": "pressure",
+        "min": 0,
+        "max": 255
+      }
+    ]
+  },
+  {
+    "pid": 12,
+    "cmd": "010C",
+    "name": "EngineRPM",
+    "parameters": [
+      {
+        "name": "EngineRPM",
+        "expression": "[B2:B3]*0.25",
+        "unit": "rpm",
+        "class": "speed",
+        "min": 0,
+        "max": 16384
+      }
+    ]
+  },
+  {
+    "pid": 13,
+    "cmd": "010D",
+    "name": "VehicleSpeed",
+    "parameters": [
+      {
+        "name": "VehicleSpeed",
+        "expression": "B2",
+        "unit": "km/h",
+        "class": "speed",
+        "min": 0,
+        "max": 255
+      }
+    ]
+  },
+  {
+    "pid": 14,
+    "cmd": "010E",
+    "name": "TimingAdvance",
+    "parameters": [
+      {
+        "name": "TimingAdvance",
+        "expression": "B2*0.5-64",
+        "unit": "deg",
+        "class": "none",
+        "min": -64,
+        "max": 64
+      }
+    ]
+  },
+  {
+    "pid": 15,
+    "cmd": "010F",
+    "name": "IntakeAirTemperature",
+    "parameters": [
+      {
+        "name": "IntakeAirTemperature",
+        "expression": "B2-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 215
+      }
+    ]
+  },
+  {
+    "pid": 16,
+    "cmd": "0110",
+    "name": "MAFAirFlowRate",
+    "parameters": [
+      {
+        "name": "MAFAirFlowRate",
+        "expression": "[B2:B3]*0.009999999776",
+        "unit": "grams/sec",
+        "class": "volume_flow_rate",
+        "min": 0,
+        "max": 655
+      }
+    ]
+  },
+  {
+    "pid": 17,
+    "cmd": "0111",
+    "name": "ThrottlePosition",
+    "parameters": [
+      {
+        "name": "ThrottlePosition",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 18,
+    "cmd": "0112",
+    "name": "CmdSecAirStatus",
+    "parameters": [
+      {
+        "name": "CmdSecAirStatus",
+        "expression": "B2",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 20,
+    "cmd": "0114",
+    "name": "OxySensor1_Volt",
+    "parameters": [
+      {
+        "name": "OxySensor1_Volt",
+        "expression": "B2*0.004999999888",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "OxySensor1_STFT",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 21,
+    "cmd": "0115",
+    "name": "OxySensor2_Volt",
+    "parameters": [
+      {
+        "name": "OxySensor2_Volt",
+        "expression": "B2*0.004999999888",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "OxySensor2_STFT",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 22,
+    "cmd": "0116",
+    "name": "OxySensor3_Volt",
+    "parameters": [
+      {
+        "name": "OxySensor3_Volt",
+        "expression": "B2*0.004999999888",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "OxySensor3_STFT",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 23,
+    "cmd": "0117",
+    "name": "OxySensor4_Volt",
+    "parameters": [
+      {
+        "name": "OxySensor4_Volt",
+        "expression": "B2*0.004999999888",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "OxySensor4_STFT",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 24,
+    "cmd": "0118",
+    "name": "OxySensor5_Volt",
+    "parameters": [
+      {
+        "name": "OxySensor5_Volt",
+        "expression": "B2*0.004999999888",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "OxySensor5_STFT",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 25,
+    "cmd": "0119",
+    "name": "OxySensor6_Volt",
+    "parameters": [
+      {
+        "name": "OxySensor6_Volt",
+        "expression": "B2*0.004999999888",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "OxySensor6_STFT",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 26,
+    "cmd": "011A",
+    "name": "OxySensor7_Volt",
+    "parameters": [
+      {
+        "name": "OxySensor7_Volt",
+        "expression": "B2*0.004999999888",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "OxySensor7_STFT",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 27,
+    "cmd": "011B",
+    "name": "OxySensor8_Volt",
+    "parameters": [
+      {
+        "name": "OxySensor8_Volt",
+        "expression": "B2*0.004999999888",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 1
+      },
+      {
+        "name": "OxySensor8_STFT",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 28,
+    "cmd": "011C",
+    "name": "OBDStandard",
+    "parameters": [
+      {
+        "name": "OBDStandard",
+        "expression": "B2",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 31,
+    "cmd": "011F",
+    "name": "TimeSinceEngStart",
+    "parameters": [
+      {
+        "name": "TimeSinceEngStart",
+        "expression": "[B2:B3]",
+        "unit": "seconds",
+        "class": "duration",
+        "min": 0,
+        "max": 65535
+      }
+    ]
+  },
+  {
+    "pid": 32,
+    "cmd": "0120",
+    "name": "PIDsSupported_21_40",
+    "parameters": [
+      {
+        "name": "PIDsSupported_21_40",
+        "expression": "[B2:B5]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 33,
+    "cmd": "0121",
+    "name": "DistanceMILOn",
+    "parameters": [
+      {
+        "name": "DistanceMILOn",
+        "expression": "[B2:B3]",
+        "unit": "km",
+        "class": "distance",
+        "min": 0,
+        "max": 65535
+      }
+    ]
+  },
+  {
+    "pid": 34,
+    "cmd": "0122",
+    "name": "FuelRailPres",
+    "parameters": [
+      {
+        "name": "FuelRailPres",
+        "expression": "[B2:B3]*0.07900000364",
+        "unit": "kPa",
+        "class": "pressure",
+        "min": 0,
+        "max": 5177
+      }
+    ]
+  },
+  {
+    "pid": 35,
+    "cmd": "0123",
+    "name": "FuelRailGaug",
+    "parameters": [
+      {
+        "name": "FuelRailGaug",
+        "expression": "[B2:B3]*10",
+        "unit": "kPa",
+        "class": "pressure",
+        "min": 0,
+        "max": 655350
+      }
+    ]
+  },
+  {
+    "pid": 36,
+    "cmd": "0124",
+    "name": "OxySensor1_WR_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor1_WR_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor1_WR_Volt",
+        "expression": "[B4:B5]*0.0001220703125",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 2
+      }
+    ]
+  },
+  {
+    "pid": 37,
+    "cmd": "0125",
+    "name": "OxySensor2_WR_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor2_WR_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor2_WR_Volt",
+        "expression": "[B4:B5]*0.0001220703125",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "pid": 38,
+    "cmd": "0126",
+    "name": "OxySensor3_WR_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor3_WR_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor3_WR_Volt",
+        "expression": "[B4:B5]*0.0001220703125",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "pid": 39,
+    "cmd": "0127",
+    "name": "OxySensor4_WR_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor4_WR_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor4_WR_Volt",
+        "expression": "[B4:B5]*0.0001220703125",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "pid": 40,
+    "cmd": "0128",
+    "name": "OxySensor5_WR_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor5_WR_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor5_WR_Volt",
+        "expression": "[B4:B5]*0.0001220703125",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "pid": 41,
+    "cmd": "0129",
+    "name": "OxySensor6_WR_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor6_WR_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor6_WR_Volt",
+        "expression": "[B4:B5]*0.0001220703125",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "pid": 42,
+    "cmd": "012A",
+    "name": "OxySensor7_WR_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor7_WR_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor7_WR_Volt",
+        "expression": "[B4:B5]*0.0001220703125",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "pid": 43,
+    "cmd": "012B",
+    "name": "OxySensor8_WR_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor8_WR_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor8_WR_Volt",
+        "expression": "[B4:B5]*0.0001220703125",
+        "unit": "volts",
+        "class": "voltage",
+        "min": 0,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "pid": 44,
+    "cmd": "012C",
+    "name": "CmdEGR",
+    "parameters": [
+      {
+        "name": "CmdEGR",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 45,
+    "cmd": "012D",
+    "name": "EGRError",
+    "parameters": [
+      {
+        "name": "EGRError",
+        "expression": "B2*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 46,
+    "cmd": "012E",
+    "name": "CmdEvapPurge",
+    "parameters": [
+      {
+        "name": "CmdEvapPurge",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 47,
+    "cmd": "012F",
+    "name": "FuelTankLevel",
+    "parameters": [
+      {
+        "name": "FuelTankLevel",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "volume_storage",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 48,
+    "cmd": "0130",
+    "name": "WarmUpsSinceCodeClear",
+    "parameters": [
+      {
+        "name": "WarmUpsSinceCodeClear",
+        "expression": "B2",
+        "unit": "count",
+        "class": "none",
+        "min": 0,
+        "max": 255
+      }
+    ]
+  },
+  {
+    "pid": 49,
+    "cmd": "0131",
+    "name": "DistanceSinceCodeClear",
+    "parameters": [
+      {
+        "name": "DistanceSinceCodeClear",
+        "expression": "[B2:B3]",
+        "unit": "km",
+        "class": "distance",
+        "min": 0,
+        "max": 65535
+      }
+    ]
+  },
+  {
+    "pid": 50,
+    "cmd": "0132",
+    "name": "EvapSysVaporPres",
+    "parameters": [
+      {
+        "name": "EvapSysVaporPres",
+        "expression": "[B2:B3]*0.25",
+        "unit": "Pa",
+        "class": "pressure",
+        "min": -8192,
+        "max": 8192
+      }
+    ]
+  },
+  {
+    "pid": 51,
+    "cmd": "0133",
+    "name": "AbsBaroPres",
+    "parameters": [
+      {
+        "name": "AbsBaroPres",
+        "expression": "B2",
+        "unit": "kPa",
+        "class": "atmospheric_pressure",
+        "min": 0,
+        "max": 255
+      }
+    ]
+  },
+  {
+    "pid": 52,
+    "cmd": "0134",
+    "name": "OxySensor1_WRC_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor1_WRC_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor1_Crnt",
+        "expression": "[B4:B5]*0.00390625-128",
+        "unit": "mA",
+        "class": "current",
+        "min": -128,
+        "max": 128
+      }
+    ]
+  },
+  {
+    "pid": 53,
+    "cmd": "0135",
+    "name": "OxySensor2_WRC_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor2_WRC_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor2_Crnt",
+        "expression": "[B4:B5]*0.00390625-128",
+        "unit": "mA",
+        "class": "current",
+        "min": -128,
+        "max": 128
+      }
+    ]
+  },
+  {
+    "pid": 54,
+    "cmd": "0136",
+    "name": "OxySensor3_WRC_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor3_WRC_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor3_Crnt",
+        "expression": "[B4:B5]*0.00390625-128",
+        "unit": "mA",
+        "class": "current",
+        "min": -128,
+        "max": 128
+      }
+    ]
+  },
+  {
+    "pid": 55,
+    "cmd": "0137",
+    "name": "OxySensor4_WRC_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor4_WRC_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor4_Crnt",
+        "expression": "[B4:B5]*0.00390625-128",
+        "unit": "mA",
+        "class": "current",
+        "min": -128,
+        "max": 128
+      }
+    ]
+  },
+  {
+    "pid": 56,
+    "cmd": "0138",
+    "name": "OxySensor5_WRC_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor5_WRC_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor5_Crnt",
+        "expression": "[B4:B5]*0.00390625-128",
+        "unit": "mA",
+        "class": "current",
+        "min": -128,
+        "max": 128
+      }
+    ]
+  },
+  {
+    "pid": 57,
+    "cmd": "0139",
+    "name": "OxySensor6_WRC_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor6_WRC_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor6_Crnt",
+        "expression": "[B4:B5]*0.00390625-128",
+        "unit": "mA",
+        "class": "current",
+        "min": -128,
+        "max": 128
+      }
+    ]
+  },
+  {
+    "pid": 58,
+    "cmd": "013A",
+    "name": "OxySensor7_WRC_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor7_WRC_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor7_Crnt",
+        "expression": "[B4:B5]*0.00390625-128",
+        "unit": "mA",
+        "class": "current",
+        "min": -128,
+        "max": 128
+      }
+    ]
+  },
+  {
+    "pid": 59,
+    "cmd": "013B",
+    "name": "OxySensor8_WRC_FAER",
+    "parameters": [
+      {
+        "name": "OxySensor8_WRC_FAER",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "OxySensor8_Crnt",
+        "expression": "[B4:B5]*0.00390625-128",
+        "unit": "mA",
+        "class": "current",
+        "min": -128,
+        "max": 128
+      }
+    ]
+  },
+  {
+    "pid": 60,
+    "cmd": "013C",
+    "name": "CatTempBank1Sens1",
+    "parameters": [
+      {
+        "name": "CatTempBank1Sens1",
+        "expression": "[B2:B3]*0.1000000015-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 6514
+      }
+    ]
+  },
+  {
+    "pid": 61,
+    "cmd": "013D",
+    "name": "CatTempBank2Sens1",
+    "parameters": [
+      {
+        "name": "CatTempBank2Sens1",
+        "expression": "[B2:B3]*0.1000000015-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 6514
+      }
+    ]
+  },
+  {
+    "pid": 62,
+    "cmd": "013E",
+    "name": "CatTempBank1Sens2",
+    "parameters": [
+      {
+        "name": "CatTempBank1Sens2",
+        "expression": "[B2:B3]*0.1000000015-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 6514
+      }
+    ]
+  },
+  {
+    "pid": 63,
+    "cmd": "013F",
+    "name": "CatTempBank2Sens2",
+    "parameters": [
+      {
+        "name": "CatTempBank2Sens2",
+        "expression": "[B2:B3]*0.1000000015-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 6514
+      }
+    ]
+  },
+  {
+    "pid": 64,
+    "cmd": "0140",
+    "name": "PIDsSupported_41_60",
+    "parameters": [
+      {
+        "name": "PIDsSupported_41_60",
+        "expression": "[B2:B5]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 65,
+    "cmd": "0141",
+    "name": "MonStatusDriveCycle",
+    "parameters": [
+      {
+        "name": "MonStatusDriveCycle",
+        "expression": "[B2:B5]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 66,
+    "cmd": "0142",
+    "name": "ControlModuleVolt",
+    "parameters": [
+      {
+        "name": "ControlModuleVolt",
+        "expression": "[B2:B3]*0.001000000047",
+        "unit": "V",
+        "class": "voltage",
+        "min": 0,
+        "max": 66
+      }
+    ]
+  },
+  {
+    "pid": 67,
+    "cmd": "0143",
+    "name": "AbsLoadValue",
+    "parameters": [
+      {
+        "name": "AbsLoadValue",
+        "expression": "[B2:B3]*0.3921568692",
+        "unit": "%",
+        "class": "power_factor",
+        "min": 0,
+        "max": 25700
+      }
+    ]
+  },
+  {
+    "pid": 68,
+    "cmd": "0144",
+    "name": "FuelAirCmdEquiv",
+    "parameters": [
+      {
+        "name": "FuelAirCmdEquiv",
+        "expression": "[B2:B3]*0.000030517578125",
+        "unit": "ratio",
+        "class": "none",
+        "min": 0,
+        "max": 2
+      }
+    ]
+  },
+  {
+    "pid": 69,
+    "cmd": "0145",
+    "name": "RelThrottlePos",
+    "parameters": [
+      {
+        "name": "RelThrottlePos",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 70,
+    "cmd": "0146",
+    "name": "AmbientAirTemp",
+    "parameters": [
+      {
+        "name": "AmbientAirTemp",
+        "expression": "B2-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 215
+      }
+    ]
+  },
+  {
+    "pid": 71,
+    "cmd": "0147",
+    "name": "AbsThrottlePosB",
+    "parameters": [
+      {
+        "name": "AbsThrottlePosB",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 72,
+    "cmd": "0148",
+    "name": "AbsThrottlePosC",
+    "parameters": [
+      {
+        "name": "AbsThrottlePosC",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 73,
+    "cmd": "0149",
+    "name": "AbsThrottlePosD",
+    "parameters": [
+      {
+        "name": "AbsThrottlePosD",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 74,
+    "cmd": "014A",
+    "name": "AbsThrottlePosE",
+    "parameters": [
+      {
+        "name": "AbsThrottlePosE",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 75,
+    "cmd": "014B",
+    "name": "AbsThrottlePosF",
+    "parameters": [
+      {
+        "name": "AbsThrottlePosF",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 76,
+    "cmd": "014C",
+    "name": "CmdThrottleAct",
+    "parameters": [
+      {
+        "name": "CmdThrottleAct",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 77,
+    "cmd": "014D",
+    "name": "TimeRunMILOn",
+    "parameters": [
+      {
+        "name": "TimeRunMILOn",
+        "expression": "[B2:B3]",
+        "unit": "minutes",
+        "class": "duration",
+        "min": 0,
+        "max": 65535
+      }
+    ]
+  },
+  {
+    "pid": 78,
+    "cmd": "014E",
+    "name": "TimeSinceCodeClear",
+    "parameters": [
+      {
+        "name": "TimeSinceCodeClear",
+        "expression": "[B2:B3]",
+        "unit": "minutes",
+        "class": "duration",
+        "min": 0,
+        "max": 65535
+      }
+    ]
+  },
+  {
+    "pid": 79,
+    "cmd": "014F",
+    "name": "Max_FAER",
+    "parameters": [
+      {
+        "name": "Max_FAER",
+        "expression": "B2",
+        "unit": "ratio",
+        "class": "gas",
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "Max_OxySensVol",
+        "expression": "B3",
+        "unit": "V",
+        "class": "voltage",
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "Max_OxySensCrnt",
+        "expression": "B4",
+        "unit": "mA",
+        "class": "current",
+        "min": 0,
+        "max": 255
+      },
+      {
+        "name": "Max_IntManiAbsPres",
+        "expression": "B5*10",
+        "unit": "kPa",
+        "class": "pressure",
+        "min": 0,
+        "max": 2550
+      }
+    ]
+  },
+  {
+    "pid": 80,
+    "cmd": "0150",
+    "name": "Max_AirFlowMAF",
+    "parameters": [
+      {
+        "name": "Max_AirFlowMAF",
+        "expression": "B2*10",
+        "unit": "g/s",
+        "class": "none",
+        "min": 0,
+        "max": 2550
+      }
+    ]
+  },
+  {
+    "pid": 81,
+    "cmd": "0151",
+    "name": "FuelType",
+    "parameters": [
+      {
+        "name": "FuelType",
+        "expression": "B2",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 82,
+    "cmd": "0152",
+    "name": "EthanolFuelPct",
+    "parameters": [
+      {
+        "name": "EthanolFuelPct",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "volume_storage",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 83,
+    "cmd": "0153",
+    "name": "AbsEvapSysVapPres",
+    "parameters": [
+      {
+        "name": "AbsEvapSysVapPres",
+        "expression": "[B2:B3]*0.004999999888",
+        "unit": "kPa",
+        "class": "pressure",
+        "min": 0,
+        "max": 328
+      }
+    ]
+  },
+  {
+    "pid": 84,
+    "cmd": "0154",
+    "name": "EvapSysVapPres",
+    "parameters": [
+      {
+        "name": "EvapSysVapPres",
+        "expression": "[B2:B3]-32767",
+        "unit": "Pa",
+        "class": "pressure",
+        "min": -32767,
+        "max": 32768
+      }
+    ]
+  },
+  {
+    "pid": 85,
+    "cmd": "0155",
+    "name": "ShortSecOxyTrimBank1",
+    "parameters": [
+      {
+        "name": "ShortSecOxyTrimBank1",
+        "expression": "B2*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      },
+      {
+        "name": "ShortSecOxyTrimBank3",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 86,
+    "cmd": "0156",
+    "name": "LongSecOxyTrimBank1",
+    "parameters": [
+      {
+        "name": "LongSecOxyTrimBank1",
+        "expression": "B2*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      },
+      {
+        "name": "LongSecOxyTrimBank3",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 87,
+    "cmd": "0157",
+    "name": "ShortSecOxyTrimBank2",
+    "parameters": [
+      {
+        "name": "ShortSecOxyTrimBank2",
+        "expression": "B2*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      },
+      {
+        "name": "ShortSecOxyTrimBank4",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 88,
+    "cmd": "0158",
+    "name": "LongSecOxyTrimBank2",
+    "parameters": [
+      {
+        "name": "LongSecOxyTrimBank2",
+        "expression": "B2*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      },
+      {
+        "name": "LongSecOxyTrimBank4",
+        "expression": "B3*0.78125-100",
+        "unit": "%",
+        "class": "none",
+        "min": -100,
+        "max": 99
+      }
+    ]
+  },
+  {
+    "pid": 89,
+    "cmd": "0159",
+    "name": "FuelRailAbsPres",
+    "parameters": [
+      {
+        "name": "FuelRailAbsPres",
+        "expression": "[B2:B3]*10",
+        "unit": "kPa",
+        "class": "pressure",
+        "min": 0,
+        "max": 655350
+      }
+    ]
+  },
+  {
+    "pid": 90,
+    "cmd": "015A",
+    "name": "RelAccelPedalPos",
+    "parameters": [
+      {
+        "name": "RelAccelPedalPos",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 91,
+    "cmd": "015B",
+    "name": "HybrBatPackRemLife",
+    "parameters": [
+      {
+        "name": "HybrBatPackRemLife",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 92,
+    "cmd": "015C",
+    "name": "EngineOilTemp",
+    "parameters": [
+      {
+        "name": "EngineOilTemp",
+        "expression": "B2-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 215
+      }
+    ]
+  },
+  {
+    "pid": 93,
+    "cmd": "015D",
+    "name": "FuelInjectionTiming",
+    "parameters": [
+      {
+        "name": "FuelInjectionTiming",
+        "expression": "[B2:B3]*0.0078125-210",
+        "unit": "deg",
+        "class": "none",
+        "min": -210,
+        "max": 302
+      }
+    ]
+  },
+  {
+    "pid": 94,
+    "cmd": "015E",
+    "name": "EngineFuelRate",
+    "parameters": [
+      {
+        "name": "EngineFuelRate",
+        "expression": "[B2:B3]*0.05000000075",
+        "unit": "L/h",
+        "class": "none",
+        "min": 0,
+        "max": 3277
+      }
+    ]
+  },
+  {
+    "pid": 95,
+    "cmd": "015F",
+    "name": "EmissionReq",
+    "parameters": [
+      {
+        "name": "EmissionReq",
+        "expression": "B2",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 96,
+    "cmd": "0160",
+    "name": "PIDsSupported_61_80",
+    "parameters": [
+      {
+        "name": "PIDsSupported_61_80",
+        "expression": "[B2:B5]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 97,
+    "cmd": "0161",
+    "name": "DemandEngTorqPct",
+    "parameters": [
+      {
+        "name": "DemandEngTorqPct",
+        "expression": "B2-125",
+        "unit": "%",
+        "class": "none",
+        "min": -125,
+        "max": 130
+      }
+    ]
+  },
+  {
+    "pid": 98,
+    "cmd": "0162",
+    "name": "ActualEngTorqPct",
+    "parameters": [
+      {
+        "name": "ActualEngTorqPct",
+        "expression": "B2-125",
+        "unit": "%",
+        "class": "none",
+        "min": -125,
+        "max": 130
+      }
+    ]
+  },
+  {
+    "pid": 99,
+    "cmd": "0163",
+    "name": "EngRefTorq",
+    "parameters": [
+      {
+        "name": "EngRefTorq",
+        "expression": "[B2:B3]",
+        "unit": "Nm",
+        "class": "none",
+        "min": 0,
+        "max": 65535
+      }
+    ]
+  },
+  {
+    "pid": 100,
+    "cmd": "0164",
+    "name": "EngPctTorq_Idle",
+    "parameters": [
+      {
+        "name": "EngPctTorq_Idle",
+        "expression": "B2-125",
+        "unit": "%",
+        "class": "none",
+        "min": -125,
+        "max": 130
+      },
+      {
+        "name": "EngPctTorq_EP1",
+        "expression": "B3-125",
+        "unit": "%",
+        "class": "none",
+        "min": -125,
+        "max": 130
+      },
+      {
+        "name": "EngPctTorq_EP2",
+        "expression": "B4-125",
+        "unit": "%",
+        "class": "none",
+        "min": -125,
+        "max": 130
+      },
+      {
+        "name": "EngPctTorq_EP3",
+        "expression": "B5-125",
+        "unit": "%",
+        "class": "none",
+        "min": -125,
+        "max": 130
+      },
+      {
+        "name": "EngPctTorq_EP4",
+        "expression": "B6-125",
+        "unit": "%",
+        "class": "none",
+        "min": -125,
+        "max": 130
+      }
+    ]
+  },
+  {
+    "pid": 101,
+    "cmd": "0165",
+    "name": "AuxInputOutput",
+    "parameters": [
+      {
+        "name": "AuxInputOutput",
+        "expression": "B2",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 102,
+    "cmd": "0166",
+    "name": "MAFSensorA",
+    "parameters": [
+      {
+        "name": "MAFSensorA",
+        "expression": "[B3:B4]*0.03125",
+        "unit": "grams/sec",
+        "class": "none",
+        "min": 0,
+        "max": 2048
+      },
+      {
+        "name": "MAFSensorB",
+        "expression": "[B5:B6]*0.03125",
+        "unit": "grams/sec",
+        "class": "none",
+        "min": 0,
+        "max": 2048
+      }
+    ]
+  },
+  {
+    "pid": 103,
+    "cmd": "0167",
+    "name": "EngineCoolantTemp1",
+    "parameters": [
+      {
+        "name": "EngineCoolantTemp1",
+        "expression": "B3-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 215
+      },
+      {
+        "name": "EngineCoolantTemp2",
+        "expression": "B4-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 215
+      }
+    ]
+  },
+  {
+    "pid": 104,
+    "cmd": "0168",
+    "name": "IntakeAirTempSens1",
+    "parameters": [
+      {
+        "name": "IntakeAirTempSens1",
+        "expression": "B3-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 215
+      },
+      {
+        "name": "IntakeAirTempSens2",
+        "expression": "B4-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 215
+      }
+    ]
+  },
+  {
+    "pid": 124,
+    "cmd": "017C",
+    "name": "DPF_Temperature",
+    "parameters": [
+      {
+        "name": "DPF_Temperature",
+        "expression": "[B2:B3]*0.1000000015-40",
+        "unit": "degC",
+        "class": "temperature",
+        "min": -40,
+        "max": 6514
+      }
+    ]
+  },
+  {
+    "pid": 128,
+    "cmd": "0180",
+    "name": "PIDsSupported_81_A0",
+    "parameters": [
+      {
+        "name": "PIDsSupported_81_A0",
+        "expression": "[B2:B5]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 141,
+    "cmd": "018D",
+    "name": "ThrottlePositionG",
+    "parameters": [
+      {
+        "name": "ThrottlePositionG",
+        "expression": "B2*0.3921568692",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 142,
+    "cmd": "018E",
+    "name": "EngineFrictionPercentTorque",
+    "parameters": [
+      {
+        "name": "EngineFrictionPercentTorque",
+        "expression": "B2-125",
+        "unit": "%",
+        "class": "none",
+        "min": -125,
+        "max": 130
+      }
+    ]
+  },
+  {
+    "pid": 155,
+    "cmd": "019B",
+    "name": "DieselExhaustFluidSensorData",
+    "parameters": [
+      {
+        "name": "DieselExhaustFluidSensorData",
+        "expression": "B5*0.3921000063",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "pid": 160,
+    "cmd": "01A0",
+    "name": "PIDsSupported_A1_C0",
+    "parameters": [
+      {
+        "name": "PIDsSupported_A1_C0",
+        "expression": "[B2:B5]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  },
+  {
+    "pid": 162,
+    "cmd": "01A2",
+    "name": "CylinderFuelRate",
+    "parameters": [
+      {
+        "name": "CylinderFuelRate",
+        "expression": "[B2:B3]*0.03125",
+        "unit": "mg/stroke",
+        "class": "none",
+        "min": 0,
+        "max": 2048
+      }
+    ]
+  },
+  {
+    "pid": 164,
+    "cmd": "01A4",
+    "name": "TransmissionActualGear",
+    "parameters": [
+      {
+        "name": "TransmissionActualGear",
+        "expression": "[B4:B5]*0.001000000047",
+        "unit": "ratio",
+        "class": "none",
+        "min": 0,
+        "max": 66
+      }
+    ]
+  },
+  {
+    "pid": 165,
+    "cmd": "01A5",
+    "name": "ComDieselExhaustFluidDosing",
+    "parameters": [
+      {
+        "name": "ComDieselExhaustFluidDosing",
+        "expression": "B3*0.5",
+        "unit": "%",
+        "class": "none",
+        "min": 0,
+        "max": 128
+      }
+    ]
+  },
+  {
+    "pid": 166,
+    "cmd": "01A6",
+    "name": "Odometer",
+    "parameters": [
+      {
+        "name": "Odometer",
+        "expression": "[B2:B5]*0.1000000015",
+        "unit": "km",
+        "class": "distance",
+        "min": 0,
+        "max": 429000000
+      }
+    ]
+  },
+  {
+    "pid": 192,
+    "cmd": "01C0",
+    "name": "PIDsSupported_C1_E0",
+    "parameters": [
+      {
+        "name": "PIDsSupported_C1_E0",
+        "expression": "[B2:B5]",
+        "unit": "Encoded",
+        "class": "none"
+      }
+    ]
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "properties": {
+    "servers": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 15,
+            "default": ""
+          },
+          "proto": {
+            "type": "string",
+            "enum": [
+              "tcp",
+              "udp"
+            ],
+            "default": "tcp"
+          },
+          "port": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 65535,
+            "default": 3333
+          },
+          "max_clients": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "default": 2
+          },
+          "keepalive_s": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 600,
+            "default": 30
+          },
+          "enabled": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "name",
+          "proto",
+          "port"
+        ]
+      },
+      "default": [
+        {
+          "name": "obd0",
+          "proto": "tcp",
+          "port": 35000,
+          "enabled": true
+        },
+        {
+          "name": "slcan0",
+          "proto": "tcp",
+          "port": 3333,
+          "enabled": false
+        },
+        {
+          "name": "gvret0",
+          "proto": "tcp",
+          "port": 23,
+          "enabled": false
+        },
+        {
+          "name": "udp0",
+          "proto": "udp",
+          "port": 17,
+          "enabled": false
+        }
+      ]
+    }
+  }
+}

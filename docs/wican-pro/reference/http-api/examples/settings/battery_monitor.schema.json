@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "poll_s": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 60,
+      "default": 3
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "servers": [
+    {
+      "name": "obd0",
+      "proto": "tcp",
+      "port": 35000,
+      "enabled": true,
+      "stats": {
+        "clients": 0,
+        "bytes_in": 0,
+        "bytes_out": 0,
+        "rx_drops": 0,
+        "tx_drops": 0,
+        "reconnects": 1,
+        "refused": 0
+      },
+      "up": true
+    },
+    {
+      "name": "slcan0",
+      "proto": "tcp",
+      "port": 3333,
+      "enabled": false,
+      "stats": {
+        "clients": 0,
+        "bytes_in": 0,
+        "bytes_out": 0,
+        "rx_drops": 0,
+        "tx_drops": 0,
+        "reconnects": 0,
+        "refused": 0
+      },
+      "up": true
+    },
+    {
+      "name": "gvret0",
+      "proto": "tcp",
+      "port": 23,
+      "enabled": false,
+      "stats": {
+        "clients": 0,
+        "bytes_in": 0,
+        "bytes_out": 0,
+        "rx_drops": 0,
+        "tx_drops": 0,
+        "reconnects": 0,
+        "refused": 0
+      },
+      "up": true
+    },
+    {
+      "name": "udp0",
+      "proto": "udp",
+      "port": 17,
+      "enabled": false,
+      "stats": {
+        "clients": 0,
+        "bytes_in": 0,
+        "bytes_out": 0,
+        "rx_drops": 0,
+        "tx_drops": 0,
+        "reconnects": 0,
+        "refused": 0
+      },
+      "up": true
+    }
+  ]
+}

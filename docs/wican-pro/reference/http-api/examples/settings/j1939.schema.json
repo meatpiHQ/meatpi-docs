@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "listen",
+        "active"
+      ],
+      "default": "listen"
+    },
+    "address": {
+      "type": "integer",
+      "minimum": 128,
+      "maximum": 253,
+      "default": 249
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

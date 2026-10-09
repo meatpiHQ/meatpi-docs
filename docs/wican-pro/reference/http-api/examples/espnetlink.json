@@ -1,0 +1,46 @@
+{
+  "enabled": true,
+  "mode": "wifi_modem",
+  "auto_pair": true,
+  "paired": true,
+  "ssid": "ESPNetLink_457FED",
+  "device_id": "14c19f457fed",
+  "uplink": "wifi",
+  "on_link": false,
+  "host": "",
+  "pair_blocked_factory_pw": false,
+  "last_error": "",
+  "dongle_fw": "",
+  "dongle_api": 0,
+  "dongle_api_min": 7,
+  "health_unsupported": false,
+  "apn": "",
+  "carrier_synced": true,
+  "carrier_note": "",
+  "usb": {
+    "attached": false,
+    "pair_state": "idle",
+    "cuts": 0,
+    "vbus_cycles": 0,
+    "errors": 0
+  },
+  "gps": {
+    "valid": false
+  },
+  "dongle": {
+    "valid": true,
+    "lte_connected": true,
+    "rssi_dbm": -55,
+    "operator": "ALDI Mobile",
+    "network_type": "eMTC",
+    "gps_fix": true,
+    "usb_data": false,
+    "sim": "ready",
+    "stage": "connected",
+    "ip": "10.195.16.154",
+    "age_s": 4150
+  },
+  "polls": 133,
+  "failures": 1,
+  "link_ups": 1
+}

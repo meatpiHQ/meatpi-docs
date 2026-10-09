@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "poll_s": 3,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

@@ -1,0 +1,250 @@
+{
+  "components": [
+    {
+      "name": "log_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "dev_status_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "restart_tracker",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "external_storage",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "filesystem",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "http_server_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "wifi_manager",
+      "version": 7,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "obd_gate",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "obd_chip",
+      "version": 3,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "ble_manager",
+      "version": 4,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "socket_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "websocket_manager",
+      "version": 2,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "log_sinks",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "bridge_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "can_manager",
+      "version": 2,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "j1939",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "uds_manager",
+      "version": 2,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "script_engine",
+      "version": 2,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "led_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "rtc_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "imu_manager",
+      "version": 3,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "battery_monitor",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "mdns_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "mqtt_manager",
+      "version": 2,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "mqtt_can",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "vpn_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "iperf_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "sleep_manager",
+      "version": 4,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "usb_host_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "usb_acm_cli",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "espnetlink",
+      "version": 2,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "j2534_server",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "ble_http",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "cmdline_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "button_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "interface_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "event_manager",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "autopid",
+      "version": 8,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "ha_webhooks",
+      "version": 2,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "data_destinations",
+      "version": 1,
+      "degraded": false,
+      "pending_reboot": false
+    },
+    {
+      "name": "data_logger",
+      "version": 2,
+      "degraded": false,
+      "pending_reboot": false
+    }
+  ]
+}

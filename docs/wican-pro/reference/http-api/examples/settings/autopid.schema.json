@@ -1,0 +1,145 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "std_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "custom_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "specific_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "std_init": {
+      "type": "string",
+      "maxLength": 95,
+      "default": ""
+    },
+    "custom_init": {
+      "type": "string",
+      "maxLength": 95,
+      "default": ""
+    },
+    "specific_init": {
+      "type": "string",
+      "maxLength": 95,
+      "default": ""
+    },
+    "std_protocol": {
+      "type": "string",
+      "enum": [
+        "0",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "default": "0"
+    },
+    "vehicle": {
+      "type": "string",
+      "maxLength": 63,
+      "default": ""
+    },
+    "pause_below_mv": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 14500,
+      "default": 0
+    },
+    "pause_follow_sleep": {
+      "type": "boolean",
+      "default": true
+    },
+    "pause_mode": {
+      "type": "string",
+      "enum": [
+        "all",
+        "requests_only"
+      ],
+      "default": "requests_only"
+    },
+    "min_event_interval_ms": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 600000,
+      "default": 1000
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    },
+    "dtc_enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "dtc_allow_clear": {
+      "type": "boolean",
+      "default": false
+    },
+    "dtc_scan_period_min": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10080,
+      "default": 0
+    },
+    "dtc_pending": {
+      "type": "boolean",
+      "default": true
+    },
+    "dtc_permanent": {
+      "type": "boolean",
+      "default": false
+    },
+    "dtc_freeze": {
+      "type": "boolean",
+      "default": true
+    },
+    "dtc_init": {
+      "type": "string",
+      "maxLength": 95,
+      "default": ""
+    },
+    "dtc_rxheader": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "dtc_protocol": {
+      "type": "string",
+      "enum": [
+        "obd",
+        "uds",
+        "auto"
+      ],
+      "default": "obd"
+    },
+    "dtc_uds_txid": {
+      "type": "string",
+      "maxLength": 8,
+      "default": "7E0"
+    },
+    "dtc_uds_rxid": {
+      "type": "string",
+      "maxLength": 8,
+      "default": "7E8"
+    },
+    "dtc_uds_ext": {
+      "type": "boolean",
+      "default": false
+    },
+    "dtc_uds_mask": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "default": 8
+    }
+  }
+}

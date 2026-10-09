@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "sleep_mv": {
+      "type": "integer",
+      "minimum": 12000,
+      "maximum": 14000,
+      "default": 13100
+    },
+    "wake_mv": {
+      "type": "integer",
+      "minimum": 12100,
+      "maximum": 15000,
+      "default": 13200
+    },
+    "wake_delay_ms": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 5000,
+      "default": 500
+    },
+    "sleep_delay_min": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30,
+      "default": 5
+    },
+    "periodic_wakeup": {
+      "type": "boolean",
+      "default": false
+    },
+    "wakeup_interval_min": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 1440,
+      "default": 30
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

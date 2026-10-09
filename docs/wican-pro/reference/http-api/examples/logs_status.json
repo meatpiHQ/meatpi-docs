@@ -1,0 +1,29 @@
+{
+  "dropped": 0,
+  "sinks": [
+    {
+      "name": "console",
+      "enabled": true
+    },
+    {
+      "name": "ring",
+      "enabled": true
+    },
+    {
+      "name": "tcp",
+      "enabled": false
+    },
+    {
+      "name": "udp",
+      "enabled": false
+    },
+    {
+      "name": "ws",
+      "enabled": false
+    },
+    {
+      "name": "file",
+      "enabled": false
+    }
+  ]
+}

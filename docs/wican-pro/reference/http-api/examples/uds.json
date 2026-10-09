@@ -1,0 +1,23 @@
+{
+  "backend_setting": "auto",
+  "backend_active": "obd_chip",
+  "provider": "esp_isotp",
+  "can_running": false,
+  "exclusive": true,
+  "exclusive_default": true,
+  "holding": false,
+  "autopid_paused": false,
+  "session_active": false,
+  "exclusive_idle_ms": 10000,
+  "max_request": 64,
+  "max_response": 4096,
+  "last": null,
+  "provider_stats": {
+    "sessions_open": 0,
+    "pdus_tx": 0,
+    "pdus_rx": 0,
+    "frames_fed": 0,
+    "tx_timeouts": 0,
+    "rx_dropped": 0
+  }
+}

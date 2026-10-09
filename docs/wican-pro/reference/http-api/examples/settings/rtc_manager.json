@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "sntp": true,
+  "ntp_server": "pool.ntp.org",
+  "ntp_server2": "",
+  "sync_interval_h": 24,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

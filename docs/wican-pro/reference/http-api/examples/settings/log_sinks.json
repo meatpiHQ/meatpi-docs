@@ -1,0 +1,15 @@
+{
+  "tcp_enabled": false,
+  "tcp_port": 5515,
+  "udp_enabled": false,
+  "udp_host": "",
+  "udp_port": 5514,
+  "ws_enabled": false,
+  "file_enabled": false,
+  "file_max_kb": 512,
+  "file_keep": 4,
+  "file_flush_s": 60,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

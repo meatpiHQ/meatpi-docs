@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "passkey": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 999999,
+      "default": 123456
+    },
+    "tx_power_dbm": {
+      "type": "integer",
+      "minimum": -12,
+      "maximum": 9,
+      "default": 9
+    },
+    "pairing_at_boot": {
+      "type": "boolean",
+      "default": true
+    },
+    "bonding": {
+      "type": "boolean",
+      "default": true
+    },
+    "sc_only": {
+      "type": "boolean",
+      "default": true
+    },
+    "conn_profile": {
+      "type": "string",
+      "enum": [
+        "ios",
+        "android_fast"
+      ],
+      "default": "ios"
+    },
+    "phy": {
+      "type": "string",
+      "enum": [
+        "1m",
+        "2m",
+        "coded",
+        "auto"
+      ],
+      "default": "1m"
+    },
+    "advertising": {
+      "type": "string",
+      "enum": [
+        "legacy",
+        "extended",
+        "both"
+      ],
+      "default": "legacy"
+    }
+  }
+}

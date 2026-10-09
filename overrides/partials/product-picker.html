@@ -1,0 +1,39 @@
+{#-
+  The product drop-down at the top of the sidebar: one entry per top-level
+  section whose title is listed under extra.products in mkdocs.yml. Picking
+  one opens that product's landing page (its index page, or its first page).
+-#}
+{% set products = config.extra.products | d([]) %}
+{% set state = namespace(active=false) %}
+{% for item in nav.items %}
+  {% if item.title in products and item.active %}{% set state.active = true %}{% endif %}
+{% endfor %}
+<div class="mp-picker">
+  <label class="mp-picker__label" for="mp-product">Product</label>
+  <select id="mp-product" class="mp-picker__select">
+    {% if not state.active %}
+      <option value="" selected disabled>Choose a product</option>
+    {% endif %}
+    {% for item in nav.items %}
+      {% if item.title in products %}
+        {% set t = namespace(url=item.url) %}
+        {% if not t.url %}
+          {% for child in item.children %}
+            {% if not t.url and child.is_page and child.is_index %}{% set t.url = child.url %}{% endif %}
+          {% endfor %}
+          {% for child in item.children %}
+            {% if not t.url and child.url %}{% set t.url = child.url %}{% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if t.url is not none %}
+          <option value="{{ t.url | url }}"{% if item.active %} selected{% endif %}>{{ item.title }}</option>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </select>
+</div>
+<script>
+  document.getElementById("mp-product").addEventListener("change", function () {
+    if (this.value) { window.location.href = this.value; }
+  });
+</script>

@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

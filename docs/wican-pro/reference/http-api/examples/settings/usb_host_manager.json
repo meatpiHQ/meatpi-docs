@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "role": "host",
+  "device_class": "ncm",
+  "ip_mode": "dhcp",
+  "static_ip": "",
+  "static_netmask": "255.255.255.0",
+  "static_gw": "",
+  "prefer_usb_route": false,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

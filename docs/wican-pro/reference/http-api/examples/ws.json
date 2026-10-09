@@ -1,0 +1,72 @@
+{
+  "channels": [
+    {
+      "name": "ws_obd",
+      "path": "/ws/obd",
+      "mode": "binary",
+      "enabled": true,
+      "stats": {
+        "clients": 0,
+        "frames_in": 0,
+        "frames_out": 0,
+        "bytes_in": 0,
+        "bytes_out": 0,
+        "rx_drops": 0,
+        "tx_drops": 0,
+        "refused": 0
+      },
+      "up": true
+    },
+    {
+      "name": "ws_can",
+      "path": "/ws/can",
+      "mode": "binary",
+      "enabled": false,
+      "stats": {
+        "clients": 0,
+        "frames_in": 0,
+        "frames_out": 0,
+        "bytes_in": 0,
+        "bytes_out": 0,
+        "rx_drops": 0,
+        "tx_drops": 0,
+        "refused": 0
+      },
+      "up": true
+    },
+    {
+      "name": "ws_cli",
+      "path": "/ws/cli",
+      "mode": "text",
+      "enabled": false,
+      "stats": {
+        "clients": 0,
+        "frames_in": 0,
+        "frames_out": 0,
+        "bytes_in": 0,
+        "bytes_out": 0,
+        "rx_drops": 0,
+        "tx_drops": 0,
+        "refused": 0
+      },
+      "up": true
+    },
+    {
+      "name": "ws_log",
+      "path": "/ws/log",
+      "mode": "text",
+      "enabled": true,
+      "stats": {
+        "clients": 0,
+        "frames_in": 0,
+        "frames_out": 0,
+        "bytes_in": 0,
+        "bytes_out": 0,
+        "rx_drops": 0,
+        "tx_drops": 0,
+        "refused": 0
+      },
+      "up": true
+    }
+  ]
+}

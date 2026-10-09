@@ -1,0 +1,30 @@
+{
+  "channels": [
+    {
+      "name": "ws_obd",
+      "path": "/ws/obd",
+      "mode": "binary",
+      "enabled": true
+    },
+    {
+      "name": "ws_can",
+      "path": "/ws/can",
+      "mode": "binary",
+      "enabled": false
+    },
+    {
+      "name": "ws_cli",
+      "path": "/ws/cli",
+      "mode": "text",
+      "enabled": false
+    },
+    {
+      "name": "ws_log",
+      "path": "/ws/log",
+      "mode": "text",
+      "enabled": true
+    }
+  ],
+  "degraded": false,
+  "pending_reboot": false
+}

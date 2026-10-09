@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "url": "mqtt://10.42.1.1:1883",
+  "username": "",
+  "broker_password": "",
+  "client_id": "wican-sleep-matrix",
+  "topic_prefix": "",
+  "ca_file": "",
+  "cert_set": "",
+  "keepalive_s": 30,
+  "connect_on": "wifi",
+  "degraded": false,
+  "pending_reboot": false
+}

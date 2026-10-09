@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "sta_ble_handover": {
+      "type": "boolean",
+      "default": true
+    },
+    "ap_ble_exclusive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

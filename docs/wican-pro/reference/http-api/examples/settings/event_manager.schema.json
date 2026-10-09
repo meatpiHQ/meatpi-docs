@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "timers": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 15,
+            "default": ""
+          },
+          "period_s": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 604800,
+            "default": 60
+          }
+        },
+        "required": [
+          "name",
+          "period_s"
+        ]
+      },
+      "default": []
+    },
+    "rules": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "object"
+      },
+      "default": [
+        {
+          "name": "bump_event",
+          "on": "imu.bump",
+          "do": "mqtt.publish",
+          "with": {
+            "topic": "~/events",
+            "payload": "{\"event\":\"bump\",\"axes\":${axes},\"ts\":\"${time.iso}\"}"
+          }
+        },
+        {
+          "name": "motion_event",
+          "on": "imu.motion",
+          "do": "mqtt.publish",
+          "with": {
+            "topic": "~/events",
+            "payload": "{\"event\":\"motion_${state}\",\"ts\":\"${time.iso}\"}"
+          }
+        },
+        {
+          "name": "battery_event",
+          "on": "battery.threshold",
+          "do": "mqtt.publish",
+          "with": {
+            "topic": "~/events",
+            "payload": "{\"event\":\"battery_${edge}\",\"voltage\":${volts},\"ts\":\"${time.iso}\"}"
+          }
+        }
+      ]
+    }
+  }
+}

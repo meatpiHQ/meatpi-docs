@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "state": "normal",
+  "voltage": 13.5,
+  "sleep_v": 13.1,
+  "wake_v": 13.2,
+  "naps": 0,
+  "pending": "none",
+  "sleep_in_s": 0,
+  "critical_v": 11.9,
+  "critical_s": 300,
+  "hold_s": 0,
+  "holds_left": 3,
+  "holds_max": 3
+}

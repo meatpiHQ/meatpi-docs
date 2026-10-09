@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "backend": {
+      "type": "string",
+      "enum": [
+        "auto",
+        "obd_chip",
+        "isotp"
+      ],
+      "default": "auto"
+    },
+    "p2_ms": {
+      "type": "integer",
+      "minimum": 50,
+      "maximum": 5000,
+      "default": 250
+    },
+    "p2star_ms": {
+      "type": "integer",
+      "minimum": 500,
+      "maximum": 30000,
+      "default": 5000
+    },
+    "tester_present_ms": {
+      "type": "integer",
+      "minimum": 500,
+      "maximum": 10000,
+      "default": 2000
+    },
+    "exclusive": {
+      "type": "boolean",
+      "default": true
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

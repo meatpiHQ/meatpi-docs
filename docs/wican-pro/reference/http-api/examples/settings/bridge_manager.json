@@ -1,0 +1,27 @@
+{
+  "bridges": [
+    {
+      "name": "br_obd",
+      "a": "obd",
+      "b": "ws_obd",
+      "translator": "raw",
+      "enabled": true
+    },
+    {
+      "name": "br_tcp_obd",
+      "a": "obd0",
+      "b": "obd",
+      "translator": "raw",
+      "enabled": true
+    },
+    {
+      "name": "br_usb_obd",
+      "a": "usb_obd",
+      "b": "obd",
+      "translator": "raw",
+      "enabled": true
+    }
+  ],
+  "degraded": false,
+  "pending_reboot": false
+}

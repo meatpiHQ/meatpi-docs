@@ -1,0 +1,70 @@
+{
+  "type": "object",
+  "properties": {
+    "bridges": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 15,
+            "default": ""
+          },
+          "a": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 15,
+            "default": ""
+          },
+          "b": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 15,
+            "default": ""
+          },
+          "translator": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 15,
+            "default": "raw"
+          },
+          "enabled": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "name",
+          "a",
+          "b"
+        ]
+      },
+      "default": [
+        {
+          "name": "br_obd",
+          "a": "obd",
+          "b": "ws_obd",
+          "translator": "raw",
+          "enabled": true
+        },
+        {
+          "name": "br_tcp_obd",
+          "a": "obd0",
+          "b": "obd",
+          "translator": "raw",
+          "enabled": true
+        },
+        {
+          "name": "br_usb_obd",
+          "a": "usb_obd",
+          "b": "obd",
+          "translator": "raw",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

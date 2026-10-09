@@ -1,0 +1,20 @@
+{
+  "enabled": false,
+  "format": "sqlite",
+  "max_file_mb": 4,
+  "max_files": 100,
+  "batch_rows": 256,
+  "flush_ms": 5000,
+  "autopid_log": "off",
+  "can_log": false,
+  "can_format": "binary",
+  "can_filter": "",
+  "can_mask": "7FF",
+  "can_ext": false,
+  "can_max_file_mb": 8,
+  "can_max_files": 50,
+  "ring_len": 2048,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

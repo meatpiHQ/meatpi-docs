@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "wireguard",
+        "tailscale"
+      ],
+      "default": "wireguard"
+    },
+    "ts_auth_key": {
+      "type": "string",
+      "maxLength": 95,
+      "default": ""
+    },
+    "ts_device_name": {
+      "type": "string",
+      "maxLength": 47,
+      "default": ""
+    },
+    "ts_control_url": {
+      "type": "string",
+      "maxLength": 63,
+      "default": ""
+    },
+    "private_key": {
+      "type": "string",
+      "maxLength": 63,
+      "default": ""
+    },
+    "peer_public_key": {
+      "type": "string",
+      "maxLength": 63,
+      "default": ""
+    },
+    "preshared_key": {
+      "type": "string",
+      "maxLength": 63,
+      "default": ""
+    },
+    "address": {
+      "type": "string",
+      "maxLength": 31,
+      "default": ""
+    },
+    "allowed_ip": {
+      "type": "string",
+      "maxLength": 31,
+      "default": "0.0.0.0"
+    },
+    "allowed_ip_mask": {
+      "type": "string",
+      "maxLength": 31,
+      "default": "0.0.0.0"
+    },
+    "endpoint": {
+      "type": "string",
+      "maxLength": 63,
+      "default": ""
+    },
+    "port": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535,
+      "default": 51820
+    },
+    "keepalive_s": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3600,
+      "default": 25
+    },
+    "default_route": {
+      "type": "boolean",
+      "default": false
+    },
+    "dns": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

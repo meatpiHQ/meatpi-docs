@@ -1,0 +1,60 @@
+{
+  "examples": [
+    {
+      "id": "hello",
+      "title": "Hello, WiCAN",
+      "desc": "Output, variables, loops and timing. Runs without a vehicle.",
+      "needs": "",
+      "level": 1,
+      "size": 928
+    },
+    {
+      "id": "obd_live",
+      "title": "Live OBD-II values",
+      "desc": "Poll engine speed, vehicle speed and coolant temperature and decode the answers.",
+      "needs": "vehicle",
+      "level": 1,
+      "size": 1169
+    },
+    {
+      "id": "vin",
+      "title": "Read the VIN",
+      "desc": "Mode 09 first, UDS data identifier F190 as the fallback, decoded to text.",
+      "needs": "vehicle",
+      "level": 1,
+      "size": 951
+    },
+    {
+      "id": "uds_session",
+      "title": "A UDS conversation",
+      "desc": "Claim the bus, open an extended session, read data identifiers, handle a refusal.",
+      "needs": "vehicle",
+      "level": 2,
+      "size": 1052
+    },
+    {
+      "id": "dtc_report",
+      "title": "Trouble codes report",
+      "desc": "Scan, list every code with its description, show the freeze frame.",
+      "needs": "dtc",
+      "level": 2,
+      "size": 1421
+    },
+    {
+      "id": "on_event",
+      "title": "Run from a rule",
+      "desc": "Read the trigger event's fields and emit an event other rules can use.",
+      "needs": "",
+      "level": 2,
+      "size": 1348
+    },
+    {
+      "id": "can_frame",
+      "title": "Raw CAN frames",
+      "desc": "Send 11-bit and 29-bit frames and see why answers come back through uds().",
+      "needs": "can",
+      "level": 2,
+      "size": 851
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "enabled": true,
+  "destinations": [
+    {
+      "name": "autopid",
+      "type": "mqtt",
+      "enabled": true,
+      "url": "~/autopid",
+      "period_s": 5,
+      "auth": "none",
+      "auth_token": "",
+      "auth_name": "",
+      "basic_username": "",
+      "basic_password": "",
+      "api_key": "",
+      "query": "",
+      "cert_set": "",
+      "car_model": "",
+      "retain": true,
+      "full_first": true
+    }
+  ],
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

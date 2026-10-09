@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "auto_sleep": {
+      "type": "boolean",
+      "default": false
+    },
+    "auto_update": {
+      "type": "boolean",
+      "default": true
+    },
+    "monitor_policy": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "auto_interrupt"
+      ],
+      "default": "manual"
+    },
+    "wake_voltage_mv": {
+      "type": "integer",
+      "minimum": 12000,
+      "maximum": 15000,
+      "default": 13500
+    },
+    "sleep_voltage_mv": {
+      "type": "integer",
+      "minimum": 12000,
+      "maximum": 14000,
+      "default": 13200
+    },
+    "sleep_time_min": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 60,
+      "default": 2
+    }
+  }
+}

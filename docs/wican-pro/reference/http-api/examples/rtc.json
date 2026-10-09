@@ -1,0 +1,10 @@
+{
+  "time": "2026-10-09T04:06:57Z",
+  "valid": true,
+  "rtc": "2026-10-09T04:06:55Z",
+  "sntp": {
+    "enabled": true,
+    "server": "pool.ntp.org",
+    "last_sync": "2026-10-09T02:52:49Z"
+  }
+}

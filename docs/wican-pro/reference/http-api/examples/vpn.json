@@ -1,0 +1,10 @@
+{
+  "state": "disabled",
+  "type": "wireguard",
+  "endpoint": "203.0.113.10:51820",
+  "ts_ip": "",
+  "ts_peers": 0,
+  "connects": 0,
+  "failures": 0,
+  "uptime_s": 0
+}

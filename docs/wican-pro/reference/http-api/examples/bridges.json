@@ -1,0 +1,52 @@
+{
+  "bridges": [
+    {
+      "name": "br_obd",
+      "a": "obd",
+      "b": "ws_obd",
+      "translator": "raw",
+      "enabled": true,
+      "stats": {
+        "a2b_chunks": 5342,
+        "b2a_chunks": 0,
+        "a2b_bytes": 34770,
+        "b2a_bytes": 0,
+        "send_errors": 0,
+        "codec_errors": 0
+      },
+      "up": true
+    },
+    {
+      "name": "br_tcp_obd",
+      "a": "obd0",
+      "b": "obd",
+      "translator": "raw",
+      "enabled": true,
+      "stats": {
+        "a2b_chunks": 0,
+        "b2a_chunks": 5342,
+        "a2b_bytes": 0,
+        "b2a_bytes": 34770,
+        "send_errors": 0,
+        "codec_errors": 0
+      },
+      "up": true
+    },
+    {
+      "name": "br_usb_obd",
+      "a": "usb_obd",
+      "b": "obd",
+      "translator": "raw",
+      "enabled": true,
+      "stats": {
+        "a2b_chunks": 0,
+        "b2a_chunks": 5342,
+        "a2b_bytes": 0,
+        "b2a_bytes": 34770,
+        "send_errors": 0,
+        "codec_errors": 0
+      },
+      "up": true
+    }
+  ]
+}

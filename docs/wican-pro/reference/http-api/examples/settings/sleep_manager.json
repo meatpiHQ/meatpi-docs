@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "sleep_mv": 13100,
+  "wake_mv": 13200,
+  "wake_delay_ms": 500,
+  "sleep_delay_min": 5,
+  "periodic_wakeup": false,
+  "wakeup_interval_min": 30,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

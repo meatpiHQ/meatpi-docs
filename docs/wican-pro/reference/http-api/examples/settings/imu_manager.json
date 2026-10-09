@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "smd": true,
+  "wom": false,
+  "smd_sensitivity": 0,
+  "wom_threshold": 32,
+  "stationary_s": 3,
+  "cli": true,
+  "degraded": false,
+  "pending_reboot": false
+}

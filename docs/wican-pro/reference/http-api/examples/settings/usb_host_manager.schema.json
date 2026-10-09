@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "host",
+        "device"
+      ],
+      "default": "host"
+    },
+    "device_class": {
+      "type": "string",
+      "enum": [
+        "ncm",
+        "rndis",
+        "cdc"
+      ],
+      "default": "ncm"
+    },
+    "ip_mode": {
+      "type": "string",
+      "enum": [
+        "dhcp",
+        "static"
+      ],
+      "default": "dhcp"
+    },
+    "static_ip": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "static_netmask": {
+      "type": "string",
+      "maxLength": 15,
+      "default": "255.255.255.0"
+    },
+    "static_gw": {
+      "type": "string",
+      "maxLength": 15,
+      "default": ""
+    },
+    "prefer_usb_route": {
+      "type": "boolean",
+      "default": false
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

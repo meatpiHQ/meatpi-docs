@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "properties": {
+    "channels": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 15,
+            "default": ""
+          },
+          "path": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 31,
+            "default": "/ws/"
+          },
+          "max_clients": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4,
+            "default": 2
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "binary",
+              "text"
+            ],
+            "default": "binary"
+          },
+          "enabled": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "name",
+          "path"
+        ]
+      },
+      "default": [
+        {
+          "name": "ws_obd",
+          "path": "/ws/obd",
+          "mode": "binary",
+          "enabled": true
+        },
+        {
+          "name": "ws_can",
+          "path": "/ws/can",
+          "mode": "binary",
+          "enabled": false
+        },
+        {
+          "name": "ws_cli",
+          "path": "/ws/cli",
+          "mode": "text",
+          "enabled": false
+        },
+        {
+          "name": "ws_log",
+          "path": "/ws/log",
+          "mode": "text",
+          "enabled": true
+        }
+      ]
+    }
+  }
+}

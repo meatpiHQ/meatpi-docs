@@ -1,0 +1,10 @@
+{
+  "auto_sleep": false,
+  "auto_update": true,
+  "monitor_policy": "manual",
+  "wake_voltage_mv": 13500,
+  "sleep_voltage_mv": 13200,
+  "sleep_time_min": 2,
+  "degraded": false,
+  "pending_reboot": false
+}

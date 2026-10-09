@@ -1,0 +1,9 @@
+{
+  "device_type": "wican_pro",
+  "model": "WiCAN Pro",
+  "hw_version": "WiCAN-PRO",
+  "fw_version": "v6.00p_alfa-02-dirty",
+  "device_id": "68ee8f5a653d",
+  "mac": "68:EE:8F:5A:65:3C",
+  "api_level": 6
+}

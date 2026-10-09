@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "current": "1WCAN0FW0P0000001",
+  "max": 8,
+  "vehicles": [
+    {
+      "key": "1WCAN0FW0P0000001",
+      "vin": "1WCAN0FW0P0000001",
+      "fingerprint": "bf3423ae",
+      "name": "1WC 0001",
+      "protocol": "6",
+      "chip_protocol": "",
+      "dialect": "obd2",
+      "j1939": false,
+      "profile": "",
+      "specific_init": "",
+      "ecus": "7E8:183F8003",
+      "std_supported": 16,
+      "pending_profile": false,
+      "first_seen": 1791486786,
+      "last_seen": 1791486786,
+      "scan_ts": 1791486786,
+      "current": true
+    }
+  ]
+}

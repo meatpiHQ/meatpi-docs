@@ -1,0 +1,270 @@
+[
+  {
+    "name": "obd.request",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "cmd": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 23
+        }
+      },
+      "required": [
+        "cmd"
+      ]
+    },
+    "undoable": false
+  },
+  {
+    "name": "uds.request",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "tx": {
+          "type": "string",
+          "description": "tx CAN id hex"
+        },
+        "rx": {
+          "type": "string",
+          "description": "rx CAN id hex"
+        },
+        "req": {
+          "type": "string",
+          "description": "request hex"
+        },
+        "ext": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "tx",
+        "rx",
+        "req"
+      ]
+    },
+    "undoable": false
+  },
+  {
+    "name": "script.run",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "script in /data/scripts (.be optional)"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "undoable": false
+  },
+  {
+    "name": "led.indicate",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "r": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "g": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "b": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "solid",
+            "off",
+            "blink_slow",
+            "blink_fast"
+          ]
+        }
+      },
+      "required": [
+        "r",
+        "g",
+        "b"
+      ]
+    },
+    "undoable": true
+  },
+  {
+    "name": "led.clear",
+    "params_schema": {
+      "type": "object",
+      "properties": {}
+    },
+    "undoable": false
+  },
+  {
+    "name": "http.post",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "body": {
+          "type": "string"
+        },
+        "content_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "body"
+      ]
+    },
+    "undoable": false
+  },
+  {
+    "name": "mqtt.publish",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "topic": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 127
+        },
+        "payload": {
+          "type": "string"
+        },
+        "qos": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "retain": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "topic",
+        "payload"
+      ]
+    },
+    "undoable": false
+  },
+  {
+    "name": "log.note",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "undoable": false
+  },
+  {
+    "name": "autopid.group",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "string",
+          "minLength": 1
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "period_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "group",
+        "enabled"
+      ]
+    },
+    "undoable": true
+  },
+  {
+    "name": "autopid.dtc_scan",
+    "params_schema": {
+      "type": "object",
+      "properties": {}
+    },
+    "undoable": false
+  },
+  {
+    "name": "autopid.dtc_clear",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "codes": {
+          "type": "string",
+          "description": "CSV, e.g. P0420,P0171"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "always",
+            "if_any",
+            "if_only"
+          ]
+        }
+      }
+    },
+    "undoable": false
+  },
+  {
+    "name": "logger.enable",
+    "params_schema": {
+      "type": "object",
+      "properties": {}
+    },
+    "undoable": false
+  },
+  {
+    "name": "logger.disable",
+    "params_schema": {
+      "type": "object",
+      "properties": {}
+    },
+    "undoable": false
+  },
+  {
+    "name": "logger.write",
+    "params_schema": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "maxLength": 15,
+          "description": "record namespace (default: events)"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 31
+        },
+        "value": {
+          "type": "string",
+          "description": "numeric or a ${key} template"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ]
+    },
+    "undoable": false
+  }
+]

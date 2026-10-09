@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "mode": "wifi_modem",
+  "auto_pair": true,
+  "ssid": "ESPNetLink_457FED",
+  "device_id": "14c19f457fed",
+  "host": "",
+  "gps_poll_s": 2,
+  "health_poll_s": 10,
+  "cut_retries": 2,
+  "cli": true,
+  "apn": "",
+  "apn_user": "",
+  "apn_password": "",
+  "degraded": false,
+  "pending_reboot": false
+}

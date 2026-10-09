@@ -1,0 +1,995 @@
+{
+  "base": "http://127.0.0.1:8081",
+  "captured": "2026-10-09 04:06 UTC",
+  "calls": [
+    {
+      "name": "info",
+      "path": "/api/info",
+      "status": 200,
+      "bytes": 175,
+      "ms": 64
+    },
+    {
+      "name": "status",
+      "path": "/api/status",
+      "status": 200,
+      "bytes": 1127,
+      "ms": 63
+    },
+    {
+      "name": "status_tasks",
+      "path": "/api/status/tasks",
+      "status": 200,
+      "bytes": 4050,
+      "ms": 86
+    },
+    {
+      "name": "faults",
+      "path": "/api/faults",
+      "status": 200,
+      "bytes": 13,
+      "ms": 63
+    },
+    {
+      "name": "restart_history",
+      "path": "/api/restart/history",
+      "status": 200,
+      "bytes": 388,
+      "ms": 65
+    },
+    {
+      "name": "restart_report",
+      "path": "/api/restart/report",
+      "status": 404,
+      "bytes": 37,
+      "ms": 61
+    },
+    {
+      "name": "logs_status",
+      "path": "/api/logs/status",
+      "status": 200,
+      "bytes": 212,
+      "ms": 59
+    },
+    {
+      "name": "logs_ring",
+      "path": "/api/logs/ring",
+      "status": 200,
+      "bytes": 16384,
+      "ms": 73
+    },
+    {
+      "name": "fs_list_data",
+      "path": "/api/fs/list?path=/data",
+      "status": 200,
+      "bytes": 104,
+      "ms": 60
+    },
+    {
+      "name": "fs_info_data",
+      "path": "/api/fs/info?path=/data",
+      "status": 200,
+      "bytes": 30,
+      "ms": 81
+    },
+    {
+      "name": "fs_info_sd",
+      "path": "/api/fs/info?path=/sd",
+      "status": 200,
+      "bytes": 36,
+      "ms": 54
+    },
+    {
+      "name": "ota_status",
+      "path": "/api/ota/status",
+      "status": 200,
+      "bytes": 65,
+      "ms": 52
+    },
+    {
+      "name": "battery",
+      "path": "/api/battery",
+      "status": 200,
+      "bytes": 17,
+      "ms": 52
+    },
+    {
+      "name": "rtc",
+      "path": "/api/rtc",
+      "status": 200,
+      "bytes": 156,
+      "ms": 53
+    },
+    {
+      "name": "imu",
+      "path": "/api/imu",
+      "status": 200,
+      "bytes": 80,
+      "ms": 54
+    },
+    {
+      "name": "led",
+      "path": "/api/led",
+      "status": 200,
+      "bytes": 56,
+      "ms": 57
+    },
+    {
+      "name": "bridges",
+      "path": "/api/bridges",
+      "status": 200,
+      "bytes": 599,
+      "ms": 64
+    },
+    {
+      "name": "sockets",
+      "path": "/api/sockets",
+      "status": 200,
+      "bytes": 693,
+      "ms": 62
+    },
+    {
+      "name": "obd_chip",
+      "path": "/api/obd_chip",
+      "status": 200,
+      "bytes": 425,
+      "ms": 61
+    },
+    {
+      "name": "ws",
+      "path": "/api/ws",
+      "status": 200,
+      "bytes": 780,
+      "ms": 57
+    },
+    {
+      "name": "autopid",
+      "path": "/api/autopid",
+      "status": 200,
+      "bytes": 1266,
+      "ms": 67
+    },
+    {
+      "name": "autopid_data",
+      "path": "/api/autopid/data",
+      "status": 200,
+      "bytes": 184,
+      "ms": 53
+    },
+    {
+      "name": "autopid_config",
+      "path": "/api/autopid/config",
+      "status": 200,
+      "bytes": 638,
+      "ms": 80
+    },
+    {
+      "name": "autopid_std_scan",
+      "path": "/api/autopid/std_scan",
+      "status": 200,
+      "bytes": 56,
+      "ms": 64
+    },
+    {
+      "name": "autopid_std_scan_result",
+      "path": "/api/autopid/std_scan/result",
+      "status": 200,
+      "bytes": 4468,
+      "ms": 123
+    },
+    {
+      "name": "autopid_vehicles",
+      "path": "/api/autopid/vehicles",
+      "status": 200,
+      "bytes": 406,
+      "ms": 69
+    },
+    {
+      "name": "autopid_std_table",
+      "path": "/api/autopid/std_table",
+      "status": 200,
+      "bytes": 23132,
+      "ms": 157
+    },
+    {
+      "name": "autopid_dtc",
+      "path": "/api/autopid/dtc",
+      "status": 200,
+      "bytes": 238,
+      "ms": 67
+    },
+    {
+      "name": "autopid_dtc_db",
+      "path": "/api/autopid/dtc/db",
+      "status": 200,
+      "bytes": 18,
+      "ms": 52
+    },
+    {
+      "name": "autopid_dbc",
+      "path": "/api/autopid/dbc",
+      "status": 200,
+      "bytes": 19,
+      "ms": 54
+    },
+    {
+      "name": "events_sources",
+      "path": "/api/events/sources",
+      "status": 200,
+      "bytes": 4778,
+      "ms": 70
+    },
+    {
+      "name": "events_actions",
+      "path": "/api/events/actions",
+      "status": 200,
+      "bytes": 2749,
+      "ms": 61
+    },
+    {
+      "name": "events_values",
+      "path": "/api/events/values",
+      "status": 200,
+      "bytes": 98,
+      "ms": 56
+    },
+    {
+      "name": "events_log",
+      "path": "/api/events/log",
+      "status": 200,
+      "bytes": 3474,
+      "ms": 76
+    },
+    {
+      "name": "events_rules",
+      "path": "/api/events/rules",
+      "status": 200,
+      "bytes": 299,
+      "ms": 56
+    },
+    {
+      "name": "logger",
+      "path": "/api/logger",
+      "status": 200,
+      "bytes": 324,
+      "ms": 53
+    },
+    {
+      "name": "vpn",
+      "path": "/api/vpn",
+      "status": 200,
+      "bytes": 137,
+      "ms": 58
+    },
+    {
+      "name": "sleep",
+      "path": "/api/sleep",
+      "status": 200,
+      "bytes": 197,
+      "ms": 56
+    },
+    {
+      "name": "usb",
+      "path": "/api/usb",
+      "status": 200,
+      "bytes": 164,
+      "ms": 54
+    },
+    {
+      "name": "usb_acm",
+      "path": "/api/usb/acm",
+      "status": 200,
+      "bytes": 71,
+      "ms": 60
+    },
+    {
+      "name": "gps",
+      "path": "/api/gps",
+      "status": 200,
+      "bytes": 15,
+      "ms": 52
+    },
+    {
+      "name": "espnetlink",
+      "path": "/api/espnetlink",
+      "status": 200,
+      "bytes": 684,
+      "ms": 56
+    },
+    {
+      "name": "can",
+      "path": "/api/can",
+      "status": 200,
+      "bytes": 588,
+      "ms": 58
+    },
+    {
+      "name": "j1939",
+      "path": "/api/j1939",
+      "status": 200,
+      "bytes": 855,
+      "ms": 65
+    },
+    {
+      "name": "j1939_pgns",
+      "path": "/api/j1939?pgns=1",
+      "status": 200,
+      "bytes": 19,
+      "ms": 58
+    },
+    {
+      "name": "uds",
+      "path": "/api/uds",
+      "status": 200,
+      "bytes": 383,
+      "ms": 53
+    },
+    {
+      "name": "scripts",
+      "path": "/api/scripts",
+      "status": 200,
+      "bytes": 88,
+      "ms": 57
+    },
+    {
+      "name": "scripts_reference",
+      "path": "/api/scripts/reference",
+      "status": 200,
+      "bytes": 9266,
+      "ms": 80
+    },
+    {
+      "name": "scripts_examples",
+      "path": "/api/scripts/examples",
+      "status": 200,
+      "bytes": 1153,
+      "ms": 65
+    },
+    {
+      "name": "certs",
+      "path": "/api/certs",
+      "status": 200,
+      "bytes": 11,
+      "ms": 57
+    },
+    {
+      "name": "destinations",
+      "path": "/api/destinations",
+      "status": 200,
+      "bytes": 426,
+      "ms": 55
+    },
+    {
+      "name": "j2534",
+      "path": "/api/j2534",
+      "status": 200,
+      "bytes": 270,
+      "ms": 60
+    },
+    {
+      "name": "ble",
+      "path": "/api/ble",
+      "status": 200,
+      "bytes": 460,
+      "ms": 56
+    },
+    {
+      "name": "wifi_status",
+      "path": "/api/wifi/status",
+      "status": 200,
+      "bytes": 254,
+      "ms": 54
+    },
+    {
+      "name": "wifi_try",
+      "path": "/api/wifi/try",
+      "status": 200,
+      "bytes": 75,
+      "ms": 59
+    },
+    {
+      "name": "wifi_scan",
+      "path": "/api/wifi/scan",
+      "status": 200,
+      "bytes": 2350,
+      "ms": 4181
+    },
+    {
+      "name": "webhook",
+      "path": "/api/webhook",
+      "status": 200,
+      "bytes": 216,
+      "ms": 61
+    },
+    {
+      "name": "settings",
+      "path": "/api/settings",
+      "status": 200,
+      "bytes": 3141,
+      "ms": 63
+    },
+    {
+      "name": "settings/log_manager.json",
+      "path": "/api/settings/log_manager",
+      "status": 200,
+      "bytes": 99,
+      "ms": 57
+    },
+    {
+      "name": "settings/log_manager.schema.json",
+      "path": "/api/settings/log_manager/schema",
+      "status": 200,
+      "bytes": 232,
+      "ms": 52
+    },
+    {
+      "name": "settings/dev_status_manager.json",
+      "path": "/api/settings/dev_status_manager",
+      "status": 200,
+      "bytes": 52,
+      "ms": 57
+    },
+    {
+      "name": "settings/dev_status_manager.schema.json",
+      "path": "/api/settings/dev_status_manager/schema",
+      "status": 200,
+      "bytes": 72,
+      "ms": 59
+    },
+    {
+      "name": "settings/restart_tracker.json",
+      "path": "/api/settings/restart_tracker",
+      "status": 200,
+      "bytes": 52,
+      "ms": 53
+    },
+    {
+      "name": "settings/restart_tracker.schema.json",
+      "path": "/api/settings/restart_tracker/schema",
+      "status": 200,
+      "bytes": 72,
+      "ms": 59
+    },
+    {
+      "name": "settings/external_storage.json",
+      "path": "/api/settings/external_storage",
+      "status": 200,
+      "bytes": 52,
+      "ms": 59
+    },
+    {
+      "name": "settings/external_storage.schema.json",
+      "path": "/api/settings/external_storage/schema",
+      "status": 200,
+      "bytes": 72,
+      "ms": 58
+    },
+    {
+      "name": "settings/filesystem.json",
+      "path": "/api/settings/filesystem",
+      "status": 200,
+      "bytes": 52,
+      "ms": 55
+    },
+    {
+      "name": "settings/filesystem.schema.json",
+      "path": "/api/settings/filesystem/schema",
+      "status": 200,
+      "bytes": 72,
+      "ms": 53
+    },
+    {
+      "name": "settings/http_server_manager.json",
+      "path": "/api/settings/http_server_manager",
+      "status": 200,
+      "bytes": 81,
+      "ms": 55
+    },
+    {
+      "name": "settings/http_server_manager.schema.json",
+      "path": "/api/settings/http_server_manager/schema",
+      "status": 200,
+      "bytes": 144,
+      "ms": 54
+    },
+    {
+      "name": "settings/wifi_manager.json",
+      "path": "/api/settings/wifi_manager",
+      "status": 200,
+      "bytes": 1578,
+      "ms": 59
+    },
+    {
+      "name": "settings/wifi_manager.schema.json",
+      "path": "/api/settings/wifi_manager/schema",
+      "status": 200,
+      "bytes": 4342,
+      "ms": 75
+    },
+    {
+      "name": "settings/obd_gate.json",
+      "path": "/api/settings/obd_gate",
+      "status": 200,
+      "bytes": 56,
+      "ms": 58
+    },
+    {
+      "name": "settings/obd_gate.schema.json",
+      "path": "/api/settings/obd_gate/schema",
+      "status": 200,
+      "bytes": 76,
+      "ms": 51
+    },
+    {
+      "name": "settings/obd_chip.json",
+      "path": "/api/settings/obd_chip",
+      "status": 200,
+      "bytes": 173,
+      "ms": 58
+    },
+    {
+      "name": "settings/obd_chip.schema.json",
+      "path": "/api/settings/obd_chip/schema",
+      "status": 200,
+      "bytes": 461,
+      "ms": 55
+    },
+    {
+      "name": "settings/ble_manager.json",
+      "path": "/api/settings/ble_manager",
+      "status": 200,
+      "bytes": 199,
+      "ms": 56
+    },
+    {
+      "name": "settings/ble_manager.schema.json",
+      "path": "/api/settings/ble_manager/schema",
+      "status": 200,
+      "bytes": 603,
+      "ms": 59
+    },
+    {
+      "name": "settings/socket_manager.json",
+      "path": "/api/settings/socket_manager",
+      "status": 200,
+      "bytes": 285,
+      "ms": 68
+    },
+    {
+      "name": "settings/socket_manager.schema.json",
+      "path": "/api/settings/socket_manager/schema",
+      "status": 200,
+      "bytes": 777,
+      "ms": 57
+    },
+    {
+      "name": "settings/websocket_manager.json",
+      "path": "/api/settings/websocket_manager",
+      "status": 200,
+      "bytes": 316,
+      "ms": 54
+    },
+    {
+      "name": "settings/websocket_manager.schema.json",
+      "path": "/api/settings/websocket_manager/schema",
+      "status": 200,
+      "bytes": 736,
+      "ms": 59
+    },
+    {
+      "name": "settings/log_sinks.json",
+      "path": "/api/settings/log_sinks",
+      "status": 200,
+      "bytes": 228,
+      "ms": 54
+    },
+    {
+      "name": "settings/log_sinks.schema.json",
+      "path": "/api/settings/log_sinks/schema",
+      "status": 200,
+      "bytes": 688,
+      "ms": 52
+    },
+    {
+      "name": "settings/bridge_manager.json",
+      "path": "/api/settings/bridge_manager",
+      "status": 200,
+      "bytes": 285,
+      "ms": 53
+    },
+    {
+      "name": "settings/bridge_manager.schema.json",
+      "path": "/api/settings/bridge_manager/schema",
+      "status": 200,
+      "bytes": 701,
+      "ms": 63
+    },
+    {
+      "name": "settings/can_manager.json",
+      "path": "/api/settings/can_manager",
+      "status": 200,
+      "bytes": 96,
+      "ms": 59
+    },
+    {
+      "name": "settings/can_manager.schema.json",
+      "path": "/api/settings/can_manager/schema",
+      "status": 200,
+      "bytes": 264,
+      "ms": 51
+    },
+    {
+      "name": "settings/j1939.json",
+      "path": "/api/settings/j1939",
+      "status": 200,
+      "bytes": 98,
+      "ms": 56
+    },
+    {
+      "name": "settings/j1939.schema.json",
+      "path": "/api/settings/j1939/schema",
+      "status": 200,
+      "bytes": 259,
+      "ms": 52
+    },
+    {
+      "name": "settings/uds_manager.json",
+      "path": "/api/settings/uds_manager",
+      "status": 200,
+      "bytes": 140,
+      "ms": 59
+    },
+    {
+      "name": "settings/uds_manager.schema.json",
+      "path": "/api/settings/uds_manager/schema",
+      "status": 200,
+      "bytes": 427,
+      "ms": 62
+    },
+    {
+      "name": "settings/script_engine.json",
+      "path": "/api/settings/script_engine",
+      "status": 200,
+      "bytes": 130,
+      "ms": 64
+    },
+    {
+      "name": "settings/script_engine.schema.json",
+      "path": "/api/settings/script_engine/schema",
+      "status": 200,
+      "bytes": 297,
+      "ms": 55
+    },
+    {
+      "name": "settings/led_manager.json",
+      "path": "/api/settings/led_manager",
+      "status": 200,
+      "bytes": 124,
+      "ms": 56
+    },
+    {
+      "name": "settings/led_manager.schema.json",
+      "path": "/api/settings/led_manager/schema",
+      "status": 200,
+      "bytes": 402,
+      "ms": 52
+    },
+    {
+      "name": "settings/rtc_manager.json",
+      "path": "/api/settings/rtc_manager",
+      "status": 200,
+      "bytes": 145,
+      "ms": 55
+    },
+    {
+      "name": "settings/rtc_manager.schema.json",
+      "path": "/api/settings/rtc_manager/schema",
+      "status": 200,
+      "bytes": 364,
+      "ms": 52
+    },
+    {
+      "name": "settings/imu_manager.json",
+      "path": "/api/settings/imu_manager",
+      "status": 200,
+      "bytes": 146,
+      "ms": 59
+    },
+    {
+      "name": "settings/imu_manager.schema.json",
+      "path": "/api/settings/imu_manager/schema",
+      "status": 200,
+      "bytes": 417,
+      "ms": 56
+    },
+    {
+      "name": "settings/battery_monitor.json",
+      "path": "/api/settings/battery_monitor",
+      "status": 200,
+      "bytes": 78,
+      "ms": 53
+    },
+    {
+      "name": "settings/battery_monitor.schema.json",
+      "path": "/api/settings/battery_monitor/schema",
+      "status": 200,
+      "bytes": 181,
+      "ms": 61
+    },
+    {
+      "name": "settings/mdns_manager.json",
+      "path": "/api/settings/mdns_manager",
+      "status": 200,
+      "bytes": 56,
+      "ms": 53
+    },
+    {
+      "name": "settings/mdns_manager.schema.json",
+      "path": "/api/settings/mdns_manager/schema",
+      "status": 200,
+      "bytes": 76,
+      "ms": 67
+    },
+    {
+      "name": "settings/mqtt_manager.json",
+      "path": "/api/settings/mqtt_manager",
+      "status": 200,
+      "bytes": 236,
+      "ms": 55
+    },
+    {
+      "name": "settings/mqtt_manager.schema.json",
+      "path": "/api/settings/mqtt_manager/schema",
+      "status": 200,
+      "bytes": 626,
+      "ms": 54
+    },
+    {
+      "name": "settings/mqtt_can.json",
+      "path": "/api/settings/mqtt_can",
+      "status": 200,
+      "bytes": 229,
+      "ms": 51
+    },
+    {
+      "name": "settings/mqtt_can.schema.json",
+      "path": "/api/settings/mqtt_can/schema",
+      "status": 200,
+      "bytes": 699,
+      "ms": 62
+    },
+    {
+      "name": "settings/vpn_manager.json",
+      "path": "/api/settings/vpn_manager",
+      "status": 200,
+      "bytes": 443,
+      "ms": 56
+    },
+    {
+      "name": "settings/vpn_manager.schema.json",
+      "path": "/api/settings/vpn_manager/schema",
+      "status": 200,
+      "bytes": 1065,
+      "ms": 59
+    },
+    {
+      "name": "settings/iperf_manager.json",
+      "path": "/api/settings/iperf_manager",
+      "status": 200,
+      "bytes": 52,
+      "ms": 58
+    },
+    {
+      "name": "settings/iperf_manager.schema.json",
+      "path": "/api/settings/iperf_manager/schema",
+      "status": 200,
+      "bytes": 72,
+      "ms": 58
+    },
+    {
+      "name": "settings/sleep_manager.json",
+      "path": "/api/settings/sleep_manager",
+      "status": 200,
+      "bytes": 189,
+      "ms": 52
+    },
+    {
+      "name": "settings/sleep_manager.schema.json",
+      "path": "/api/settings/sleep_manager/schema",
+      "status": 200,
+      "bytes": 557,
+      "ms": 57
+    },
+    {
+      "name": "settings/usb_host_manager.json",
+      "path": "/api/settings/usb_host_manager",
+      "status": 200,
+      "bytes": 207,
+      "ms": 56
+    },
+    {
+      "name": "settings/usb_host_manager.schema.json",
+      "path": "/api/settings/usb_host_manager/schema",
+      "status": 200,
+      "bytes": 577,
+      "ms": 57
+    },
+    {
+      "name": "settings/usb_acm_cli.json",
+      "path": "/api/settings/usb_acm_cli",
+      "status": 200,
+      "bytes": 67,
+      "ms": 52
+    },
+    {
+      "name": "settings/usb_acm_cli.schema.json",
+      "path": "/api/settings/usb_acm_cli/schema",
+      "status": 200,
+      "bytes": 117,
+      "ms": 59
+    },
+    {
+      "name": "settings/espnetlink.json",
+      "path": "/api/settings/espnetlink",
+      "status": 200,
+      "bytes": 259,
+      "ms": 59
+    },
+    {
+      "name": "settings/espnetlink.schema.json",
+      "path": "/api/settings/espnetlink/schema",
+      "status": 200,
+      "bytes": 800,
+      "ms": 54
+    },
+    {
+      "name": "settings/j2534_server.json",
+      "path": "/api/settings/j2534_server",
+      "status": 200,
+      "bytes": 137,
+      "ms": 54
+    },
+    {
+      "name": "settings/j2534_server.schema.json",
+      "path": "/api/settings/j2534_server/schema",
+      "status": 200,
+      "bytes": 330,
+      "ms": 54
+    },
+    {
+      "name": "settings/ble_http.json",
+      "path": "/api/settings/ble_http",
+      "status": 200,
+      "bytes": 67,
+      "ms": 54
+    },
+    {
+      "name": "settings/ble_http.schema.json",
+      "path": "/api/settings/ble_http/schema",
+      "status": 200,
+      "bytes": 116,
+      "ms": 57
+    },
+    {
+      "name": "settings/cmdline_manager.json",
+      "path": "/api/settings/cmdline_manager",
+      "status": 200,
+      "bytes": 68,
+      "ms": 57
+    },
+    {
+      "name": "settings/cmdline_manager.schema.json",
+      "path": "/api/settings/cmdline_manager/schema",
+      "status": 200,
+      "bytes": 117,
+      "ms": 56
+    },
+    {
+      "name": "settings/button_manager.json",
+      "path": "/api/settings/button_manager",
+      "status": 200,
+      "bytes": 67,
+      "ms": 56
+    },
+    {
+      "name": "settings/button_manager.schema.json",
+      "path": "/api/settings/button_manager/schema",
+      "status": 200,
+      "bytes": 141,
+      "ms": 60
+    },
+    {
+      "name": "settings/interface_manager.json",
+      "path": "/api/settings/interface_manager",
+      "status": 200,
+      "bytes": 104,
+      "ms": 53
+    },
+    {
+      "name": "settings/interface_manager.schema.json",
+      "path": "/api/settings/interface_manager/schema",
+      "status": 200,
+      "bytes": 182,
+      "ms": 58
+    },
+    {
+      "name": "settings/event_manager.json",
+      "path": "/api/settings/event_manager",
+      "status": 200,
+      "bytes": 580,
+      "ms": 58
+    },
+    {
+      "name": "settings/event_manager.schema.json",
+      "path": "/api/settings/event_manager/schema",
+      "status": 200,
+      "bytes": 918,
+      "ms": 63
+    },
+    {
+      "name": "settings/autopid.json",
+      "path": "/api/settings/autopid",
+      "status": 200,
+      "bytes": 577,
+      "ms": 56
+    },
+    {
+      "name": "settings/autopid.schema.json",
+      "path": "/api/settings/autopid/schema",
+      "status": 200,
+      "bytes": 1658,
+      "ms": 63
+    },
+    {
+      "name": "settings/ha_webhooks.json",
+      "path": "/api/settings/ha_webhooks",
+      "status": 200,
+      "bytes": 176,
+      "ms": 52
+    },
+    {
+      "name": "settings/ha_webhooks.schema.json",
+      "path": "/api/settings/ha_webhooks/schema",
+      "status": 200,
+      "bytes": 524,
+      "ms": 51
+    },
+    {
+      "name": "settings/data_destinations.json",
+      "path": "/api/settings/data_destinations",
+      "status": 200,
+      "bytes": 333,
+      "ms": 52
+    },
+    {
+      "name": "settings/data_destinations.schema.json",
+      "path": "/api/settings/data_destinations/schema",
+      "status": 200,
+      "bytes": 1225,
+      "ms": 63
+    },
+    {
+      "name": "settings/data_logger.json",
+      "path": "/api/settings/data_logger",
+      "status": 200,
+      "bytes": 313,
+      "ms": 52
+    },
+    {
+      "name": "settings/data_logger.schema.json",
+      "path": "/api/settings/data_logger/schema",
+      "status": 200,
+      "bytes": 1124,
+      "ms": 58
+    }
+  ],
+  "device": {
+    "device_type": "wican_pro",
+    "model": "WiCAN Pro",
+    "hw_version": "WiCAN-PRO",
+    "fw_version": "v6.00p_alfa-02-dirty",
+    "device_id": "68ee8f5a653d",
+    "mac": "68:EE:8F:5A:65:3C",
+    "api_level": 6
+  }
+}

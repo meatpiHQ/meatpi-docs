@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "port": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535,
+      "default": 6809
+    },
+    "allow_reflash": {
+      "type": "boolean",
+      "default": false
+    },
+    "allow_lan": {
+      "type": "boolean",
+      "default": false
+    },
+    "exclusive": {
+      "type": "boolean",
+      "default": true
+    },
+    "cli": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

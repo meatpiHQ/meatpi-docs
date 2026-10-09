@@ -1,0 +1,27 @@
+{
+  "enabled": false,
+  "running": false,
+  "paused": false,
+  "storage_ok": false,
+  "file": "",
+  "file_rows": 0,
+  "files": 0,
+  "queued": 0,
+  "written": 0,
+  "dropped": 0,
+  "errors": 0,
+  "rotations": 0,
+  "can": {
+    "enabled": false,
+    "file": "",
+    "file_rows": 0,
+    "files": 0,
+    "queued": 0,
+    "frames_written": 0,
+    "frames_dropped": 0,
+    "rotations": 0
+  },
+  "salvaged": 0,
+  "corrupt": 0,
+  "dir": "/sd/logs"
+}

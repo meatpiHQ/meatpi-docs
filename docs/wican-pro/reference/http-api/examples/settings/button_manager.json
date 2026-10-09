@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "hold_s": 5,
+  "degraded": false,
+  "pending_reboot": false
+}
