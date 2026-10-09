@@ -96,7 +96,7 @@ A profile is a JSON object with the car's name, an init chain sent once before p
 </dl>
 
 !!! note "Two things the importer does for you"
-    Published profiles count reply bytes from the start of the frame as older WiCAN firmware saw it; WiCAN Pro's reply starts one byte later, and the importer shifts every byte index when it loads a published profile. Parameter names must be unique across the whole table: a repeat (some community profiles have one) is renamed with a `_2` suffix and the page tells you.
+    Published profiles count reply bytes from the start of the frame as older WiCAN firmware saw it; WiCAN PRO's reply starts one byte later, and the importer shifts every byte index when it loads a published profile. Parameter names must be unique across the whole table: a repeat (some community profiles have one) is renamed with a `_2` suffix and the page tells you.
 
 ## Contribute a profile
 

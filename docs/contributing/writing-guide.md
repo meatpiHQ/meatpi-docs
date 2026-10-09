@@ -33,7 +33,7 @@ A guide is an ordered list inside a `steps` block. The first line of a step is i
 
 <div class="steps" markdown>
 
-1.  **Plug WiCAN Pro into the OBD-II port**
+1.  **Plug WiCAN PRO into the OBD-II port**
 
     On most cars the port is under the dashboard on the driver side. The LED lights within a few seconds.
 
@@ -58,7 +58,7 @@ A guide is an ordered list inside a `steps` block. The first line of a step is i
 ````markdown
 <div class="steps" markdown>
 
-1.  **Plug WiCAN Pro into the OBD-II port**
+1.  **Plug WiCAN PRO into the OBD-II port**
 
     On most cars the port is under the dashboard on the driver side. The LED lights within a few seconds.
 

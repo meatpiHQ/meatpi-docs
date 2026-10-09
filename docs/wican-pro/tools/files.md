@@ -6,7 +6,7 @@ title: Files
 
 <p class="verified">Checked on the bench device, firmware v6.00p_alfa-02, 2026-10-10: the storage figures and the log folder listing read from its file routes; the page from the preview; the routes and limits from the firmware's filesystem reference (its own round-trip check covers upload, download and delete).</p>
 
-<p class="lead">WiCAN Pro has two places for files: a small internal flash for the things the firmware keeps (certificates, scripts, the vehicle tables, the dashboard layout) and the SD card for everything large (logs, firmware files). The File Manager browses both, uploads, downloads and tidies.</p>
+<p class="lead">WiCAN PRO has two places for files: a small internal flash for the things the firmware keeps (certificates, scripts, the vehicle tables, the dashboard layout) and the SD card for everything large (logs, firmware files). The File Manager browses both, uploads, downloads and tidies.</p>
 
 <figure class="shot" markdown>
 ![The File Manager's start page: the Internal flash and SD card storage cards with their usage bars, and the note on the folders](../img/pages/09-files.png){ width="640" }

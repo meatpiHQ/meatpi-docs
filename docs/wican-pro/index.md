@@ -1,8 +1,8 @@
 ---
-title: WiCAN Pro
+title: WiCAN PRO
 ---
 
-# WiCAN Pro
+# WiCAN PRO
 
 <div class="hero" markdown>
 <div markdown>
@@ -10,10 +10,9 @@ title: WiCAN Pro
 
 ## Your car's data, on your network
 
-WiCAN Pro plugs into the OBD-II port and brings vehicle data to Home Assistant, MQTT, and the diagnostic apps you already use, over WiFi or Bluetooth LE. A USB port takes accessories such as a cellular modem, a GPS receiver or an Ethernet adapter.
+WiCAN PRO plugs into the OBD-II port and brings vehicle data to Home Assistant, MQTT, and the diagnostic apps you already use, over WiFi or Bluetooth LE. A USB port takes accessories such as a cellular modem, a GPS receiver or an Ethernet adapter.
 
 [Start with Quick Setup](getting-started/quick-setup.md){ .md-button .md-button--primary }
-[What is in the box](#what-is-in-the-box){ .md-button }
 </div>
 </div>
 
@@ -23,10 +22,6 @@ WiCAN Pro plugs into the OBD-II port and brings vehicle data to Home Assistant, 
 <dt>Setup</dt><dd>From any phone or laptop browser, no app to install</dd>
 <dt>Firmware</dt><dd>Updated from the web interface, over the air</dd>
 </dl>
-
-## What is in the box
-
-<span class="pill warn">to confirm</span> The box contents and the product photo go here.
 
 ## Where to go next
 
@@ -46,38 +41,38 @@ WiCAN Pro plugs into the OBD-II port and brings vehicle data to Home Assistant, 
 
     WiFi modes, Bluetooth LE, USB accessories.
 
-    <span class="pill">coming soon</span>
+    [:octicons-arrow-right-24: WiFi](connectivity/wifi.md)
 
 -   :material-engine:{ .lg .middle } **Vehicle data**
 
     ---
 
-    AutoPID, vehicle profiles, custom PIDs, J1939 trucks.
+    AutoPID, vehicle profiles, trouble codes, J1939 trucks, the data logger.
 
-    <span class="pill">coming soon</span>
+    [:octicons-arrow-right-24: AutoPID](vehicle-data/autopid.md)
 
 -   :material-home-automation:{ .lg .middle } **Send data somewhere**
 
     ---
 
-    Home Assistant, MQTT, HTTP, ABRP.
+    Home Assistant, MQTT, HTTP, ABRP, apps, J2534.
 
-    <span class="pill">coming soon</span>
+    [:octicons-arrow-right-24: Home Assistant](send-data/home-assistant.md)
 
 -   :material-tools:{ .lg .middle } **Tools**
 
     ---
 
-    CAN Monitor, UDS Tool, Scripts, Automate.
+    CAN Monitor, UDS Tool, scripts, rules, files, logs.
 
-    <span class="pill">coming soon</span>
+    [:octicons-arrow-right-24: CAN Monitor](tools/can-monitor.md)
 
 -   :material-lifebuoy:{ .lg .middle } **Troubleshooting**
 
     ---
 
-    LED patterns, crash notes, factory reset.
+    LED patterns, the crash report, faults, factory reset.
 
-    <span class="pill">coming soon</span>
+    [:octicons-arrow-right-24: LED patterns](troubleshooting/led-patterns.md)
 
 </div>

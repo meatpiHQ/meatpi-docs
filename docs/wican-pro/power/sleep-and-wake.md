@@ -6,7 +6,7 @@ title: Sleep and wake
 
 <p class="verified">Facts checked against the device's settings schema and the firmware's sleep reference, firmware v6.00p_alfa-02, 2026-10-09. Screens from the web interface preview.</p>
 
-<p class="lead">WiCAN Pro stays plugged in when the car is parked, so it has to know when to stop drawing power. It reads the 12 V battery: high while the engine charges it, lower when the car rests. Below a sleep voltage for a few minutes it goes to sleep; above a wake voltage it wakes. The page for this is ==Power Saving==.</p>
+<p class="lead">WiCAN PRO stays plugged in when the car is parked, so it has to know when to stop drawing power. It reads the 12 V battery: high while the engine charges it, lower when the car rests. Below a sleep voltage for a few minutes it goes to sleep; above a wake voltage it wakes. The page for this is ==Power Saving==.</p>
 
 <figure class="shot" markdown>
 ![The Power Saving page: the sleep state, the Enabled switch, periodic wake-up, the sleep and wake voltages, the wake and sleep delays](../img/pages/05-power.png){ width="700" }

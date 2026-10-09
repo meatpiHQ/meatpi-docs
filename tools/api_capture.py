@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Capture real HTTP API responses from a WiCAN Pro for the reference pages.
+"""Capture real HTTP API responses from a WiCAN PRO for the reference pages.
 
 Every example JSON shown in the HTTP API reference comes from this script,
 never typed by hand, so the reference is verified against a device each time

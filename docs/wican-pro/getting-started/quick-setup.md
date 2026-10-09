@@ -4,9 +4,9 @@ title: Quick Setup
 
 # Quick Setup
 
-<p class="verified">Screens from the web interface preview; facts checked against WiCAN Pro firmware v6.00p_alfa-02, 2026-10-09</p>
+<p class="verified">Screens from the web interface preview; facts checked against WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
 
-<p class="lead">Quick Setup gets a new WiCAN Pro onto your home WiFi, talking to Home Assistant or your MQTT broker, reading your vehicle and sleeping when the car is parked. It takes about six minutes and runs in your phone's browser.</p>
+<p class="lead">Quick Setup gets a new WiCAN PRO onto your home WiFi, talking to Home Assistant or your MQTT broker, reading your vehicle and sleeping when the car is parked. It takes about six minutes and runs in your phone's browser.</p>
 
 <dl class="facts" markdown>
 <dt>You need</dt><dd>A phone or laptop with WiFi, the password of your home WiFi, the car parked with the ignition on</dd>
@@ -22,7 +22,7 @@ title: Quick Setup
 
 <div class="steps" markdown>
 
-1.  **Plug WiCAN Pro into the OBD-II port**
+1.  **Plug WiCAN PRO into the OBD-II port**
 
     On most cars the port is under the dashboard on the driver side, sometimes behind a small cover. The LED on WiCAN lights within a few seconds.
 

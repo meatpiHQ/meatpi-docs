@@ -1,6 +1,6 @@
 # MeatPi Docs
 
-User manuals for MeatPi products (WiCAN Pro, WiCAN OBD, WiCAN USB, ESPNetLink), built with
+User manuals for MeatPi products (WiCAN PRO, WiCAN OBD, WiCAN USB, ESPNetLink), built with
 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and published with GitHub Pages.
 
 ## Run it locally
@@ -40,7 +40,7 @@ docs/
   wican-obd/  wican-usb/  espnetlink/
   integrations/                 guides that apply to several products
   contributing/writing-guide.md every building block with its markup
-  stylesheets/extra.css         the theme: colours and fonts of the WiCAN Pro web interface
+  stylesheets/extra.css         the theme: colours and fonts of the WiCAN PRO web interface
 overrides/.icons/meatpi/        the logo, inlined into the header
 overrides/main.html             the sidebar: product drop-down above the chapters, "More" below
 overrides/partials/             product-picker.html, sidebar-more.html

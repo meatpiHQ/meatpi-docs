@@ -6,7 +6,7 @@ title: The web interface
 
 <p class="verified">Screens from the web interface preview; the page list checked against firmware v6.00p_alfa-02, 2026-10-09</p>
 
-<p class="lead">Everything WiCAN Pro does is set up and watched from one web page that the device itself serves. Open it from any phone or computer on the same network, no app and no account needed. This chapter is a tour; each page gets its own chapter later in the manual.</p>
+<p class="lead">Everything WiCAN PRO does is set up and watched from one web page that the device itself serves. Open it from any phone or computer on the same network, no app and no account needed. This chapter is a tour; each page gets its own chapter later in the manual.</p>
 
 ## Opening it
 

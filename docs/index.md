@@ -11,7 +11,7 @@ hide:
 
 <div class="grid cards products" markdown>
 
--   :material-car-connected:{ .lg .middle } **WiCAN Pro**
+-   :material-car-connected:{ .lg .middle } **WiCAN PRO**
 
     ---
 
@@ -39,7 +39,7 @@ hide:
 
     ---
 
-    The cellular modem and GPS accessory that plugs into the WiCAN Pro USB port.
+    The cellular modem and GPS accessory that plugs into the WiCAN PRO USB port.
 
     [:octicons-arrow-right-24: Open the manual](espnetlink/index.md)
 

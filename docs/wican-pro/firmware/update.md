@@ -10,7 +10,7 @@ title: Firmware update
 
 ## Get the file
 
-Releases are at `https://github.com/meatpiHQ/wican-fw/releases`. Download the WiCAN Pro image, a `.bin` file named like `wican-fw_obd_pro_v6.00.bin`, and read the release notes. ==About== and ==System== › ==Firmware update== show the version installed now.
+Releases are at `https://github.com/meatpiHQ/wican-fw/releases`. Download the WiCAN PRO image, a `.bin` file named like `wican-fw_obd_pro_v6.00.bin`, and read the release notes. ==About== and ==System== › ==Firmware update== show the version installed now.
 
 ## Update
 
@@ -54,7 +54,7 @@ Hold the button while applying power: WiCAN starts in safe mode (LED solid yello
 
 | Symptom | Likely cause | What to do |
 | --- | --- | --- |
-| `image validation failed` | not a WiCAN Pro v6 image (a zip, another product's file) | the `.bin` for WiCAN Pro from the releases page |
+| `image validation failed` | not a WiCAN PRO v6 image (a zip, another product's file) | the `.bin` for WiCAN PRO from the releases page |
 | `short image (connection dropped?)` | the WiFi link broke during the upload | closer to the device, or over the USB link; try again |
 | `update already in progress` | a second upload while one runs | wait for the first |
 | The page does not come back | the device restarted and the browser kept the old connection | wait 30 s and reload; the address may have changed with the network |

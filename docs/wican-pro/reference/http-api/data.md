@@ -4,7 +4,7 @@ title: Data paths and automation
 
 # Data paths and automation
 
-<p class="verified">Checked on WiCAN Pro firmware v6.00p_alfa-02, 2026-10-09</p>
+<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
 
 <p class="lead">How bytes and values leave the device: bridges and sockets, WebSocket channels, cyclic pushes to MQTT, HTTP and ABRP, the SD card logger, the rules engine, scripts, and the Home Assistant webhook.</p>
 

@@ -26,7 +26,7 @@ title: Backup and restore
 !!! note "After the restart"
     The device comes back with the restored network settings: on the backup's WiFi, with its access point name and password. Look for it there, not where it was.
 
-**To another WiCAN Pro.** The same file restores onto another device. Names derived from the device id (the access point `WiCAN_<id>`, the hostname, the Bluetooth name) follow the new device; a name typed by hand in the backup is copied as it is, so two devices on one network should not share one.
+**To another WiCAN PRO.** The same file restores onto another device. Names derived from the device id (the access point `WiCAN_<id>`, the hostname, the Bluetooth name) follow the new device; a name typed by hand in the backup is copied as it is, so two devices on one network should not share one.
 
 ## By API
 

@@ -4,7 +4,7 @@ title: After the restart
 
 # Quick Setup, after the restart
 
-<p class="verified">Screens from the web interface preview; facts checked against WiCAN Pro firmware v6.00p_alfa-02, 2026-10-09</p>
+<p class="verified">Screens from the web interface preview; facts checked against WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
 
 <p class="lead">The second half of Quick Setup runs on your home network: a few checks, your vehicle, the battery voltages that decide when WiCAN sleeps, how the car is read, done. Six steps, with the car parked and the ignition on.</p>
 

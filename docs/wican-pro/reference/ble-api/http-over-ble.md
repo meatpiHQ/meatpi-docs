@@ -4,7 +4,7 @@ title: HTTP over BLE
 
 # HTTP over BLE
 
-<p class="verified">Checked on air against WiCAN Pro firmware v6.00p_alfa-02, 2026-10-09: status, settings, uploads and downloads up to 512 KB on flash and SD card (byte exact, no lost frames in notify mode), the tunnel's error answers, a dropped link mid-upload, UDS requests and a streamed log, all through the tunnel from a Linux central.</p>
+<p class="verified">Checked on air against WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09: status, settings, uploads and downloads up to 512 KB on flash and SD card (byte exact, no lost frames in notify mode), the tunnel's error answers, a dropped link mid-upload, UDS requests and a streamed log, all through the tunnel from a Linux central.</p>
 
 <p class="lead">Every route of the <a href="../../http-api/">HTTP API</a> is reachable from a paired phone without WiFi. The app sends the request over the HTTP stream channel (FFF4 in, FFF3 out); the device replays it against its own web server and streams the answer back. No route needs BLE-specific work.</p>
 

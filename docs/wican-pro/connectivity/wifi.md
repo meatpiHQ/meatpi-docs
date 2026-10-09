@@ -6,7 +6,7 @@ title: WiFi
 
 <p class="verified">Facts checked against the device's settings schema and the firmware's WiFi reference, firmware v6.00p_alfa-02, 2026-10-09. Screens from the web interface preview.</p>
 
-<p class="lead">WiCAN Pro has two WiFi faces: its own access point, which phones and laptops join directly, and a station that joins your network. This chapter covers both, the networks list with backups, trusted networks, and how to get back in when something goes wrong.</p>
+<p class="lead">WiCAN PRO has two WiFi faces: its own access point, which phones and laptops join directly, and a station that joins your network. This chapter covers both, the networks list with backups, trusted networks, and how to get back in when something goes wrong.</p>
 
 All of it lives under ==Settings== › ==WiFi==. Changes are staged on the page and applied from ==Submit== in the header, which restarts WiCAN.
 

@@ -4,7 +4,7 @@ title: Status and diagnostics
 
 # Status and diagnostics
 
-<p class="verified">Checked on WiCAN Pro firmware v6.00p_alfa-02, 2026-10-09</p>
+<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
 
 <p class="lead">Who the device is, what it is doing right now, and what happened before the last reboot.</p>
 
@@ -31,7 +31,7 @@ title: Status and diagnostics
 --8<-- "wican-pro/reference/http-api/examples/info.json"
 ```
 
-`device_type` and `model` tell a WiCAN Pro from a WiCAN OBD or USB. `api_level` is the number an app checks before it relies on a route that appeared in a later firmware.
+`device_type` and `model` tell a WiCAN PRO from a WiCAN OBD or USB. `api_level` is the number an app checks before it relies on a route that appeared in a later firmware.
 
 ## `/api/status`
 

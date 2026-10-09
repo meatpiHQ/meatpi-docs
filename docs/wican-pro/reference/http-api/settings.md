@@ -4,7 +4,7 @@ title: Settings
 
 # Settings
 
-<p class="verified">Checked on WiCAN Pro firmware v6.00p_alfa-02, 2026-10-09</p>
+<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
 
 <p class="lead">Every feature of WiCAN is a component with its own settings document. One set of routes reads, writes, describes, backs up and restores all of them.</p>
 

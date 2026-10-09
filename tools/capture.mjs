@@ -1,5 +1,5 @@
 /* Screenshot capture for the manuals.
-   Opens the REAL WiCAN Pro web interface (tools/webui_preview/preview.html in
+   Opens the REAL WiCAN PRO web interface (tools/webui_preview/preview.html in
    the wican-fw checkout: web/index.html over the in-page mock API, no device)
    in headless Chromium, walks to each screen and saves a PNG.
 

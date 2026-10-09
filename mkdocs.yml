@@ -12,7 +12,7 @@ theme:
   name: material
   custom_dir: overrides
   language: en
-  # the WiCAN Pro web interface logo (overrides/.icons/meatpi/logo.svg), inlined so
+  # the WiCAN PRO web interface logo (overrides/.icons/meatpi/logo.svg), inlined so
   # the wordmark takes the header's text colour
   icon:
     logo: meatpi/logo
@@ -58,7 +58,7 @@ extra:
   # the entries of the product drop-down in the sidebar: top-level nav
   # sections by title, in this order
   products:
-    - WiCAN Pro
+    - WiCAN PRO
     - WiCAN OBD
     - WiCAN USB
     - ESPNetLink
@@ -106,7 +106,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - WiCAN Pro:
+  - WiCAN PRO:
       - wican-pro/index.md
       - Getting started:
           - Quick Setup: wican-pro/getting-started/quick-setup.md

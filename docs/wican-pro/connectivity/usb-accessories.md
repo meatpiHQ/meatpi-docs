@@ -6,7 +6,7 @@ title: USB accessories
 
 <p class="verified pending">Device side read from the bench device (its USB, ESPNetLink, GPS and settings documents; the bench device is paired with an ESPNetLink in WiFi modem mode), firmware v6.00p_alfa-02, 2026-10-10. The USB Ethernet adapter and the GPS receiver flows come from the firmware's references and bench records; neither was plugged in for this page.</p>
 
-<p class="lead">The USB connector gives WiCAN Pro a second life beyond the OBD port: an ESPNetLink dongle for internet and GPS away from home, a USB Ethernet adapter for a wired network, or a plain USB GPS receiver. The same connector is the serial console for a PC, and can turn WiCAN itself into a USB network adapter.</p>
+<p class="lead">The USB connector gives WiCAN PRO a second life beyond the OBD port: an ESPNetLink dongle for internet and GPS away from home, a USB Ethernet adapter for a wired network, or a plain USB GPS receiver. The same connector is the serial console for a PC, and can turn WiCAN itself into a USB network adapter.</p>
 
 Everything about it lives under ==USB== in the sidebar: ==Status==, ==Settings== and ==Dongle console==. Quick Setup also has a ==USB devices== step that names whatever is plugged in and asks the one question each accessory has.
 

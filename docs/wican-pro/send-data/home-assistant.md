@@ -6,7 +6,7 @@ title: Home Assistant
 
 <p class="verified pending">Facts from the firmware's Home Assistant contract and the WiCAN integration's documentation (version 0.4.0). Not yet walked through on the bench Home Assistant.</p>
 
-<p class="lead">WiCAN Pro pushes its vehicle data straight into Home Assistant: one entity per parameter, a location tracker from GPS, and diagnostic sensors for the device itself. No MQTT broker is needed. The WiCAN integration finds the device on your network and registers itself; from then on WiCAN sends.</p>
+<p class="lead">WiCAN PRO pushes its vehicle data straight into Home Assistant: one entity per parameter, a location tracker from GPS, and diagnostic sensors for the device itself. No MQTT broker is needed. The WiCAN integration finds the device on your network and registers itself; from then on WiCAN sends.</p>
 
 ## How it works
 

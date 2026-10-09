@@ -4,7 +4,7 @@ title: Vehicle
 
 # Vehicle
 
-<p class="verified">Checked on WiCAN Pro firmware v6.00p_alfa-02, 2026-10-09</p>
+<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
 
 <p class="lead">Everything that talks to the car: the AutoPID loop and its tables, the vehicle store, detection, trouble codes, DBC signals, the UDS terminal, the native CAN bus, the J1939 listener, the OBD chip and the J2534 server.</p>
 
