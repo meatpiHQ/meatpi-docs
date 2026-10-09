@@ -4,8 +4,6 @@ title: Crash report
 
 # Crash report
 
-<p class="verified pending">The restart history read from the bench device (no report stored there, no unexpected resets), firmware v6.00p_alfa-02, 2026-10-10; the mechanism from the firmware's restart tracker reference, whose benches crash a device on purpose. No crash was provoked for this page.</p>
-
 <p class="lead">When the firmware crashes, WiCAN keeps a note of where: the task, the address, the call chain. It files it under the next boot, stores the newest one in flash where a power cut cannot take it, and shows it on the Status page. A crash report pasted into a bug report is what lets the developers find the cause.</p>
 
 ## Where to find it

@@ -4,8 +4,6 @@ title: AutoPID
 
 # AutoPID
 
-<p class="verified">Facts checked against the device's settings schema and the firmware's API reference, firmware v6.00p_alfa-02, 2026-10-09. Screens from the web interface preview.</p>
-
 <p class="lead">AutoPID is the loop that asks your car for values and turns the answers into named parameters: RPM, speed, coolant temperature, state of charge. Everything else in WiCAN (the Dashboard, Home Assistant, MQTT, the logger, the rules) works from those parameters. The web interface calls the whole area ==Automate==.</p>
 
 ## What it does

@@ -4,8 +4,6 @@ title: Automate rules
 
 # Automate rules
 
-<p class="verified pending">The triggers, actions and live values and the default rules read from the bench device, firmware v6.00p_alfa-02, 2026-10-10; the page from the preview; behaviours from the firmware's event manager reference. No rule was exercised for this page.</p>
-
 <p class="lead">A rule is "when this happens, do that", running on the device itself: when the battery drops, publish an alert; while the car is at home, poll slowly; when a new trouble code appears, turn the LED red. Triggers are events the device raises, actions are things its components can do, and a rule can undo its action when the condition stops holding.</p>
 
 Rules live under ==Rules & Events==: ==Rules== (the list and the builder), ==Live events== (the last events and which rules fired) and ==Triggers & actions== (everything a rule can use on this firmware).

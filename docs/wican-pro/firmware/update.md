@@ -4,8 +4,6 @@ title: Firmware update
 
 # Firmware update
 
-<p class="verified pending">The update status document and the running partition read from the bench device, firmware v6.00p_alfa-02, 2026-10-10; the page from the preview; the upload flow, its checks and its timing from the firmware's update reference (measured there: a 1.5 MB image in about 8 s over WiFi). No update was performed for this page.</p>
-
 <p class="lead">A firmware update is one file uploaded from the web interface. WiCAN writes it to its spare slot, checks it, switches to it and restarts; a failed or interrupted upload never touches the firmware that is running. Settings, files and the SD card stay as they are.</p>
 
 ## Get the file

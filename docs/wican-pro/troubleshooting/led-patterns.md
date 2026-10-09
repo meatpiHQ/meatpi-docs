@@ -4,8 +4,6 @@ title: LED patterns
 
 # LED patterns
 
-<p class="verified pending">The idle colour and the LED settings read from the bench device; every pattern from the firmware's LED, button, update, sleep and crash-park code, firmware v6.00p_alfa-02, 2026-10-10. Nothing on the bench can see the LED, so the colours are as the firmware sets them, not checked by eye.</p>
-
 <p class="lead">One RGB LED says what the device is doing. Most of the time it is a steady cyan; every other pattern means one of the states below.</p>
 
 ## What the LED says

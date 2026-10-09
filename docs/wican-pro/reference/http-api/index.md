@@ -4,8 +4,6 @@ title: HTTP API
 
 # HTTP API
 
-<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09. Every example on these pages was captured from a device by tools/api_capture.py.</p>
-
 <p class="lead">Everything the web interface does, it does through this API, and so can your own script, a home automation hub or a phone app. Plain HTTP, JSON in and out, no library needed.</p>
 
 ## Where to send requests

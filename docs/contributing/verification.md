@@ -4,20 +4,14 @@ title: Verification log
 
 # Verification log
 
-<p class="lead">Every page of a manual is checked against a real device before it is published, and the check is recorded here. A page that has not been checked says so at its top.</p>
+<p class="lead">Every page of a manual is checked against a real device before it is published, and the check is recorded here.</p>
 
 ## How a page is verified
 
 - **Facts in prose** (defaults, addresses, names of screens and buttons, what happens after an action) are read back from the device: its web interface, its HTTP API, its console.
 - **API examples** are captured by `tools/api_capture.py` from the device, never typed. The firmware version and date of the capture are in `_meta.json` next to the examples and shown on the reference pages.
 - **Screenshots** come from the web interface preview (the same UI code the device serves, with mock data) so no bench addresses or passwords appear. When a screenshot shows a state the preview cannot reproduce, it is taken from the device and said so in the caption.
-- A verified page carries a line like the one below under its title. The line names the firmware the page was checked against, so a reader on a different version knows what to expect.
-
-<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
-
-```markdown
-<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
-```
+- The record of every check is the table below: the firmware version, the date, how the page was checked and what came of it. The pages themselves carry no marker (Ali, 2026-10-10: no pills on the pages).
 
 ## The log
 

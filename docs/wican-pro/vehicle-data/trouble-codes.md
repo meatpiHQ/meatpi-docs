@@ -4,8 +4,6 @@ title: Trouble codes
 
 # Trouble codes
 
-<p class="verified pending">The gates, the report shape and the database list read from the bench device (scanning is off there and no scan was run for this page), firmware v6.00p_alfa-02, 2026-10-10. The pages from the web interface preview with a sample report. The firmware's own benches cover scans and clears against the ECU simulator.</p>
-
 <p class="lead">WiCAN reads the diagnostic trouble codes (DTCs) your car's ECUs store, shows them with descriptions from a code database you upload, and clears them when you say so. Scans can run on a schedule, and a new code can trigger a rule: an LED, an MQTT message, a push to Home Assistant.</p>
 
 Everything is under ==Trouble Codes== in the sidebar: ==Codes==, ==Code databases== and ==Settings==.

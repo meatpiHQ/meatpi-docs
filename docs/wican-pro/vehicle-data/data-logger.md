@@ -4,8 +4,6 @@ title: Data logger
 
 # Data logger
 
-<p class="verified pending">The logger's status and settings documents and the SD card's log folder read from the bench device (logging off there; the folder holds files from earlier bench runs), firmware v6.00p_alfa-02, 2026-10-10; the page from the preview with logging on; formats and behaviours from the firmware's logger reference. No recording was made for this page; the firmware's bench covers every format against a CAN adapter.</p>
-
 <p class="lead">WiCAN PRO records to the SD card: the vehicle parameters it polls, and raw CAN frames, each in the file format your tools open. SQLite, CSV and JSON lines for the parameters; for frames also MDF4, Vector BLF, candump and ASC. Files rotate by size, the oldest go when the count is reached, and the Dashboard reads its history from them.</p>
 
 ## Before you start

@@ -4,8 +4,6 @@ title: Faults
 
 # Faults
 
-<p class="verified">Checked on the bench device, firmware v6.00p_alfa-02, 2026-10-10: the faults document read from the device (none latched) and the codes from the firmware's source and status reference. The picture is the preview with one fault injected.</p>
-
 <p class="lead">A fault is the device's own trouble code: a structural problem, latched with a code, a detail, a count and the time it was first and last seen. It survives restarts and power cycles until someone clears it, so a problem that happened once in the field is still visible on the bench weeks later.</p>
 
 ## Where faults show

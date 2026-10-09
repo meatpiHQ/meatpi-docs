@@ -4,8 +4,6 @@ title: Bluetooth LE
 
 # Bluetooth LE
 
-<p class="verified">Facts checked against the device's settings schema and the firmware's BLE reference, firmware v6.00p_alfa-02, 2026-10-09; enabling, pairing with the passkey and the app tunnel exercised on air by the firmware's BLE bench the same day.</p>
-
 <p class="lead">Bluetooth Low Energy is the way a phone talks to WiCAN PRO without any WiFi: an OBD app such as Car Scanner, a diagnostic app, or an app of your own that uses the whole WiCAN API over the air. It is off until you turn it on.</p>
 
 ## Turning it on

@@ -4,8 +4,6 @@ title: CAN Monitor
 
 # CAN Monitor
 
-<p class="verified pending">The wiring facts read from the bench device's CAN, connections and WebSocket documents (its CAN interface is off, so the page shows the wiring check), firmware v6.00p_alfa-02, 2026-10-10; the page from the preview; behaviours from the web interface's and the CAN interface's references. No live capture for this page.</p>
-
 <p class="lead">A CAN bus analyzer in the browser, laid out like PCAN-View: a receive list grouped by identifier with the changing bytes lit, a transmit list, a trace, DBC decoding, and a status bar with the bus load and error counters. It reads WiCAN's own CAN interface, so it works beside the OBD chip and on any CAN bus, not only the diagnostic one.</p>
 
 ## Wire it up once

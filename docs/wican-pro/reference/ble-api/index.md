@@ -4,8 +4,6 @@ title: BLE API
 
 # BLE API
 
-<p class="verified">Checked on air against WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09: discovery, pairing with the passkey, the service layout (17 characteristics) and the HTTP channel were exercised by the firmware's BLE bench from a Linux central. The data pipe, the command line pipe and the J2534 channel are from the firmware's contract document.</p>
-
 <p class="lead">The Bluetooth LE interface for your own app: how to find and pair with WiCAN PRO, the services and characteristics, the raw data pipe, the command line, and the behaviour a phone app has to expect. Anyone can build an app; there is no privileged client.</p>
 
 ## Discovery

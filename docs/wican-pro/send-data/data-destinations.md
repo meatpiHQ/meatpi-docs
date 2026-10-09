@@ -4,8 +4,6 @@ title: Data destinations
 
 # Data destinations
 
-<p class="verified">Checked on the bench device, firmware v6.00p_alfa-02, 2026-10-10: its MQTT row watched on the bench broker (a snapshot every 5 seconds), and an HTTP row added for this page delivered to a receiver on the bench Pi (bearer token, extra query, the first push with config and status, then the short form every 5 seconds; the device was restored afterwards). HTTPS with a certificate set and ABRP come from the firmware's reference and its bench (`DATA DEST PASS`), not re-run here.</p>
-
 <p class="lead">A destination is a place the live parameter set is sent to on a cycle: an MQTT topic, an HTTP or HTTPS endpoint (your own server, a cloud ingest), or ABRP, A Better Routeplanner, for EV route planning. Up to 8 of them, each with its own interval and switch, on ==Automate== › ==Data destinations==.</p>
 
 <figure class="shot" markdown>

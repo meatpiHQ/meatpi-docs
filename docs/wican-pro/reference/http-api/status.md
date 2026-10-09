@@ -4,8 +4,6 @@ title: Status and diagnostics
 
 # Status and diagnostics
 
-<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
-
 <p class="lead">Who the device is, what it is doing right now, and what happened before the last reboot.</p>
 
 <div class="api" markdown>

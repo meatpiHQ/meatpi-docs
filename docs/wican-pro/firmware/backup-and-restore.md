@@ -4,8 +4,6 @@ title: Backup and restore
 
 # Backup and restore
 
-<p class="verified pending">The backup document's shape and the restore rules from the firmware's settings reference; the settings list from the bench device; the page from the preview, firmware v6.00p_alfa-02, 2026-10-10. No restore was performed for this page; the firmware's benches restore the bench device from such files routinely.</p>
-
 <p class="lead">Every setting of the device in one JSON file: download it before an experiment, keep it as a record, move it to a replacement device. The file carries passwords and keys, so keep it private.</p>
 
 ## Back up

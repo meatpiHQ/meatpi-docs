@@ -4,8 +4,6 @@ title: Logs, files, firmware
 
 # Logs, files, firmware
 
-<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
-
 <p class="lead">The log ring support asks for first, the file manager behind the Files page, firmware upload, and the certificate store for TLS.</p>
 
 ## Logs

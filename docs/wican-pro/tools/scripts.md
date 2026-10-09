@@ -4,8 +4,6 @@ title: Scripts
 
 # Scripts
 
-<p class="verified pending">The scripts list, the engine's reference and the example gallery read from the bench device (scripting off there, no stored scripts; the three examples below are the device's own), firmware v6.00p_alfa-02, 2026-10-10; the page from the preview; behaviours from the firmware's script engine reference. No script was run for this page.</p>
-
 <p class="lead">For what a rule cannot say in one line: a UDS conversation across several requests, a trouble-code report with descriptions, a sequence of CAN frames, a computation before an event goes out. Scripts are written in Berry, a small language in the Python family, edited and run in the browser, and a rule can start one.</p>
 
 ## Switch scripting on

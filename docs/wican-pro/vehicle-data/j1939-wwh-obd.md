@@ -4,8 +4,6 @@ title: J1939 and WWH-OBD
 
 # J1939 and WWH-OBD
 
-<p class="verified pending">Settings, defaults and the status document read from the bench device (an OBD-II car on the bench, the listener off), firmware v6.00p_alfa-02, 2026-10-10; the pages from the web interface preview; behaviours from the firmware's J1939 and AutoPID references. The firmware's own benches cover a J1939 network and an EU truck; nothing of that was re-run for this page.</p>
-
 <p class="lead">Trucks, buses, agricultural and construction machines do not talk like a car. Their controllers broadcast what they know on the CAN bus (SAE J1939), and their legislated emission data is asked over UDS (WWH-OBD, ISO 27145). WiCAN PRO listens to the first and asks the second; a European truck has both on one bus, and WiCAN handles both at once.</p>
 
 ## Which is which

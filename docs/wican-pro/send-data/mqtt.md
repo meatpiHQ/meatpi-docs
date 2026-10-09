@@ -4,8 +4,6 @@ title: MQTT
 
 # MQTT
 
-<p class="verified">Checked on the bench device against the bench broker (Mosquitto on the bench Pi), firmware v6.00p_alfa-02, 2026-10-10: the status topic and the vehicle snapshot every 5 seconds were watched on the broker; settings and defaults from the device's MQTT settings document. CAN over MQTT was not exercised for this page.</p>
-
 <p class="lead">WiCAN PRO keeps one connection to an MQTT broker, and everything that publishes goes through it: the vehicle parameters, a status topic, messages from rules, and raw CAN frames if you want them. Home Assistant does not need it (it uses the webhook), but Node-RED, Grafana, openHAB, a fleet server or your own scripts do.</p>
 
 ## Set it up

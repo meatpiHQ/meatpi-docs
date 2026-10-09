@@ -4,8 +4,6 @@ title: Factory reset
 
 # Factory reset
 
-<p class="verified pending">The scope of each reset from the firmware's settings and button references and its safe mode; the page from the preview, firmware v6.00p_alfa-02, 2026-10-10. Not performed on the bench device for this page.</p>
-
 <p class="lead">Three ways back to a known state, for three situations: the web interface's ==Factory Reset== when you can reach the device, safe mode with the button when you cannot, and config mode for the case in between, a device that is fine but on a network you cannot reach.</p>
 
 ## From the web interface

@@ -4,8 +4,6 @@ title: Quick Setup
 
 # Quick Setup
 
-<p class="verified">Screens from the web interface preview; facts checked against WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
-
 <p class="lead">Quick Setup gets a new WiCAN PRO onto your home WiFi, talking to Home Assistant or your MQTT broker, reading your vehicle and sleeping when the car is parked. It takes about six minutes and runs in your phone's browser.</p>
 
 <dl class="facts" markdown>

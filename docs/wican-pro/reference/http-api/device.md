@@ -4,8 +4,6 @@ title: Device and connectivity
 
 # Device and connectivity
 
-<p class="verified">Checked on WiCAN PRO firmware v6.00p_alfa-02, 2026-10-09</p>
-
 <p class="lead">The sensors and radios: battery, clock, motion, LED, WiFi, Bluetooth, the USB connector and what is plugged into it, VPN and sleep.</p>
 
 ## Battery

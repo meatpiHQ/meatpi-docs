@@ -4,8 +4,6 @@ title: Vehicle profiles
 
 # Vehicle profiles
 
-<p class="verified pending">The vehicle store and its routes read from the bench device (it knows one car: the bench ECU simulator, no profile), firmware v6.00p_alfa-02, 2026-10-10. The profile picker and the import rules from the web interface and the firmware's AutoPID reference; the import itself was not run on the device for this page.</p>
-
 <p class="lead">A vehicle profile is a ready-made set of requests for one car model: battery state of charge, cell voltages, charging state, cabin temperature, the things standard OBD does not expose. Profiles are shared by the community in the WiCAN repository and loaded from the web interface. Combustion cars mostly get by on the standard PIDs; EVs and hybrids want a profile.</p>
 
 ## Where profiles appear

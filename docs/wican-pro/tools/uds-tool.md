@@ -4,8 +4,6 @@ title: UDS Tool
 
 # UDS Tool
 
-<p class="verified pending">The tool's status and settings read from the bench device (transport Automatic, the native ISO-TP provider present, the OBD chip in use while the CAN interface is off), firmware v6.00p_alfa-02, 2026-10-10; the page from the preview; behaviours from the firmware's UDS reference. No request was sent for this page; the firmware's benches cover both paths against the ECU simulator.</p>
-
 <p class="lead">Send a diagnostic request (ISO 14229, UDS) to an ECU by hand and read the answer decoded: read a data identifier, open a session, keep it alive, list trouble codes. The tool goes over WiCAN's own CAN interface with ISO-TP, or through the OBD chip when that is the only path, and keeps WiCAN's own polling off the bus while you work.</p>
 
 <figure class="shot" markdown>

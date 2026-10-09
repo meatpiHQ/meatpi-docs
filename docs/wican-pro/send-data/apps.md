@@ -4,8 +4,6 @@ title: Apps over WiFi and BLE
 
 # Apps over WiFi and BLE
 
-<p class="verified pending">Device side (the connections, their ports and the factory setup) read from the bench device, firmware v6.00p_alfa-02, 2026-10-09. The app-side steps are carried over from the earlier WiCAN guides and have not been re-checked in the apps' current versions.</p>
-
 <p class="lead">WiCAN PRO works with the OBD and CAN apps you already use. Out of the box it is an ELM327 WiFi adapter for Car Scanner, Torque and the like; a connection row turns it into a RealDash, SavvyCAN or slcan device, over WiFi or Bluetooth.</p>
 
 ## Connections: how apps reach the car

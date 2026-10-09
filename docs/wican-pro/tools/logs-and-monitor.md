@@ -4,8 +4,6 @@ title: Logs and system monitor
 
 # Logs and system monitor
 
-<p class="verified">Checked on the bench device, firmware v6.00p_alfa-02, 2026-10-10: the Logs page captured from the device itself, the log status, health counters and task list read from its routes; behaviours from the firmware's log manager and status references. The System Monitor picture is from the preview.</p>
-
 <p class="lead">When something does not behave, two pages tell you what the device sees: ==Logs==, the firmware's own log with the lines from before the last restart still in it, and ==System Monitor==, the live state of memory, tasks and temperature with the fault codes. Both are read-only views; nothing here changes a setting.</p>
 
 ## Logs
