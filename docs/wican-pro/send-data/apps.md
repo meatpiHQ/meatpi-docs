@@ -28,7 +28,7 @@ Between the two sits a protocol: plain ELM327 text for the OBD chip; for the CAN
 | WebSocket `/ws/obd` | WiFi | browser apps and the web interface's own tools |
 | USB serial | the USB connector in device mode | a PC with a cable |
 
-Three more servers are prepared but switched off, for the CAN bus: TCP `3333` (slcan), TCP `23` (GVRET), UDP `17`.
+Three more servers exist for the CAN bus, switched off: TCP `3333` (slcan), TCP `23` (GVRET), UDP `17`. A server on its own carries nothing: switched on without a connection row, it accepts a client and sends it no data. What turns slcan or GVRET on is the row (==CAN bus== › TCP `3333`, protocol ==slcan==, for instance), and the row switches its server on by itself. A server left on with no row is flagged under ==Settings== › ==Connections== and in the device log.
 
 !!! note "AutoPID steps aside"
     While an app talks to the OBD chip, WiCAN's own polling pauses and resumes 10 seconds after the app's last command, so the two never talk over each other. Dashboard values and Home Assistant updates stop meanwhile.

@@ -15,8 +15,8 @@ A bridge joins two endpoints (the OBD chip, the native CAN bus, a TCP server, a 
 | Route | Method | What it does |
 | --- | --- | --- |
 | `/api/bridges` | GET | Every bridge with its two ends, translator, enabled, `up`, and byte and chunk counters in both directions plus send and codec errors. |
-| `/api/sockets` | GET | Every TCP or UDP server with its port, enabled, `up`, clients, bytes, drops, reconnects and refused connections. |
-| `/api/ws` | GET | Every WebSocket channel with its path, mode, client limit, enabled, `up`, frame and byte counters, drops and refused connections. |
+| `/api/sockets` | GET | Every TCP or UDP server with its port, enabled, `up`, `bridge` (the connection that uses the server, `null` when none does: such a server accepts clients and sends them nothing), clients, bytes, drops, reconnects and refused connections. |
+| `/api/ws` | GET | Every WebSocket channel with its path, mode, client limit, enabled, `up`, `bridge` (as above; `null` on a channel is not a fault, `/ws/log` is fed by the log sinks), frame and byte counters, drops and refused connections. |
 
 </div>
 
