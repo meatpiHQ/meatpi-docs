@@ -20,6 +20,8 @@ Under ==CAN Monitor== › ==Settings== › ==CAN INTERFACE== the same card sets 
 !!! note "WiCAN listens before it talks"
     A CAN node at the wrong bit rate damages the traffic of the bus it sits on. WiCAN's interface always starts listen-only, proves the bit rate from two frames it could read, and only then goes to normal mode when the settings ask for it. With ==Automatic== it walks the usual rates until one reads. The status bar and the Status page say where it is: `Listening for the bit rate`, `Listening · no traffic yet`, `Bus runs at another bit rate · listen-only`, then `Normal · active` or `Listen-only · active`.
 
+    A bus that only answers when asked cannot be found by listening: with ==Automatic== on such a port nothing is sent until the bus talks. Set the bit rate for it, or let the tool state it: a J2534 tester's connect and an slcan client's `S` command set the rate while nothing has been read (the Status page then shows `Normal · bit rate from the tester` until frames confirm it).
+
 ## Connect
 
 The page opens disconnected. ==Connect...== in the page header opens the stream and the receive list fills; the stream reconnects by itself until ==Disconnect==. ==Pause== freezes the lists without closing the stream; ==Clear== empties them.
