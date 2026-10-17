@@ -32,7 +32,8 @@ picture; the GitHub workflow runs exactly that.
 ```text
 mkdocs.yml                      site config, theme, navigation
 docs/
-  index.md                      home: one card per product
+  index.md                      home: one card per product (WiCAN OBD and WiCAN USB share one)
+  assets/products/              the product photos on the home page cards, 1600 x 900 JPEG
   wican-pro/                    one folder per product
     index.md                    the manual landing page
     getting-started/            sections: getting-started, connectivity, vehicle-data,
@@ -55,6 +56,8 @@ tools/capture.mjs               screenshot capture from the web interface previe
 3. Add its title to `extra.products` in `mkdocs.yml`: that list is the product drop-down in the
    sidebar, in order. A top-level section that is not in the list (Integrations, Contributing)
    appears under "More" instead.
+4. Add its card to `docs/index.md`, with a 1600 x 900 photo of the product on a white background in
+   `docs/assets/products/`.
 
 ## Screenshots
 

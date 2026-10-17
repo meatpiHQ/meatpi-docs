@@ -488,9 +488,10 @@
   color: var(--mp-hero-a);
 }
 
-/* ---- product cards on the home page: two across, so four products make a square ---- */
+/* ---- product cards on the home page: a photo on top, three across on a wide screen ----
+   -   ![alt](assets/products/<product>.jpg){ .product-photo .no-lightbox }  **Name**  ---  text  link */
 .md-typeset .grid.cards.products {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
 }
 .md-typeset .grid.cards.products > ul > li {
   border-radius: 12px;
@@ -501,6 +502,25 @@
 .md-typeset .grid.cards.products > ul > li:hover {
   border-color: var(--md-accent-fg-color);
   transform: translateY(-2px);
+}
+/* the photo: a white tile in both themes, because the product shots have a white background */
+.md-typeset .grid.cards.products > ul > li > p:first-child {
+  margin: 0 0 .8rem;
+}
+.md-typeset .grid.cards.products img.product-photo {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  padding: .35rem;
+  border: 1px solid var(--mp-border);
+  border-radius: 10px;
+  background: #fff;
+}
+/* the product name, a little larger than the card text */
+.md-typeset .grid.cards.products > ul > li > p:has(+ hr) {
+  font-size: .9rem;
 }
 .md-typeset .grid.cards .lg {
   color: var(--md-accent-fg-color);

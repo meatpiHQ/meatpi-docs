@@ -11,7 +11,9 @@ hide:
 
 <div class="grid cards products" markdown>
 
--   :material-car-connected:{ .lg .middle } **WiCAN PRO**
+-   ![WiCAN PRO](assets/products/wican-pro.jpg){ .product-photo .no-lightbox }
+
+    **WiCAN PRO**
 
     ---
 
@@ -19,23 +21,20 @@ hide:
 
     [:octicons-arrow-right-24: Open the manual](wican-pro/index.md)
 
--   :material-car-cog:{ .lg .middle } **WiCAN OBD**
+-   ![WiCAN OBD and WiCAN USB side by side](assets/products/wican-obd-usb.jpg){ .product-photo .no-lightbox }
+
+    **WiCAN OBD and WiCAN USB**
 
     ---
 
-    The original WiFi and Bluetooth OBD-II adapter.
+    The original WiCAN with WiFi and Bluetooth, in two versions: WiCAN OBD plugs into the OBD-II port, WiCAN USB has screw terminals for any CAN bus and a USB port.
 
-    [:octicons-arrow-right-24: Open the manual](wican-obd/index.md)
+    [:octicons-arrow-right-24: WiCAN OBD manual](wican-obd/index.md)<br>
+    [:octicons-arrow-right-24: WiCAN USB manual](wican-usb/index.md)
 
--   :material-usb-port:{ .lg .middle } **WiCAN USB**
+-   ![ESPNetLink with its USB cable and the OTG adapter](assets/products/espnetlink.jpg){ .product-photo .no-lightbox }
 
-    ---
-
-    The WiCAN CAN bus interface with a USB connection.
-
-    [:octicons-arrow-right-24: Open the manual](wican-usb/index.md)
-
--   :material-signal-cellular-3:{ .lg .middle } **ESPNetLink**
+    **ESPNetLink**
 
     ---
 

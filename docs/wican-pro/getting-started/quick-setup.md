@@ -99,9 +99,13 @@ title: Quick Setup
     !!! warning "Private networks only"
         Use your home network, never a public, hotel, cafe or guest network. WiCAN joins 2.4 GHz networks.
 
+    No home WiFi where the car lives? With an ESPNetLink plugged in (a SIM in it), this step offers ==Use the ESPNetLink, no home WiFi==: WiCAN keeps its own access point on as your way in and gets its internet over LTE. The next screens then stay on the access point, with no network switch.
+
 9.  **USB devices**
 
     Anything on the USB connector (an ESPNetLink, a USB Ethernet adapter, a GPS receiver) is named here. Nothing plugged in? Just tap ==Continue==.
+
+    An ESPNetLink shows its SIM, network, signal, internet and GPS read over the cable, and asks how WiCAN uses it: ==USB Ethernet== (recommended) or ==WiFi modem==; the carrier settings and a SIM PIN are folded under it, needed only when the carrier or the SIM asks. See [USB accessories](../connectivity/usb-accessories.md#espnetlink).
 
     <figure class="shot" markdown>
     ![The USB connector screen with a USB Ethernet adapter found](../img/quick-setup/07-usb.png){ width="640" }

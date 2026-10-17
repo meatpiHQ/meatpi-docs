@@ -87,11 +87,15 @@ The first push goes out seconds after the restart, so its `ecu_status` can still
 Live telemetry for an EV's route planning. Leave the URL empty for Iternio's endpoint.
 
 <dl class="facts" markdown>
-<dt>ABRP user token</dt><dd>From the ABRP app: ==Settings== › ==Live data== › ==Generic==. Required.</dd>
-<dt>ABRP API key</dt><dd>Iternio's developer key. Sent as the `api_key` query parameter by default, or as an `Authorization: APIKEY` header (==API key placement==).</dd>
+<dt>ABRP user token</dt><dd>From the ABRP app: open the vehicle's live data setup and choose ==Generic==; the token it shows identifies that vehicle. Required.</dd>
+<dt>ABRP API key</dt><dd>Your own Telemetry API key from Iternio (free for telemetry: write to contact@iternio.com). It identifies the application and allows 2 requests per second. Sent as the `api_key` query parameter by default, or as an `Authorization: APIKEY` header (==API key placement==).</dd>
 <dt>Car model</dt><dd>ABRP's `car_model` id, optional, sent with every record.</dd>
-<dt>Every</dt><dd>Iternio asks for a point every 5 seconds and discourages 30 or more.</dd>
+<dt>Every</dt><dd>5 seconds at least: Iternio asks for a point every 5 seconds and discourages 30 or more. A shorter value runs at 5. WiCAN also starts ABRP requests at least 2.5 seconds apart, the ==Test== button included, so no table or click pattern can pass Iternio's limit.</dd>
+<dt>ABRP fields</dt><dd>What this vehicle provides to ABRP right now, and for each missing planning field the parameter name that would fill it (`soc` from `SOC`, `power` from `HV_W`, `is_charging` from `CHARGING`). A row that reads "Missing for route planning: soc" sends a position ABRP can show but nothing it can plan with.</dd>
 </dl>
+
+!!! note "Wrong token or key"
+    Iternio refuses a missing or wrong user token with `abrp: error "Unauthorized Token"` and a wrong key with `abrp: error "Unauthorized Key"`; the row's last error shows which one.
 
 WiCAN maps the vehicle's parameters onto ABRP's fields by name, case-insensitive, values passed through unchanged. The vehicle profile therefore has to produce ABRP's units: `power` in kW with charging negative, `current` in A, `odometer` and `est_battery_range` in km, tyre pressure in kPa. `is_charging`, `is_dcfc` and `is_parked` become 0 or 1 from a boolean or an `on`/`off` value.
 

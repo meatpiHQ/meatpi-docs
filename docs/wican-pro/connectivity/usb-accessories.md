@@ -27,12 +27,38 @@ One accessory at a time. The position from a dongle or a receiver becomes a set 
 
 ## ESPNetLink
 
-The dongle can work two ways. The ==Uplink mode== on ==USB== › ==Settings== chooses:
+Plug it in and it works: the dongle pairs with WiCAN over the cable by
+itself, with nothing to type. Where you see it depends on when you plugged
+it in.
+
+**Setting up a new WiCAN with the dongle plugged in.** Quick Setup names the
+dongle on its ==USB devices== step, with the SIM, the network, the signal,
+the internet and the GPS read from it, and asks the one question (how WiCAN
+uses it, below). No home WiFi where the car lives? The ==Home WiFi== step
+offers ==Use the ESPNetLink, no home WiFi== as soon as a dongle with a SIM
+is on the cable: WiCAN keeps its own access point on as your way in, gets
+its internet over LTE wherever the car is, and the rest of the setup
+continues on the access point without a network switch.
+
+**Plugging the dongle into a WiCAN that is already set up.** A bar under the
+header says ==ESPNetLink connected== with the SIM, the carrier and the GPS
+state the first time this browser sees the dongle; ==Finish setup== opens
+the dongle screen, ==OK== puts the bar away. The header's connection pill
+shows the connector from then on: `USB: ESPNetLink · LTE · no fix`. The
+same screen is ==Set up== on the ESPNetLink card of ==USB== › ==Status==.
+
+### How WiCAN uses it
 
 | Mode | How it works | When to pick it |
 | --- | --- | --- |
-| ==WiFi modem== (the default) | The USB cable carries power only. WiCAN joins the dongle's own WiFi network (`ESPNetLink_<id>`, at `192.168.80.1`) and the dongle routes it onto LTE. GPS is read over that WiFi link. | Always, unless you need the cable as the network link. The USB data link disturbs the dongle's GPS reception; with power only the dongle gets a fix. |
-| ==USB Ethernet== (NCM or RNDIS) | The data lines stay on and the dongle is a USB Ethernet adapter on the cable. WiCAN sets the dongle's USB class and LTE sharing to match; the dongle restarts once. | A car with no GPS need, or a bench. Expect a slow or no GPS fix in this mode. |
+| ==USB Ethernet== (the default) | The dongle is a wired network adapter on the cable: always on, nothing to join, internet over LTE the moment the cable is in. GPS is read over the cable. | Always, unless the GPS never gets a fix this way: the USB link can disturb the dongle's GPS reception. |
+| ==WiFi modem== | The cable carries power only. WiCAN joins the dongle's own WiFi network (`ESPNetLink_<id>`, at `192.168.80.1`) whenever your home WiFi is out of range, and the dongle routes it onto LTE. GPS is read over that link and gets its best reception. | When the GPS matters and USB Ethernet never gets a fix. |
+
+WiCAN tells you when to switch: after ten minutes away from home on USB
+Ethernet with LTE up and no fix, the GPS row turns to a warning, the dongle
+screen shows ==Switch to WiFi modem== and the bar says the same on every
+page. One press ticks WiFi modem; ==Save== restarts WiCAN once and the
+pairing does the rest.
 
 ### Pairing, the first time
 
@@ -42,20 +68,22 @@ Nothing to type. With ==Automatic pairing== on (the default):
 
 1.  **Plug the dongle in** and give it power (the car's ignition, or the bench supply).
 
-2.  **WiCAN reads the dongle's WiFi key over the cable**, about 15 seconds after the dongle powers up. In WiFi modem mode it then asks the dongle to cut its USB data lines, and the dongle does so on every later boot by itself.
+2.  **In USB Ethernet mode WiCAN is on the dongle at once**: it identifies the dongle over the cable, finds its USB settings already right, and the cable is the uplink. Nothing restarts.
 
-3.  **WiCAN restarts once**, only when the key is new. From then on the dongle's network is one of WiCAN's backup networks: the home network stays first, the dongle takes over when the home network is out of range, and WiCAN looks for the home network again every few minutes while it is on the dongle.
+3.  **In WiFi modem mode WiCAN reads the dongle's WiFi key over the cable**, about 15 seconds after the dongle powers up, asks the dongle to cut its USB data lines, and restarts once when the key is new. The dongle's network is then one of WiCAN's backup networks: the home network stays first, the dongle takes over when the home network is out of range. The cut lasts until the dongle's next boot; WiCAN repeats the pairing in about five seconds at every later dongle boot, with no restart.
 
 4.  **The Status page shows the dongle**: its id, firmware, SIM, operator, signal, internet and GPS. The ==Uplink== row says which link is carrying traffic.
 
 </div>
 
-!!! note "A fresh device pairs after its access point password is changed"
-    WiCAN refuses to store anything in its WiFi settings while the factory access point password is in place, and the dongle's key is a WiFi setting. The Status page says so on the dongle's card (`pairing on hold`). Quick Setup changes the password on its ==Secure the access point== step; the next time the dongle is seen WiCAN pairs by itself.
+!!! note "WiFi modem on a fresh device pairs after its access point password is changed"
+    WiCAN refuses to store anything in its WiFi settings while the factory access point password is in place, and the dongle's key is a WiFi setting. The Status page says so on the dongle's card (`pairing on hold`). Quick Setup changes the password on its ==Secure the access point== step; the next time the dongle is seen WiCAN pairs by itself. USB Ethernet has no such hold.
 
 **Carrier settings.** Most SIMs work without an APN. When your carrier gave you one, type it under ==APN==, ==APN username== and ==APN password==: WiCAN sends it to the dongle the next time the dongle is on the cable, and the dongle restarts once to apply it. Blank keeps the dongle's own.
 
-**Re-pair.** The ==Re-pair== button on the Status page power-cycles the dongle's USB and reads its key again: use it when the dongle was set up afresh and its WiFi password changed. ==Manual pairing (no USB cable)== under the card stores a dongle's network name and password by hand.
+**A SIM with a PIN.** The SIM row says ==PIN locked== and the dongle screen offers a ==SIM PIN== field under the carrier settings. WiCAN sends the PIN to the dongle once; a PIN the SIM refuses shows as ==PIN rejected== and is never tried again by itself (three wrong tries lock a SIM; the PUK is on the SIM's card). Check it and save again.
+
+**Re-pair.** The ==Re-pair== button on the Status page power-cycles the dongle's USB so WiCAN reads it again: use it when the dongle was set up afresh and its WiFi password changed. ==Manual pairing (no USB cable)== under the card stores a dongle's network name and password by hand.
 
 **Dongle firmware.** WiCAN needs a dongle firmware with API level 7 or newer. An older dongle shows as `unsupported` with the name of the missing route and a note to update it; the dongle's own manual covers the update.
 

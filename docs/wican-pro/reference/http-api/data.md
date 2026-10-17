@@ -52,6 +52,7 @@ Cyclic pushes of the live AutoPID snapshot to MQTT topics, HTTP or HTTPS endpoin
 | --- | --- | --- |
 | `/api/destinations` | GET | Each destination with its type, period, auth kind, success and failure counts, `skipped_offline` (laps skipped because the link was down, never a failure), the back-off state, the last status and error. 503 before the settings apply. |
 | `/api/destinations/test` | POST | `{"name":"..."}` delivers that destination once, now: the HTTP status, the time it took, an error text. 404 unknown name; 409 while another test runs; 504 when nothing answered within 20 s. |
+| `/api/destinations/abrp` | GET | Which of ABRP's main telemetry fields the live parameter set provides (`present`) and, for each missing one, the parameter name that would fill it (`missing`: `soc` from `SOC`, `power` from `HV_W`, `is_charging` from `CHARGING` ...), plus the ABRP rate guard's constants: the 5 s period floor and the 2.5 s gap between requests. |
 
 </div>
 
@@ -59,7 +60,7 @@ Cyclic pushes of the live AutoPID snapshot to MQTT topics, HTTP or HTTPS endpoin
 --8<-- "wican-pro/reference/http-api/examples/destinations.json"
 ```
 
-Three failures in a row engage a back-off ladder (10, 20, 40 s, up to 10 minutes) that one success clears.
+Three failures in a row engage a back-off ladder (10, 20, 40 s, up to 10 minutes) that one success clears; an HTTP 429 (rate limited) goes to the ladder's cap at once. The status document's `abrp_pacer` object counts the ABRP requests that waited for the 2.5 s gap (rows and the ==Test== button alike) and the time they waited.
 
 ## Data logger
 

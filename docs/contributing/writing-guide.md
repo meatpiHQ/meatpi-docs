@@ -261,4 +261,5 @@ ping wican.local
 - Pages: lowercase with hyphens, grouped by product and section, for example `wican-pro/getting-started/quick-setup.md`.
 - Sections inside a product manual, in this order: `getting-started`, `connectivity`, `vehicle-data`, `integrations`, `tools`, `power`, `firmware`, `troubleshooting`.
 - Pictures: `docs/<product>/img/<page>/NN-<screen>.png`, numbered in the order they appear.
+- Product photos for the cards on the home page: `docs/assets/products/<product>.jpg`, 1600 x 900 on a white background.
 - A guide that applies to every product lives under `integrations/` and names its products with pills at the top.
