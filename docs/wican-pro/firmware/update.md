@@ -46,7 +46,7 @@ The first v6 firmware installed over the factory v4.5x firmware rewrites WiCAN's
 
 ## When the web interface is out of reach
 
-Hold the button while applying power: WiCAN starts in safe mode (LED solid yellow after a few seconds), opens its factory access point `WiCAN_<device id>` with the password `@meatpi#`, and serves a small recovery page at `http://192.168.0.10/` with a firmware upload on it. See [Factory reset](factory-reset.md) for the whole safe mode.
+Hold the button while applying power: WiCAN starts in safe mode (LED solid yellow after a few seconds), opens its factory access point `WiCAN_<device id>` with the password `@meatpi#`, and serves a small recovery page at `http://192.168.0.10/` with a firmware upload on it. See [Factory reset](factory-reset.md) for the whole safe mode. When even safe mode does not come up, write the firmware over the USB-C cable instead: [Recovery over USB](usb-flash.md).
 
 ## Troubleshooting
 

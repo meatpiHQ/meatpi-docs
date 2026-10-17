@@ -18,7 +18,7 @@ The figures on this page are the datasheet's. The PDF is published with the firm
 <dt>Buses</dt><dd>Three CAN buses and one single-wire CAN (GMLAN), SAE J1850 PWM and VPW, ISO 9141-2 and ISO 14230-4 with slow and fast initialisation, see [Pinout](pinout.md)</dd>
 <dt>Wireless</dt><dd>WiFi, as a station or an access point, and Bluetooth 5 LE</dd>
 <dt>USB host</dt><dd>5 V, up to 1.5 A, for a cellular modem, a GPS receiver or an Ethernet adapter, see [USB accessories](../connectivity/usb-accessories.md)</dd>
-<dt>USB-C</dt><dd>Firmware flashing only. It does not power WiCAN PRO</dd>
+<dt>USB-C</dt><dd>Firmware flashing only, see [Recovery over USB](../firmware/usb-flash.md). It does not power WiCAN PRO</dd>
 <dt>microSD</dt><dd>Local data logging, see [Data logger](../vehicle-data/data-logger.md)</dd>
 <dt>Button</dt><dd>One multi-function push button</dd>
 <dt>Clock</dt><dd>A real-time clock that keeps the time for a short while without power</dd>

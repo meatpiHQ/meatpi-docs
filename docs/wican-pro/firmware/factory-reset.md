@@ -45,7 +45,7 @@ For a device that runs but sits on a network you cannot reach (Station only, and
 | Crash report | kept | kept (restored) | kept |
 | Afterwards | factory access point, Quick Setup | the recovery page, then a normal start | the configured access point for 10 minutes |
 
-A full erase from a PC with the flashing tool is the one way to wipe the files as well; it is not needed for any of the above.
+A full erase from a PC with the flashing tool is the one way to wipe the files as well, and the way back for a corrupted flash, see [Recovery over USB](usb-flash.md). It is not needed for any of the above.
 
 ## By API
 

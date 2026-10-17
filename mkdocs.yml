@@ -147,6 +147,7 @@ nav:
           - Update: wican-pro/firmware/update.md
           - Backup and restore: wican-pro/firmware/backup-and-restore.md
           - Factory reset: wican-pro/firmware/factory-reset.md
+          - Recovery over USB: wican-pro/firmware/usb-flash.md
       - Troubleshooting:
           - LED patterns: wican-pro/troubleshooting/led-patterns.md
           - Crash report: wican-pro/troubleshooting/crash-report.md
