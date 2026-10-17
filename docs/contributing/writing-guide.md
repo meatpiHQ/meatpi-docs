@@ -109,6 +109,17 @@ A screenshot is a `figure` with the `shot` class and a caption. Set a width so t
 
 A picture taken on a phone gets the `shot-phone` class instead, which draws a rounded phone frame around it. A picture with no caption can carry the class directly: `![alt](file.png){ .shot width="480" }`.
 
+## Videos
+
+A YouTube video is a `figure` with the `video` class: the iframe sits in a `frame` div that keeps the 16:9 shape at any width, and the caption says who made the video and what it is called. Several videos go in a `grid videos` div, which puts them side by side on a wide screen. Embed only videos that stay useful when the interface changes, and always say whose they are.
+
+```html
+<figure class="video">
+<div class="frame"><iframe src="https://www.youtube.com/embed/<id>" title="<the video's title>" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<figcaption>Who made it: the video's title.</figcaption>
+</figure>
+```
+
 ## Numbered callouts on a picture
 
 When a step talks about several parts of one screen, number them on the picture instead of describing where they are. The markers are placed in percent of the picture width and height, so they stay put at any size, and the list below uses the same numbers.

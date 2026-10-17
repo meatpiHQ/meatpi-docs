@@ -153,6 +153,7 @@ nav:
           - Faults: wican-pro/troubleshooting/faults.md
       - Pinout: wican-pro/hardware/pinout.md
       - Datasheet: wican-pro/hardware/datasheet.md
+      - Videos: wican-pro/videos.md
       - Reference:
           - HTTP API:
               - wican-pro/reference/http-api/index.md

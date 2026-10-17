@@ -282,7 +282,8 @@
   max-width: none;
 }
 .md-typeset figure.shot figcaption::before,
-.md-typeset figure.shot-phone figcaption::before {
+.md-typeset figure.shot-phone figcaption::before,
+.md-typeset figure.video figcaption::before {
   content: "";
   display: inline-block;
   width: .9rem;
@@ -294,6 +295,39 @@
 .md-typeset .steps figure.shot,
 .md-typeset .steps figure.shot-phone {
   margin-top: .7rem;
+}
+
+/* ---- an embedded video ----
+   <figure class="video"> <div class="frame"><iframe src=".." title=".."></iframe></div> <figcaption>..</figcaption> </figure> */
+.md-typeset figure.video {
+  margin: 1rem 0 1.6rem;
+  width: auto;
+  max-width: 100%;
+  text-align: left;
+}
+.md-typeset figure.video .frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--mp-border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: var(--mp-shadow);
+}
+.md-typeset figure.video iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* several videos side by side on a wide screen: <div class="grid videos" markdown> */
+.md-typeset .grid.videos {
+  gap: 1.2rem;
+}
+.md-typeset .grid.videos figure.video {
+  margin: 0;
 }
 
 /* ---- numbered callouts over a screenshot ----

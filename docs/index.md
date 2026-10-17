@@ -74,3 +74,21 @@ hide:
     [:octicons-arrow-right-24: Writing guide](contributing/writing-guide.md)
 
 </div>
+
+## Videos
+
+Two walkthroughs of WiCAN PRO with Home Assistant, by people who use it. The manual's own steps are in [Quick Setup](wican-pro/getting-started/quick-setup.md) and [Home Assistant](wican-pro/send-data/home-assistant.md).
+
+<div class="grid videos" markdown>
+
+<figure class="video">
+<div class="frame"><iframe src="https://www.youtube.com/embed/nB30hqOT9yk?si=RJ_9A0bnlZWB30uW" title="Teach Your Vehicle to Talk to Home Assistant with WiCAN Pro!" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<figcaption>Smarty Van: Teach Your Vehicle to Talk to Home Assistant with WiCAN Pro!</figcaption>
+</figure>
+
+<figure class="video">
+<div class="frame"><iframe src="https://www.youtube.com/embed/3JW3J4_Ukrs?si=FZ_jsP0GmlNBxHeJ" title="Connect Any Car to Home Assistant! Probably..." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<figcaption>The Stock Pot: Connect Any Car to Home Assistant! Probably...</figcaption>
+</figure>
+
+</div>

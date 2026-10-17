@@ -6,6 +6,8 @@ title: Home Assistant
 
 <p class="lead">WiCAN PRO pushes its vehicle data straight into Home Assistant: one entity per parameter, a location tracker from GPS, and diagnostic sensors for the device itself. No MQTT broker is needed. The WiCAN integration finds the device on your network and registers itself; from then on WiCAN sends.</p>
 
+Two YouTube walkthroughs of WiCAN PRO with Home Assistant are on the [Videos](../videos.md) page.
+
 ## How it works
 
 1. The WiCAN integration in Home Assistant discovers the device on the local network (it advertises itself as `_wican._tcp`), or you give it the address.
