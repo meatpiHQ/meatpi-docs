@@ -256,10 +256,48 @@ ping wican.local
 | Sleep voltage | 13.1 V | The battery voltage below which sleep starts |
 | Wake on motion | Off | Wakes WiCAN when the car moves |
 
+## Chapters shared by two products
+
+WiCAN OBD and WiCAN USB run the same firmware and the same web interface, so their manuals say the same thing on most pages. Such a chapter is written once, under `docs/shared/wican/<chapter>.md`, without front matter and starting with its heading, and each product has a small page that includes it with a snippet:
+
+```markdown
+---
+title: WiFi
+---
+
+<!-- This chapter is shared by WiCAN OBD and WiCAN USB. Its text lives in
+     docs/shared/wican/wifi.md and is included here with a snippet; edit it there. -->
+
+--8<-- "shared/wican/wifi.md"
+```
+
+The shared files are not pages of their own (`exclude_docs` in `mkdocs.yml` keeps them out of the build), so write their links and picture paths as seen from the including page: `../connectivity/wifi.md` for another chapter, `../../shared/wican/img/pages/00-status.png` for a picture. Both products have the same folders, so one path works for both.
+
+Where a part of a chapter applies to one product only, mark sections in the shared file and let each product page compose its own sequence:
+
+```markdown
+<!-- --8<-- [start:main] -->
+...the text both products get...
+<!-- --8<-- [end:main] -->
+
+<!-- --8<-- [start:usb] -->
+## On WiCAN USB
+...
+<!-- --8<-- [end:usb] -->
+```
+
+```markdown
+--8<-- "shared/wican/sleep-and-wake.md:main"
+
+--8<-- "shared/wican/sleep-and-wake.md:usb"
+```
+
+A product page can also put its own paragraphs between two included sections. Pages that differ throughout (the landing page, first setup, hardware) are written per product, without snippets.
+
 ## Files and names
 
 - Pages: lowercase with hyphens, grouped by product and section, for example `wican-pro/getting-started/quick-setup.md`.
-- Sections inside a product manual, in this order: `getting-started`, `connectivity`, `vehicle-data`, `integrations`, `tools`, `power`, `firmware`, `troubleshooting`.
-- Pictures: `docs/<product>/img/<page>/NN-<screen>.png`, numbered in the order they appear.
+- Sections inside a product manual, in this order: `getting-started`, `connectivity`, `vehicle-data`, `integrations`, `tools`, `power`, `firmware`, `troubleshooting`, then `hardware` for the pinout and the datasheet, which sit in the sidebar as pages of their own.
+- Pictures: `docs/<product>/img/<page>/NN-<screen>.png`, numbered in the order they appear. Pictures of a shared chapter: `docs/shared/wican/img/<set>/NN-<screen>.png`.
 - Product photos for the cards on the home page: `docs/assets/products/<product>.jpg`, 1600 x 900 on a white background.
 - A guide that applies to every product lives under `integrations/` and names its products with pills at the top.

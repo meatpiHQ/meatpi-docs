@@ -32,20 +32,27 @@ picture; the GitHub workflow runs exactly that.
 ```text
 mkdocs.yml                      site config, theme, navigation
 docs/
-  index.md                      home: one card per product (WiCAN OBD and WiCAN USB share one)
+  index.md                      home: one card per product, the photo links to the manual
   assets/products/              the product photos on the home page cards, 1600 x 900 JPEG
   wican-pro/                    one folder per product
     index.md                    the manual landing page
     getting-started/            sections: getting-started, connectivity, vehicle-data,
-    img/<page>/NN-<screen>.png  integrations, tools, power, firmware, troubleshooting
-  wican-obd/  wican-usb/  espnetlink/
+    img/<page>/NN-<screen>.png  integrations, tools, power, firmware, troubleshooting, hardware
+  wican-obd/  wican-usb/        the two manuals of the original WiCAN: their own landing, first
+                                setup and hardware pages, and one small page per shared chapter
+  shared/wican/                 the chapters WiCAN OBD and WiCAN USB share, written once and
+    <chapter>.md                included from both manuals with a snippet (not pages themselves)
+    img/<set>/NN-<screen>.png   their screenshots
+  espnetlink/
   integrations/                 guides that apply to several products
   contributing/writing-guide.md every building block with its markup
   stylesheets/extra.css         the theme: colours and fonts of the WiCAN PRO web interface
 overrides/.icons/meatpi/        the logo, inlined into the header
 overrides/main.html             the sidebar: product drop-down above the chapters, "More" below
 overrides/partials/             product-picker.html, sidebar-more.html
-tools/capture.mjs               screenshot capture from the web interface preview
+tools/capture.mjs               screenshot capture from the WiCAN PRO web interface preview
+tools/capture_device.mjs        the same for the original WiCAN: a device, or the preview below
+tools/wican_preview/preview.py  the original WiCAN web page over mock data, for screenshots
 .github/workflows/deploy.yml    GitHub Pages
 ```
 
@@ -76,6 +83,26 @@ point elsewhere when the layout differs: `WICAN_FW` (the checkout) and `PLAYWRIG
 Each capture set is a function in `tools/capture.mjs`: a mock preset, a route, what to fill in on
 each screen, and the file names. Add a set per page of the manual. Sets so far: `quick-setup`
 (the wizard up to the restart) and `quick-setup-2` (after it).
+
+### WiCAN OBD and WiCAN USB
+
+The original WiCAN serves one page (`main/homepage_full.html` in the `wican-fw` checkout, the `main`
+branch). `tools/wican_preview/preview.py` serves that page over mock data in three presets, and
+`tools/capture_device.mjs` walks its tabs:
+
+```text
+python tools/wican_preview/preview.py --preset fresh --port 8090
+node tools/capture_device.mjs pages --base http://127.0.0.1:8090
+node tools/capture_device.mjs chapters --base http://127.0.0.1:8090
+python tools/wican_preview/preview.py --preset station --port 8091
+node tools/capture_device.mjs station --base http://127.0.0.1:8091
+python tools/wican_preview/preview.py --preset automate --port 8092
+node tools/capture_device.mjs configured --base http://127.0.0.1:8092
+```
+
+The pictures land in `docs/shared/wican/img/<set>/`. The same script pointed at a real device (through
+the bench tunnel, `--base http://127.0.0.1:8081`) takes the same pictures from it; its `update` set
+performs a firmware update through the System tab and pictures the steps.
 
 ## API examples from a device
 

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 364" width="720" height="364" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title>The OBD-II plug of WiCAN OBD seen from the front, with the four pins it uses</title>
+  <rect width="720" height="364" rx="12" fill="#ffffff"/>
+  <!-- the plug: a trapezoid with rounded corners, wider at the top, pins toward you -->
+  <path d="M46.3 75.3 A30 30 0 0 1 75.9 40.0 L644.1 40.0 A30 30 0 0 1 673.7 75.3 L638.4 271.3 A30 30 0 0 1 608.9 296.0 L111.1 296.0 A30 30 0 0 1 81.6 271.3 Z" fill="#2b3340" stroke="#1a2029" stroke-width="3"/>
+  <path d="M68.4 85.7 A20 20 0 0 1 88.1 62.0 L631.9 62.0 A20 20 0 0 1 651.6 85.7 L619.1 259.7 A20 20 0 0 1 599.4 276.0 L120.6 276.0 A20 20 0 0 1 100.9 259.7 Z" fill="#3a4454"/>
+  <!-- the key slot between the rows -->
+  <rect x="215" y="162" width="290" height="12" rx="6" fill="#1a2029"/>
+  <!-- top row, pins 8 to 1 from left to right, signal names below the pins -->
+  <g text-anchor="middle">
+    <rect x="108" y="96" width="24" height="14" rx="2" fill="#7c8797"/><text x="120" y="88" font-size="14" font-weight="700" fill="#9aa7b6">8</text>
+    <rect x="176" y="96" width="24" height="14" rx="2" fill="#7c8797"/><text x="188" y="88" font-size="14" font-weight="700" fill="#9aa7b6">7</text>
+    <rect x="244" y="96" width="24" height="14" rx="2" fill="#f2b705"/><text x="256" y="88" font-size="14" font-weight="700" fill="#f2b705">6</text>
+    <text x="256" y="130" font-size="12" font-weight="700" fill="#e7eef6">CANH</text>
+    <rect x="312" y="96" width="24" height="14" rx="2" fill="#dce2ea"/><text x="324" y="88" font-size="14" font-weight="700" fill="#dce2ea">5</text>
+    <text x="324" y="130" font-size="12" font-weight="700" fill="#e7eef6">GND</text>
+    <rect x="380" y="96" width="24" height="14" rx="2" fill="#7c8797"/><text x="392" y="88" font-size="14" font-weight="700" fill="#9aa7b6">4</text>
+    <rect x="448" y="96" width="24" height="14" rx="2" fill="#7c8797"/><text x="460" y="88" font-size="14" font-weight="700" fill="#9aa7b6">3</text>
+    <rect x="516" y="96" width="24" height="14" rx="2" fill="#7c8797"/><text x="528" y="88" font-size="14" font-weight="700" fill="#9aa7b6">2</text>
+    <rect x="584" y="96" width="24" height="14" rx="2" fill="#7c8797"/><text x="596" y="88" font-size="14" font-weight="700" fill="#9aa7b6">1</text>
+  </g>
+  <!-- bottom row, pins 16 to 9 from left to right, signal names above the pins -->
+  <g text-anchor="middle">
+    <rect x="108" y="224" width="24" height="14" rx="2" fill="#f2686b"/><text x="120" y="258" font-size="14" font-weight="700" fill="#f2686b">16</text>
+    <text x="120" y="212" font-size="12" font-weight="700" fill="#e7eef6">+V</text>
+    <rect x="176" y="224" width="24" height="14" rx="2" fill="#7c8797"/><text x="188" y="258" font-size="14" font-weight="700" fill="#9aa7b6">15</text>
+    <rect x="244" y="224" width="24" height="14" rx="2" fill="#f2b705"/><text x="256" y="258" font-size="14" font-weight="700" fill="#f2b705">14</text>
+    <text x="256" y="212" font-size="12" font-weight="700" fill="#e7eef6">CANL</text>
+    <rect x="312" y="224" width="24" height="14" rx="2" fill="#7c8797"/><text x="324" y="258" font-size="14" font-weight="700" fill="#9aa7b6">13</text>
+    <rect x="380" y="224" width="24" height="14" rx="2" fill="#7c8797"/><text x="392" y="258" font-size="14" font-weight="700" fill="#9aa7b6">12</text>
+    <rect x="448" y="224" width="24" height="14" rx="2" fill="#7c8797"/><text x="460" y="258" font-size="14" font-weight="700" fill="#9aa7b6">11</text>
+    <rect x="516" y="224" width="24" height="14" rx="2" fill="#7c8797"/><text x="528" y="258" font-size="14" font-weight="700" fill="#9aa7b6">10</text>
+    <rect x="584" y="224" width="24" height="14" rx="2" fill="#7c8797"/><text x="596" y="258" font-size="14" font-weight="700" fill="#9aa7b6">9</text>
+  </g>
+  <text x="360" y="322" font-size="13" fill="#586472" text-anchor="middle">The plug seen from the front, pins toward you. Pin 1 is at the top right, the socket in the car is the mirror image.</text>
+  <!-- legend -->
+  <g font-size="13" fill="#2b3340">
+    <rect x="40" y="341" width="18" height="14" rx="3" fill="#f2686b"/><text x="68" y="352">16 battery (+V)</text>
+    <rect x="185" y="341" width="18" height="14" rx="3" fill="#dce2ea"/><text x="213" y="352">5 ground</text>
+    <rect x="300" y="341" width="18" height="14" rx="3" fill="#f2b705"/><text x="328" y="352">6, 14 high-speed CAN</text>
+    <rect x="470" y="341" width="18" height="14" rx="3" fill="#7c8797"/><text x="498" y="352">other pins not used</text>
+  </g>
+</svg>

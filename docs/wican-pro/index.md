@@ -17,7 +17,7 @@ WiCAN PRO plugs into the OBD-II port and brings vehicle data to Home Assistant, 
 </div>
 
 <dl class="facts" markdown>
-<dt>Connects to the car</dt><dd>OBD-II port (SAE J1962), CAN bus, ISO 15765, J1939, ISO 27145</dd>
+<dt>Connects to the car</dt><dd>OBD-II port (SAE J1962, see the [pinout](hardware/pinout.md)), CAN bus, ISO 15765, J1939, ISO 27145</dd>
 <dt>Connects to you</dt><dd>WiFi 2.4 GHz (access point or your network), Bluetooth LE, USB accessories</dd>
 <dt>Setup</dt><dd>From any phone or laptop browser, no app to install</dd>
 <dt>Firmware</dt><dd>Updated from the web interface, over the air</dd>

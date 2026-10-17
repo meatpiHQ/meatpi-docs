@@ -54,6 +54,12 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+# the chapters WiCAN OBD and WiCAN USB share are written once under
+# docs/shared/wican/ and included from each product's pages with a snippet
+# (see the writing guide); they are not pages of their own
+exclude_docs: |
+  shared/**/*.md
+
 extra:
   # the entries of the product drop-down in the sidebar: top-level nav
   # sections by title, in this order
@@ -145,6 +151,8 @@ nav:
           - LED patterns: wican-pro/troubleshooting/led-patterns.md
           - Crash report: wican-pro/troubleshooting/crash-report.md
           - Faults: wican-pro/troubleshooting/faults.md
+      - Pinout: wican-pro/hardware/pinout.md
+      - Datasheet: wican-pro/hardware/datasheet.md
       - Reference:
           - HTTP API:
               - wican-pro/reference/http-api/index.md
@@ -159,8 +167,71 @@ nav:
               - HTTP over BLE: wican-pro/reference/ble-api/http-over-ble.md
   - WiCAN OBD:
       - wican-obd/index.md
+      - Getting started:
+          - First setup: wican-obd/getting-started/first-setup.md
+          - The web interface: wican-obd/getting-started/web-interface.md
+          - Hardware: wican-obd/getting-started/hardware.md
+      - Connectivity:
+          - WiFi: wican-obd/connectivity/wifi.md
+          - Bluetooth LE: wican-obd/connectivity/bluetooth.md
+      - Vehicle data:
+          - AutoPID: wican-obd/vehicle-data/autopid.md
+          - Vehicle profiles: wican-obd/vehicle-data/vehicle-profiles.md
+          - Custom PIDs and expressions: wican-obd/vehicle-data/custom-pids.md
+      - Send data:
+          - Home Assistant: wican-obd/send-data/home-assistant.md
+          - MQTT: wican-obd/send-data/mqtt.md
+          - Apps over WiFi and BLE: wican-obd/send-data/apps.md
+      - Tools:
+          - CAN Monitor: wican-obd/tools/can-monitor.md
+      - Power Saving:
+          - Sleep and battery alert: wican-obd/power/sleep-and-wake.md
+      - Firmware:
+          - Update: wican-obd/firmware/update.md
+          - Backup and restore: wican-obd/firmware/backup-and-restore.md
+          - Recovery over USB: wican-obd/firmware/usb-flash.md
+      - Troubleshooting:
+          - LEDs: wican-obd/troubleshooting/leds.md
+          - Common problems: wican-obd/troubleshooting/common-problems.md
+      - Pinout: wican-obd/hardware/pinout.md
+      - Reference:
+          - HTTP endpoints: wican-obd/reference/http-endpoints.md
+          - MQTT messages: wican-obd/reference/mqtt-messages.md
+          - ELM327 commands: wican-obd/reference/elm327-commands.md
   - WiCAN USB:
       - wican-usb/index.md
+      - Getting started:
+          - First setup: wican-usb/getting-started/first-setup.md
+          - The web interface: wican-usb/getting-started/web-interface.md
+          - Hardware: wican-usb/getting-started/hardware.md
+      - Connectivity:
+          - WiFi: wican-usb/connectivity/wifi.md
+          - Bluetooth LE: wican-usb/connectivity/bluetooth.md
+          - USB serial: wican-usb/connectivity/usb-serial.md
+      - Vehicle data:
+          - AutoPID: wican-usb/vehicle-data/autopid.md
+          - Vehicle profiles: wican-usb/vehicle-data/vehicle-profiles.md
+          - Custom PIDs and expressions: wican-usb/vehicle-data/custom-pids.md
+      - Send data:
+          - Home Assistant: wican-usb/send-data/home-assistant.md
+          - MQTT: wican-usb/send-data/mqtt.md
+          - Apps over WiFi, BLE and USB: wican-usb/send-data/apps.md
+      - Tools:
+          - CAN Monitor: wican-usb/tools/can-monitor.md
+      - Power Saving:
+          - Sleep and battery alert: wican-usb/power/sleep-and-wake.md
+      - Firmware:
+          - Update: wican-usb/firmware/update.md
+          - Backup and restore: wican-usb/firmware/backup-and-restore.md
+          - Recovery over USB: wican-usb/firmware/usb-flash.md
+      - Troubleshooting:
+          - LEDs: wican-usb/troubleshooting/leds.md
+          - Common problems: wican-usb/troubleshooting/common-problems.md
+      - Pinout: wican-usb/hardware/pinout.md
+      - Reference:
+          - HTTP endpoints: wican-usb/reference/http-endpoints.md
+          - MQTT messages: wican-usb/reference/mqtt-messages.md
+          - ELM327 commands: wican-usb/reference/elm327-commands.md
   - ESPNetLink:
       - espnetlink/index.md
   - Integrations:

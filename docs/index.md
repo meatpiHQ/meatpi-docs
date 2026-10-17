@@ -11,7 +11,7 @@ hide:
 
 <div class="grid cards products" markdown>
 
--   ![WiCAN PRO](assets/products/wican-pro.jpg){ .product-photo .no-lightbox }
+-   [![WiCAN PRO](assets/products/wican-pro.jpg){ .product-photo .no-lightbox }](wican-pro/index.md)
 
     **WiCAN PRO**
 
@@ -21,18 +21,27 @@ hide:
 
     [:octicons-arrow-right-24: Open the manual](wican-pro/index.md)
 
--   ![WiCAN OBD and WiCAN USB side by side](assets/products/wican-obd-usb.jpg){ .product-photo .no-lightbox }
+-   [![WiCAN OBD](assets/products/wican-obd.jpg){ .product-photo .no-lightbox }](wican-obd/index.md)
 
-    **WiCAN OBD and WiCAN USB**
+    **WiCAN OBD**
 
     ---
 
-    The original WiCAN with WiFi and Bluetooth, in two versions: WiCAN OBD plugs into the OBD-II port, WiCAN USB has screw terminals for any CAN bus and a USB port.
+    The original WiCAN for the OBD-II port, with WiFi and Bluetooth: an ELM327 adapter for Car Scanner and RealDash, a CAN interface for SavvyCAN and SocketCAN, vehicle data for Home Assistant and MQTT.
 
-    [:octicons-arrow-right-24: WiCAN OBD manual](wican-obd/index.md)<br>
-    [:octicons-arrow-right-24: WiCAN USB manual](wican-usb/index.md)
+    [:octicons-arrow-right-24: Open the manual](wican-obd/index.md)
 
--   ![ESPNetLink with its USB cable and the OTG adapter](assets/products/espnetlink.jpg){ .product-photo .no-lightbox }
+-   [![WiCAN USB](assets/products/wican-usb.jpg){ .product-photo .no-lightbox }](wican-usb/index.md)
+
+    **WiCAN USB**
+
+    ---
+
+    The original WiCAN with screw terminals for any CAN bus, 7.5 V to 36 V, and a USB serial port: SocketCAN, SavvyCAN, BUSMASTER and RealDash over WiFi, Bluetooth or the cable.
+
+    [:octicons-arrow-right-24: Open the manual](wican-usb/index.md)
+
+-   [![ESPNetLink with its USB cable and the OTG adapter](assets/products/espnetlink.jpg){ .product-photo .no-lightbox }](espnetlink/index.md)
 
     **ESPNetLink**
 
