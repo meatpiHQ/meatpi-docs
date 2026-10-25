@@ -6,7 +6,7 @@ title: Supported vehicles
 
 # Supported vehicles
 
-<p class="lead">The cars with a vehicle profile: the manufacturer-specific values a car does not expose through standard OBD, such as state of charge, cell voltages and charging state, made and tested by WiCAN owners. Type a make, a model or a value to filter the list.</p>
+<p class="lead">A vehicle profile lets you access data that a car doesn't expose through standard OBD, such as state of charge, cell voltages, charging status, and more. The profiles below have been created and tested by WiCAN owners. Search by make, model, or value to filter the list.</p>
 
 !!! warning "Before you order"
     The list is built from user submissions and verified through user feedback, so coverage varies by model year and market. Read the [notes below the list](#before-you-rely-on-a-profile) first: why WiCAN PRO is the version to order, vehicles whose alarm an OBD adapter can trigger, and how standard OBD data differs by make.
@@ -150,11 +150,11 @@ The list is based on user submissions. Profiles are tested and verified through 
 
 ### WiCAN PRO recommended
 
-Order the WiCAN PRO version when you can:
+We **highly recommend** ordering the **WiCAN PRO** version because:
 
-- Its OBD chip handles every OBD protocol and gets along with a wider range of vehicles.
-- It receives the new features and firmware updates first.
-- It has the memory for long-term support; the original WiCAN hardware is limited there.
+- It features an **advanced OBD chip**, improving compatibility with a wider range of vehicles.
+- You'll receive **access to the latest features** and **firmware updates**.
+- It offers **better long-term support** compared to the standard WiCAN **because of memory limitations on the original WiCAN hardware**.
 
 ### Vehicle alarms
 
