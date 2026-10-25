@@ -38,12 +38,31 @@ title: Supported vehicles
 
 <p class="lead">The cars with a vehicle profile: the manufacturer-specific values a car does not expose through standard OBD, such as state of charge, cell voltages and charging state, made and tested by WiCAN owners. Type a make, a model or a value to filter the list.</p>
 
+!!! warning "Before you order"
+    The list is built from user submissions and verified through user feedback, so coverage varies by model year and market. Read the [notes below the list](#before-you-rely-on-a-profile) first: why WiCAN PRO is the version to order, vehicles whose alarm an OBD adapter can trigger, and how standard OBD data differs by make.
+
 """
 
 OUTRO = """
-## Not listed?
+## Before you rely on a profile
 
-A car without a profile still gives its standard OBD-II data: the scan on the [AutoPID](vehicle-data/autopid.md) page finds the standard PIDs it supports. Profiles come from user submissions and are verified through user feedback, so coverage varies by model year and market; the [GitHub issues](https://github.com/meatpiHQ/wican-fw/issues) are the place to look for experiences with a particular car. On some vehicles an OBD adapter that polls the ECU while the car is off can trigger the alarm; whether that can be switched off depends on the car.
+The list is based on user submissions. Profiles are tested and verified through user feedback, so a profile may fit one model year or market and not another. For a particular make and model, search the [GitHub issues](https://github.com/meatpiHQ/wican-fw/issues) first: owners report what worked, what did not, and the tips that made it work.
+
+### WiCAN PRO recommended
+
+Order the WiCAN PRO version when you can:
+
+- Its OBD chip handles every OBD protocol and gets along with a wider range of vehicles.
+- It receives the new features and firmware updates first.
+- It has the memory for long-term support; the original WiCAN hardware is limited there.
+
+### Vehicle alarms
+
+On some vehicles an OBD adapter that stays plugged in and polls the ECU while the car is off triggers the alarm. The vehicle's own firmware decides this: on some cars the behaviour can be switched off in the car's settings, on others it cannot. [Sleep and wake](power/sleep-and-wake.md) covers what WiCAN does while the car is parked.
+
+### Standard OBD data differs by make
+
+Profiles carry vehicle-specific values, mostly for electric and hybrid cars, sometimes for a combustion car's odometer or fuel level. Beside them, most electric, hybrid and combustion vehicles answer a set of standard OBD-II PIDs, and what is available depends on the make and model: some manufacturers disable standard PIDs, others replace them with proprietary ones, so even two cars of one brand can differ. The scan on the [AutoPID](vehicle-data/autopid.md) page finds what your car answers; a car without a profile is not a car without data.
 
 ## Use a profile, or add your car
 
