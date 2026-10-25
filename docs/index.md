@@ -47,7 +47,7 @@ hide:
 
     ---
 
-    The cellular modem and GPS accessory that plugs into the WiCAN PRO USB port.
+    The LTE and GPS dongle for WiCAN PRO: internet over Cat M1 or NB-IoT wherever the car is, and a GPS position, with nothing to set up. On a computer, a USB modem with a web interface, a WiFi access point and a console.
 
     [:octicons-arrow-right-24: Open the manual](espnetlink/index.md)
 

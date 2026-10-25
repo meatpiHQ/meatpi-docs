@@ -236,6 +236,45 @@ nav:
           - ELM327 commands: wican-usb/reference/elm327-commands.md
   - ESPNetLink:
       - espnetlink/index.md
+      - Getting started:
+          - With WiCAN PRO: espnetlink/getting-started/with-wican-pro.md
+          - With a computer: espnetlink/getting-started/with-a-computer.md
+          - The web interface: espnetlink/getting-started/web-interface.md
+      - Connectivity:
+          - Cellular: espnetlink/connectivity/cellular.md
+          - USB: espnetlink/connectivity/usb.md
+          - WiFi: espnetlink/connectivity/wifi.md
+          - VPN: espnetlink/connectivity/vpn.md
+      - GPS:
+          - Position and assisted GPS: espnetlink/gps/position.md
+      - Send data:
+          - Home Assistant: espnetlink/send-data/home-assistant.md
+      - Tools:
+          - Console: espnetlink/tools/console.md
+          - Files: espnetlink/tools/files.md
+          - Logs and system monitor: espnetlink/tools/logs-and-monitor.md
+      - Power Saving:
+          - Sleep and wake: espnetlink/power/sleep-and-wake.md
+      - Firmware:
+          - Update: espnetlink/firmware/update.md
+          - Backup and restore: espnetlink/firmware/backup-and-restore.md
+          - Factory reset: espnetlink/firmware/factory-reset.md
+          - Recovery over USB: espnetlink/firmware/usb-flash.md
+      - Troubleshooting:
+          - LED patterns: espnetlink/troubleshooting/led-patterns.md
+          - Crash report: espnetlink/troubleshooting/crash-report.md
+          - Common problems: espnetlink/troubleshooting/common-problems.md
+      - Hardware: espnetlink/hardware/hardware.md
+      - Reference:
+          - HTTP API:
+              - espnetlink/reference/http-api/index.md
+              - Status and device: espnetlink/reference/http-api/status.md
+              - Settings: espnetlink/reference/http-api/settings.md
+              - Cellular, GPS and WiFi: espnetlink/reference/http-api/network.md
+              - VPN, motion, LED and Home Assistant: espnetlink/reference/http-api/features.md
+              - Logs, files, firmware: espnetlink/reference/http-api/logs-files-firmware.md
+          - Console commands: espnetlink/reference/console-commands.md
+          - Settings reference: espnetlink/reference/settings.md
   - Integrations:
       - integrations/index.md
   - Contributing:

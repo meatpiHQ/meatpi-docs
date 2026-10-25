@@ -40,6 +40,10 @@ curl --data-binary @wican-fw_obd_pro_v6.00.bin -H "Content-Type: application/oct
 
 The answer names the partition written and the device restarts a second later; `GET /api/ota/status` reports the progress meanwhile ([HTTP API](../reference/http-api/logs-files-firmware.md)).
 
+## Updating an ESPNetLink dongle
+
+<span class="pill">firmware 6.0.0-beta.1+</span> The same page updates a dongle on the USB port: the ==Firmware update== card gets a second row for the ESPNetLink with its installed version, ==Check now==, ==Release notes== and ==Update dongle==. WiCAN downloads the dongle's release over WiFi, checks it, sends it over the cable (or over the dongle's own WiFi in WiFi modem mode) and waits for the dongle to restart; keep the dongle plugged in until the row says ==Dongle updated==. Internet through the dongle pauses for about a minute meanwhile. A dongle on firmware 1.20 or older shows ==Needs a USB flash==: it is updated once from a computer, after which it installs from here. The dongle side, the timings and the failure texts are in the ESPNetLink manual: [Update](../../espnetlink/firmware/update.md).
+
 ## Coming from the v4.5x firmware
 
 The first v6 firmware installed over the factory v4.5x firmware rewrites WiCAN's partition layout at its first start (one extra restart, recorded as `partition_migrate` in the restart history) and starts with factory settings: run [Quick Setup](../getting-started/quick-setup.md) again. The old configuration is not converted. Going back to the legacy firmware through the same page works too; it then starts as a fresh device.

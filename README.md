@@ -43,7 +43,9 @@ docs/
   shared/wican/                 the chapters WiCAN OBD and WiCAN USB share, written once and
     <chapter>.md                included from both manuals with a snippet (not pages themselves)
     img/<set>/NN-<screen>.png   their screenshots
-  espnetlink/
+  espnetlink/                   the ESPNetLink manual: the same sections, plus gps/ and a
+    img/pages/, img/chapters/   hardware page; screenshots from the dongle's web interface
+    img/hardware/               preview (below) and the product photos
   integrations/                 guides that apply to several products
   contributing/writing-guide.md every building block with its markup
   stylesheets/extra.css         the theme: colours and fonts of the WiCAN PRO web interface
@@ -53,6 +55,8 @@ overrides/partials/             product-picker.html, sidebar-more.html
 tools/capture.mjs               screenshot capture from the WiCAN PRO web interface preview
 tools/capture_device.mjs        the same for the original WiCAN: a device, or the preview below
 tools/wican_preview/preview.py  the original WiCAN web page over mock data, for screenshots
+tools/espnetlink_preview/       the ESPNetLink web interface over mock data (preview.py)
+tools/capture_espnetlink.mjs    screenshot capture for the ESPNetLink manual from that preview
 .github/workflows/deploy.yml    GitHub Pages
 ```
 
@@ -103,6 +107,25 @@ node tools/capture_device.mjs configured --base http://127.0.0.1:8092
 The pictures land in `docs/shared/wican/img/<set>/`. The same script pointed at a real device (through
 the bench tunnel, `--base http://127.0.0.1:8081`) takes the same pictures from it; its `update` set
 performs a firmware update through the System tab and pictures the steps.
+
+### ESPNetLink
+
+The dongle serves one page (`components/web_ui/web/index.html` in the `espnetlink-fw` checkout) whose
+forms are generated from the firmware's settings schemas. `tools/espnetlink_preview/preview.py` serves
+that page over mock data (the schemas transcribed from the firmware's settings tables, the live
+documents from its API references) in five presets: `car` (on a WiCAN PRO in USB Ethernet mode),
+`fresh` (out of the box, no SIM), `wifi` (WiFi modem mode), `station` (joined a home network) and
+`vpn`. `tools/capture_espnetlink.mjs` starts the servers itself, maps the dongle's address onto them
+so the header shows `192.168.7.1` (or the access point or station address), and walks the pages:
+
+```text
+node tools/capture_espnetlink.mjs pages
+node tools/capture_espnetlink.mjs chapters
+```
+
+The pictures land in `docs/espnetlink/img/<set>/`. `ESPNETLINK_FW` points at another checkout and
+`PLAYWRIGHT_DIR` at another Playwright; to look at the preview by hand,
+`python tools/espnetlink_preview/preview.py --preset car --port 8095` and open `http://127.0.0.1:8095/`.
 
 ## API examples from a device
 
