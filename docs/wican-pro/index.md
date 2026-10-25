@@ -16,6 +16,9 @@ WiCAN PRO plugs into the OBD-II port and brings vehicle data to Home Assistant, 
 </div>
 </div>
 
+!!! warning "This manual is for firmware version 6 and later"
+    Everything in it (Quick Setup, the pages, the settings, the HTTP and Bluetooth APIs) describes WiCAN PRO firmware **6.0.0 or newer**. A WiCAN PRO on the older 4.x firmware has a different web interface and none of these pages apply to it: [update it to version 6 first](firmware/update.md#coming-from-the-4x-firmware). The installed version is shown on the device's ==About== page.
+
 <dl class="facts" markdown>
 <dt>Connects to the car</dt><dd>OBD-II port (SAE J1962, see the [pinout](hardware/pinout.md)), CAN bus, ISO 15765, J1939, ISO 27145</dd>
 <dt>Connects to you</dt><dd>WiFi 2.4 GHz (access point or your network), Bluetooth LE, USB accessories</dd>

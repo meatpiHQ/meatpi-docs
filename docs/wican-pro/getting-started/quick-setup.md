@@ -6,6 +6,9 @@ title: Quick Setup
 
 <p class="lead">Quick Setup gets a new WiCAN PRO onto your home WiFi, talking to Home Assistant or your MQTT broker, reading your vehicle and sleeping when the car is parked. It takes about six minutes and runs in your phone's browser.</p>
 
+!!! warning "Firmware version 6 or later"
+    Quick Setup exists from firmware 6.0.0 on. If the page at the setup address looks nothing like the pictures here, the device runs the older 4.x firmware: [update it first](../firmware/update.md#coming-from-the-4x-firmware).
+
 <dl class="facts" markdown>
 <dt>You need</dt><dd>A phone or laptop with WiFi, the password of your home WiFi, the car parked with the ignition on</dd>
 <dt>Access point</dt><dd>`WiCAN_` followed by twelve letters and digits, factory password `@meatpi#`</dd>
