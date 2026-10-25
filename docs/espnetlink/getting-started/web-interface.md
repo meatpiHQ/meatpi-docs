@@ -11,9 +11,9 @@ title: The web interface
 | Where the dongle is | Address |
 | --- | --- |
 | On a computer's USB port | `http://192.168.7.1` |
-| On its own WiFi access point | `http://192.168.80.1` |
+| On its own WiFi access point (`ESPNetLink_<id>`) | `http://192.168.80.1`, the dongle's own address |
 | On your WiFi network (station mode) | the address your router gave it, or `http://espnetlink_<device id>.local` by mDNS |
-| On a WiCAN PRO | In WiFi modem mode, `http://192.168.80.1` for anyone on the dongle's access point. In USB Ethernet mode the cable is the WiCAN's, so the page is out of reach; the WiCAN's ==USB== › ==Dongle console== is your way to the dongle's commands |
+| Plugged into a WiCAN PRO | The dongle's page is never behind the WiCAN's address (`192.168.0.10` on the WiCAN's access point, or its address on your network). In WiFi modem mode join the dongle's own access point and open `http://192.168.80.1`. In USB Ethernet mode the cable is the WiCAN's, so the page is out of reach; the WiCAN's ==USB== › ==Dongle console== is your way to the dongle's commands |
 
 A network you marked as untrusted under ==Settings== › ==Station== refuses the pages and the API (HTTP 403) from that network; the USB link and the access point always work. There is no password on the page: whoever reaches the dongle's address can change its settings.
 
