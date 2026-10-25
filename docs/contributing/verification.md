@@ -47,7 +47,7 @@ title: Verification log
 | Faults | v6.00p_alfa-02 | 2026-10-10 | `/api/faults` from the device (none); the codes from the firmware source (`fault_raise` call sites) and the status reference; the header chip from the preview with one fault injected | matches |
 | Pinout and Datasheet (WiCAN PRO) | - | 2026-10-17 | figures and tables transcribed from `WiCAN_PRO_Datasheet.pdf` revision 1.0 (wican-fw tag `v6.00p_alfa-06`), the PDF itself kept next to the page; the pinout redrawn from the datasheet's figure, pin by pin | matches the PDF; not checked against a board |
 | Pinout (WiCAN OBD, WiCAN USB) | - | 2026-10-17 | pins and terminal positions from the pinout figures of the wican-fw README (WiCAN-OBD2 Pinout, WiCAN-USB Pinout); the OBD plug redrawn from its figure, the USB board render taken from it | matches the README; not checked against a board |
-| Videos (WiCAN PRO) and the home page videos | - | 2026-10-17 | two YouTube embeds, titles and authors read from YouTube's oEmbed data | not a device page |
+| Videos (WiCAN PRO) and the home page videos | - | 2026-10-17 | three YouTube embeds, titles and authors read from YouTube's oEmbed data | not a device page |
 | Recovery over USB (WiCAN PRO) | - | 2026-10-17 | the steps of the legacy documentation (USB Flashing WiCAN PRO Firmware); the four files from the v4.51p release zip; the addresses from that page's ESP Tool picture and from the v6.00p_alfa-06 build's `flasher_args.json` (0x0, 0x8000, 0xd000, 0x10000) | matches; not exercised on a device |
 
 ### WiCAN OBD and WiCAN USB

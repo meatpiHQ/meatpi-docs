@@ -85,7 +85,7 @@ hide:
 
 ## Videos
 
-Two walkthroughs of WiCAN PRO with Home Assistant, by people who use it. The manual's own steps are in [Quick Setup](wican-pro/getting-started/quick-setup.md) and [Home Assistant](wican-pro/send-data/home-assistant.md).
+Three walkthroughs of WiCAN PRO with Home Assistant, by people who use it, two in English and one in German. The manual's own steps are in [Quick Setup](wican-pro/getting-started/quick-setup.md) and [Home Assistant](wican-pro/send-data/home-assistant.md).
 
 <div class="grid videos" markdown>
 
@@ -97,6 +97,11 @@ Two walkthroughs of WiCAN PRO with Home Assistant, by people who use it. The man
 <figure class="video">
 <div class="frame"><iframe src="https://www.youtube.com/embed/3JW3J4_Ukrs?si=FZ_jsP0GmlNBxHeJ" title="Connect Any Car to Home Assistant! Probably..." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 <figcaption>The Stock Pot: Connect Any Car to Home Assistant! Probably...</figcaption>
+</figure>
+
+<figure class="video">
+<div class="frame"><iframe src="https://www.youtube.com/embed/97avTCEZMZM" title="Nie wieder Cloud-Ärger! So holst du JEDES Auto lokal ins Smart Home" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<figcaption>SmartHome yourself: Nie wieder Cloud-Ärger! So holst du JEDES Auto lokal ins Smart Home (in German)</figcaption>
 </figure>
 
 </div>
