@@ -46,17 +46,19 @@ The answer names the partition written and the device restarts a second later; `
 
 ## Coming from the 4.x firmware
 
-This manual describes firmware version 6 and later. A WiCAN PRO still on the 4.x firmware (its web interface has a dark status page with tabs and no Quick Setup) is updated through that interface:
+This manual describes firmware version 6 and later. A WiCAN PRO still on the 4.x firmware is updated through that firmware's own web interface, whose pages look different from everything pictured here:
 
 <div class="steps" markdown>
 
-1.  **Download the version 6 image** from the releases page, the `.bin` for WiCAN PRO.
+1.  **Download the release** from `https://github.com/meatpiHQ/wican-fw/releases`: the zip for WiCAN PRO, `wican-fw_vXXX_obd_pro.zip`, and unzip it. The file to upload is the one named `wican-fw_obd_pro_vXXXp.bin`.
 
-2.  **In the 4.x web interface** open its firmware update page, choose the file and start the update. Keep the device powered.
+2.  **Open the 4.x configuration page** at the device's address (its access point is `192.168.80.1` on that firmware) and go to the ==System== tab.
 
-3.  **Wait for two restarts.** The first start of version 6 rewrites WiCAN's partition layout and restarts once more by itself.
+3.  **Under ==Firmware Update==** click ==Choose File==, pick the `.bin`, then ==Update==. The page shows `Updating please wait ...` for about a minute. Keep the device powered.
 
-4.  **Join the factory access point** `WiCAN_<device id>` with the password `@meatpi#`, open `http://192.168.0.10/` and run [Quick Setup](../getting-started/quick-setup.md): the device starts with factory settings, the old configuration is not converted.
+4.  **Wait for two restarts.** The first start of version 6 rewrites WiCAN's partition layout and restarts once more by itself.
+
+5.  **Join the factory access point** `WiCAN_<device id>` with the password `@meatpi#`, open `http://192.168.0.10/` and run [Quick Setup](../getting-started/quick-setup.md). Version 6 starts with factory settings: the 4.x configuration is not converted, so note down anything you want to type again (WiFi, MQTT, vehicle profile) before you start.
 
 </div>
 
