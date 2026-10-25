@@ -8,7 +8,7 @@ title: Vehicle profiles
 
 ## Where profiles appear
 
-The cars that have a profile today are listed on [Supported vehicles](supported-vehicles.md), generated from the profile sources at every publish.
+The cars that have a profile today are listed on [Supported vehicles](../supported-vehicles.md), generated from the profile sources at every publish.
 
 - **Quick Setup**, on the vehicle step: after ==Detect my vehicle== the step suggests profiles for the detected car, lets you ==Test profile== before choosing, or keep the car without one.
 - **==Automate== › ==Parameters== › ==Vehicle Specific==** on a device that is set up: the ==Vehicle profile== row names the profile the device runs, ==Choose profile== opens the published list, and a drop zone takes a profile file.

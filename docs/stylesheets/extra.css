@@ -631,3 +631,26 @@
     box-shadow: none;
   }
 }
+
+/* ---- Supported vehicles: the filter box, the make chips, the grouped list ---- */
+.md-typeset .veh-toolbar { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; margin: 1.2rem 0 .7rem; }
+.md-typeset .veh-toolbar input { flex: 1 1 18rem; font: inherit; font-size: .85rem; padding: .6rem .9rem; border: 1px solid var(--mp-border-strong); border-radius: .55rem; background: var(--mp-surface); color: inherit; box-shadow: none; }
+.md-typeset .veh-toolbar input:focus { outline: 2px solid var(--md-accent-fg-color); outline-offset: 1px; border-color: transparent; }
+.md-typeset .veh-count { color: var(--mp-text-2); font-size: .75rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.md-typeset .veh-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0 0 1.2rem; }
+.md-typeset .veh-chip { font: inherit; font-size: .7rem; font-weight: 600; line-height: 1.5; padding: .15rem .6rem; border-radius: 999px; border: 1px solid var(--mp-chip-border); background: var(--mp-chip-bg); color: var(--mp-chip-fg); cursor: pointer; transition: opacity .15s, background .15s; }
+.md-typeset .veh-chip span { opacity: .65; margin-left: .3rem; font-weight: 500; }
+.md-typeset .veh-chip:hover { border-color: var(--md-accent-fg-color); }
+.md-typeset .veh-chip.is-on { background: var(--mp-step-bg); color: var(--mp-step-fg); border-color: transparent; }
+.md-typeset .veh-chip.is-on span { opacity: .8; }
+.md-typeset .veh-chip.is-dim { opacity: .38; }
+.md-typeset table.veh-table { display: table; width: 100%; border-collapse: collapse; font-size: .75rem; border: 1px solid var(--mp-border); }
+.md-typeset table.veh-table th, .md-typeset table.veh-table td { padding: .55rem .7rem; vertical-align: top; border-bottom: 1px solid var(--mp-border); text-align: left; }
+.md-typeset table.veh-table thead th { font-size: .65rem; letter-spacing: .05em; text-transform: uppercase; color: var(--mp-text-2); background: var(--mp-surface); }
+.md-typeset table.veh-table tr.veh-make th { background: var(--mp-surface-2); font-size: .8rem; font-weight: 700; padding-top: .6rem; padding-bottom: .5rem; }
+.md-typeset table.veh-table td:first-child { min-width: 11rem; width: 30%; font-weight: 600; }
+.md-typeset table.veh-table td:nth-child(2) { color: var(--mp-text-2); }
+.md-typeset table.veh-table td:nth-child(3) { white-space: nowrap; }
+.md-typeset .veh-n { display: inline-block; min-width: 1.7rem; text-align: center; font-weight: 700; color: var(--mp-chip-fg); background: var(--mp-chip-bg); border-radius: .35rem; padding: 0 .3rem; margin-right: .4rem; font-variant-numeric: tabular-nums; }
+.md-typeset .veh-empty { color: var(--mp-text-2); font-style: italic; margin: 1rem 0; }
+.md-typeset .veh-meta { color: var(--mp-text-2); font-size: .7rem; margin-top: 1rem; }

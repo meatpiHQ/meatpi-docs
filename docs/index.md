@@ -57,6 +57,14 @@ hide:
 
 <div class="grid cards" markdown>
 
+-   :material-car-info:{ .lg .middle } **Supported vehicles**
+
+    ---
+
+    The cars with a vehicle profile, by make, with what each profile reads. Generated from the profile sources every time one is merged.
+
+    [:octicons-arrow-right-24: Supported vehicles](wican-pro/supported-vehicles.md)
+
 -   :material-home-automation:{ .lg .middle } **Integrations**
 
     ---

@@ -3,7 +3,8 @@
 The profiles live in the firmware repository (meatpiHQ/wican-fw, branch main,
 folder vehicle_profiles/, one JSON file per car, with the parameter catalogue
 in .vehicle_profiles/params.json). This script reads them from a checkout and
-writes docs/wican-pro/vehicle-data/supported-vehicles.md.
+writes docs/wican-pro/supported-vehicles.md: one filterable list grouped by
+make (the filter box and the make chips are docs/javascripts/vehicles.js).
 
     python tools/supported_vehicles.py --source C:\\path\\to\\wican-fw
     python tools/supported_vehicles.py --clone            # sparse clone of main into a temp dir
@@ -14,6 +15,7 @@ a snapshot for local builds.
 """
 import argparse
 import datetime as dt
+import html
 import json
 import re
 import subprocess
@@ -22,7 +24,7 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "docs" / "wican-pro" / "vehicle-data" / "supported-vehicles.md"
+OUT = ROOT / "docs" / "wican-pro" / "supported-vehicles.md"
 REPO_URL = "https://github.com/meatpiHQ/wican-fw"
 MAKE_NAMES = {"AAA": "Generic", "BT1": "GM"}
 
@@ -34,19 +36,18 @@ title: Supported vehicles
 
 # Supported vehicles
 
-<p class="lead">A vehicle profile adds the manufacturer-specific values a car does not expose through standard OBD: state of charge, cell voltages, charging state, cabin temperature. The profiles below are made and tested by WiCAN owners and published with the firmware. A car that is not listed still gives its standard OBD-II data; the standard PIDs it supports are found by the scan on the [AutoPID](autopid.md) page.</p>
-
-!!! note "Read before you rely on a profile"
-    Profiles come from user submissions and are verified through user feedback, so coverage varies by model year and market. The [GitHub issues](https://github.com/meatpiHQ/wican-fw/issues) are the place to look for experiences with a particular car. On some vehicles an OBD adapter that polls the ECU while the car is off can trigger the alarm; whether that can be switched off depends on the car.
-
-How to load one: [Vehicle profiles](vehicle-profiles.md). How to add one: the [profile sources](https://github.com/meatpiHQ/wican-fw/tree/main/vehicle_profiles) and their README.
+<p class="lead">The cars with a vehicle profile: the manufacturer-specific values a car does not expose through standard OBD, such as state of charge, cell voltages and charging state, made and tested by WiCAN owners. Type a make, a model or a value to filter the list.</p>
 
 """
 
 OUTRO = """
-## Add your car
+## Not listed?
 
-A profile is one JSON file: the car's name, an init string and the requests with their decode expressions. Test the requests on your own car with the ==Test== button on the Parameters page, then open a pull request against the `vehicle_profiles` folder of the firmware repository; the published list and this page follow the merge.
+A car without a profile still gives its standard OBD-II data: the scan on the [AutoPID](vehicle-data/autopid.md) page finds the standard PIDs it supports. Profiles come from user submissions and are verified through user feedback, so coverage varies by model year and market; the [GitHub issues](https://github.com/meatpiHQ/wican-fw/issues) are the place to look for experiences with a particular car. On some vehicles an OBD adapter that polls the ECU while the car is off can trigger the alarm; whether that can be switched off depends on the car.
+
+## Use a profile, or add your car
+
+Loading one is described under [Vehicle profiles](vehicle-data/vehicle-profiles.md). A profile is one JSON file: the car's name, an init string and the requests with their decode expressions. Test the requests on your own car with the ==Test== button on the Parameters page, then open a pull request against the [`vehicle_profiles` folder](https://github.com/meatpiHQ/wican-fw/tree/main/vehicle_profiles) of the firmware repository (its README has the format); the published list and this page follow the merge.
 """
 
 
@@ -147,22 +148,36 @@ def generate(src, commit):
         make, model = split_model(car["car_model"])
         names = parameter_names(car, cars)
         notes = note_text(car["note"]) if car.get("note") else ""
-        rows.setdefault(make, []).append((model, len(names), describe(names, params), notes, path))
+        rows.setdefault(make, []).append({"model": model, "count": len(names), "reads": describe(names, params),
+                                          "notes": notes, "path": path, "names": names})
         total += 1
     makes = sorted(rows, key=lambda m: (m == "Generic", m.lower()))
+    e = html.escape
     out = [INTRO]
-    today = dt.date.today().isoformat()
-    src_note = f"commit `{commit}`" if commit else "a local checkout"
-    out.append(f"**{total} profiles for {len(makes)} makes**, generated on {today} from {src_note} of the profile sources.\n\n")
+    out.append('<div class="veh">\n')
+    out.append('<div class="veh-toolbar"><input id="veh-filter" type="search" '
+               'placeholder="Filter by make, model or value: Kia, Ioniq, SOC, odometer ..." '
+               'aria-label="Filter the list" autocomplete="off" spellcheck="false">'
+               f'<span class="veh-count" id="veh-count" data-total="{total}" data-makes="{len(makes)}">'
+               f'{total} profiles, {len(makes)} makes</span></div>\n')
+    chips = "".join(f'<button type="button" class="veh-chip" data-make="{e(make)}">{e(make)}<span>{len(rows[make])}</span></button>'
+                    for make in makes)
+    out.append(f'<div class="veh-chips" id="veh-chips">{chips}</div>\n')
+    out.append('<table class="veh-table"><thead><tr><th>Model</th><th>Reads</th><th>Notes</th></tr></thead><tbody>\n')
     for make in makes:
-        entries = sorted(rows[make], key=lambda r: r[0].lower())
-        out.append(f"## {make}\n\n")
-        out.append("| Model | Reads | Notes |\n| --- | --- | --- |\n")
-        for model, count, reads, notes, path in entries:
-            link = f"{REPO_URL}/blob/main/vehicle_profiles/{path}"
-            model_md = model.replace("|", "/")
-            out.append(f"| [{model_md}]({link}) | {count} parameters: {reads} | {notes or '-'} |\n")
-        out.append("\n")
+        out.append(f'<tr class="veh-make" data-make="{e(make)}"><th colspan="3">{e(make)}</th></tr>\n')
+        for r in sorted(rows[make], key=lambda r: r["model"].lower()):
+            text = " ".join([make, r["model"], r["reads"], r["notes"]] + r["names"]).lower()
+            link = f"{REPO_URL}/blob/main/vehicle_profiles/{r['path']}"
+            notes_html = f'<span class="pill">{e(r["notes"])}</span>' if r["notes"] else ""
+            out.append(f'<tr data-make="{e(make)}" data-text="{e(text)}"><td><a href="{link}">{e(r["model"])}</a></td>'
+                       f'<td><span class="veh-n">{r["count"]}</span>{e(r["reads"])}</td><td>{notes_html}</td></tr>\n')
+    out.append('</tbody></table>\n'
+               '<p class="veh-empty" id="veh-empty" hidden>No profile matches. A car without a profile still gives its standard OBD-II data.</p>\n'
+               '</div>\n\n')
+    today = dt.date.today().isoformat()
+    src_note = f"commit <code>{commit}</code>" if commit else "a local checkout"
+    out.append(f'<p class="veh-meta">Generated on {today} from {src_note} of the profile sources. Each model links to its profile file.</p>\n')
     out.append(OUTRO)
     text = "".join(out)
     assert "\u2014" not in text and "\u2013" not in text
@@ -173,9 +188,11 @@ def generate(src, commit):
 def sparse_clone(tmp):
     """A sparse checkout of main with just the two folders this script reads."""
     dest = Path(tmp) / "wican-fw"
-    subprocess.run(["git", "clone", "--depth", "1", "--filter=blob:none", "--sparse", "--branch", "main", REPO_URL + ".git", str(dest)], check=True)
+    subprocess.run(["git", "clone", "--depth", "1", "--filter=blob:none", "--sparse", "--branch", "main",
+                    REPO_URL + ".git", str(dest)], check=True)
     subprocess.run(["git", "-C", str(dest), "sparse-checkout", "set", "vehicle_profiles", ".vehicle_profiles"], check=True)
-    sha = subprocess.run(["git", "-C", str(dest), "rev-parse", "--short", "HEAD"], check=True, capture_output=True, text=True).stdout.strip()
+    sha = subprocess.run(["git", "-C", str(dest), "rev-parse", "--short", "HEAD"], check=True,
+                         capture_output=True, text=True).stdout.strip()
     return dest, sha
 
 
@@ -194,7 +211,8 @@ def main():
     src = Path(a.source)
     sha = ""
     try:
-        sha = subprocess.run(["git", "-C", str(src), "rev-parse", "--short", "HEAD"], capture_output=True, text=True, check=True).stdout.strip()
+        sha = subprocess.run(["git", "-C", str(src), "rev-parse", "--short", "HEAD"], capture_output=True,
+                             text=True, check=True).stdout.strip()
     except Exception:
         pass
     generate(src, sha)
