@@ -149,3 +149,7 @@ settings, and change `site_url` in `mkdocs.yml`.
 Read [the writing guide](docs/contributing/writing-guide.md) (also on the site under Contributing)
 before adding a page. House rules in one line: talk to the reader as "you", one action per step, name
 things as the device names them, no long dashes.
+
+## The Supported vehicles page
+
+`docs/wican-pro/vehicle-data/supported-vehicles.md` is generated, never edited: `tools/supported_vehicles.py` reads the profile sources of the firmware repository (`vehicle_profiles/` and `.vehicle_profiles/params.json` on `main`) and writes the page. Locally: `python tools/supported_vehicles.py --source <a wican-fw checkout on main>`; the deploy workflow runs `--clone` (a sparse clone of the two folders) before every build, and the firmware repository's "Build Vehicle Profiles" workflow sends a `repository_dispatch` (`vehicle-profiles`) here after every profile merge. That dispatch needs a fine-grained token with write access to this repository's contents, stored in the firmware repository as the secret `DOCS_DISPATCH_TOKEN`. A daily schedule rebuilds the site as the fallback.

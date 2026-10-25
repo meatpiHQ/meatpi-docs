@@ -125,6 +125,7 @@ nav:
       - Vehicle data:
           - AutoPID: wican-pro/vehicle-data/autopid.md
           - Vehicle profiles: wican-pro/vehicle-data/vehicle-profiles.md
+          - Supported vehicles: wican-pro/vehicle-data/supported-vehicles.md
           - Trouble codes: wican-pro/vehicle-data/trouble-codes.md
           - J1939 and WWH-OBD: wican-pro/vehicle-data/j1939-wwh-obd.md
           - Data logger: wican-pro/vehicle-data/data-logger.md
