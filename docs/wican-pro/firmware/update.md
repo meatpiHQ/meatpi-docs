@@ -46,23 +46,14 @@ The answer names the partition written and the device restarts a second later; `
 
 ## Coming from the 4.x firmware
 
-This manual describes firmware version 6 and later. A WiCAN PRO still on the 4.x firmware is updated through that firmware's own web interface, whose pages look different from everything pictured here:
+This manual describes firmware version 6 and later. A WiCAN PRO on the 4.x firmware is updated to version 6 through the 4.x interface itself: download the version 6 `.bin` from the releases page, then in the 4.x interface open ==System==, under ==Firmware Update== choose the file and click ==Update==.
 
-<div class="steps" markdown>
+<figure class="shot" markdown>
+![The 4.x interface's System page: the Firmware Update section with the version 6 file chosen and the Update button](../img/legacy/v4-system-firmware-update.png){ width="640" }
+<figcaption>The 4.x interface, System page: choose the version 6 file, then Update.</figcaption>
+</figure>
 
-1.  **Download the release** from `https://github.com/meatpiHQ/wican-fw/releases`: the zip for WiCAN PRO, `wican-fw_vXXX_obd_pro.zip`, and unzip it. The file to upload is the one named `wican-fw_obd_pro_vXXXp.bin`.
-
-2.  **Open the 4.x configuration page** at the device's address (its access point is `192.168.80.1` on that firmware) and go to the ==System== tab.
-
-3.  **Under ==Firmware Update==** click ==Choose File==, pick the `.bin`, then ==Update==. The page shows `Updating please wait ...` for about a minute. Keep the device powered.
-
-4.  **Wait for two restarts.** The first start of version 6 rewrites WiCAN's partition layout and restarts once more by itself.
-
-5.  **Join the factory access point** `WiCAN_<device id>` with the password `@meatpi#`, open `http://192.168.0.10/` and run [Quick Setup](../getting-started/quick-setup.md). Version 6 starts with factory settings: the 4.x configuration is not converted, so note down anything you want to type again (WiFi, MQTT, vehicle profile) before you start.
-
-</div>
-
-The first v6 firmware installed over the factory v4.5x firmware rewrites WiCAN's partition layout at its first start (one extra restart, recorded as `partition_migrate` in the restart history) and starts with factory settings: run [Quick Setup](../getting-started/quick-setup.md) again. The old configuration is not converted. Going back to the legacy firmware through the same page works too; it then starts as a fresh device.
+The first start of version 6 rewrites WiCAN's partition layout and restarts once more by itself (recorded as `partition_migrate` in the restart history). The device then starts with factory settings: join `WiCAN_<device id>` with the password `@meatpi#`, open `http://192.168.0.10/` and run [Quick Setup](../getting-started/quick-setup.md). The 4.x configuration is not converted, so note down what you want to type again (WiFi, MQTT, the vehicle profile) before you start. Going back to the 4.x firmware through the same page works too; it then starts as a fresh device.
 
 ## When the web interface is out of reach
 
