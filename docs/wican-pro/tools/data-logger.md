@@ -8,7 +8,7 @@ title: Data logger
 
 ## Before you start
 
-An SD card in the slot, formatted FAT (as cards come). The ==Logger== page's status chip reads `SD card · used of total` once the card is mounted. WiCAN never formats a card: an unreadable one stays unmounted and the chip says so. Files land in `/sd/logs`.
+An SD card in the slot: a card of 32 GB or less, formatted FAT32, which is how cards of that size come. Larger cards come formatted exFAT and are not supported. The ==Logger== page's status chip reads `SD card · used of total` once the card is mounted. WiCAN never formats a card: an unreadable one stays unmounted and the chip says so. Files land in `/sd/logs`.
 
 <figure class="shot" markdown>
 ![The Logger page with logging on: the status, the Logger settings card, the Vehicle parameters card, the CAN frames card with its bus-off warning, and the Log files list](../img/chapters/10-logger-on.png){ width="640" }
@@ -25,7 +25,7 @@ The values AutoPID polls, as they arrive. A parameter is stored as `autopid.<nam
 <dt>Max file size, Files kept</dt><dd>1 to 32 MB (4) and 1 to 500 files (100): the page works out what the card keeps at most.</dd>
 </dl>
 
-To record only some parameters, or any value an event carries, leave ==Record parameters== off and use a rule: `autopid.param` matching the parameter, action ==Logger write== ([Automate rules](../tools/automate-rules.md)).
+To record only some parameters, or any value an event carries, leave ==Record parameters== off and use a rule: `autopid.param` matching the parameter, action ==Logger write== ([Automate rules](automate-rules.md)).
 
 ## CAN frames
 
@@ -47,7 +47,7 @@ MDF4, BLF and ASC files start fresh at every restart and rotation; they are neve
 | `dl_<time>.<ext>` | parameters |
 | `can_<time>.<ext>` | CAN frames |
 
-`<time>` is the start time in seconds since 1970, so names sort by age. A file is closed at its size limit and a new one starts; beyond the file count the oldest of that stream is deleted. The list at the bottom of the Logger page shows the newest files with a download button; ==Open folder== goes to the [File Manager](../tools/files.md) at `/sd/logs`.
+`<time>` is the start time in seconds since 1970, so names sort by age. A file is closed at its size limit and a new one starts; beyond the file count the oldest of that stream is deleted. The list at the bottom of the Logger page shows the newest files with a download button; ==Open folder== goes to the [File Manager](files.md) at `/sd/logs`.
 
 !!! note "The file being written is locked"
     Downloading or deleting the active file of a stream fails with `file in use`, on purpose: a file removed while it is written leaves orphaned clusters on the card. Press ==Pause== on the page (both streams close their files) or wait for the rotation, then download. Rotated files are always free.
@@ -85,7 +85,7 @@ A file recorded before a correction can be re-based on a PC with the journal and
 
 | Symptom | Likely cause | What to do |
 | --- | --- | --- |
-| `Waiting for storage` | no card, or a card WiCAN cannot read | seat the card; format it FAT on a PC |
+| `Waiting for storage` | no card, or a card WiCAN cannot read | seat the card; a card of 32 GB or less, formatted FAT32 on a PC |
 | Recording, but no parameter rows | ==Record parameters== off, polling off or paused, ignition off | ==When a value changes==; ==Automate== › ==Settings==; ignition on |
 | An empty CAN file | the CAN interface is off or at the wrong bit rate | ==Settings== › ==CAN bus== › ==Enabled==, ==Automatic== |
 | Download answers `file in use` | the active file | ==Pause==, download, ==Resume== |

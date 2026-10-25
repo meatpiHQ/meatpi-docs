@@ -36,7 +36,7 @@ The three rows WiCAN ships (an OBD-II engine speed request, a supported-PIDs req
 
 ## Trace
 
-A newest-first buffer of every frame with its time, direction, id, type, DLC and data, with bus errors as rows of their own. ==Record== and stop, the buffer size, ==Save CSV== to keep it. For long recordings use the [Data logger](../vehicle-data/data-logger.md), which writes to the SD card in MDF4, BLF, candump or ASC.
+A newest-first buffer of every frame with its time, direction, id, type, DLC and data, with bus errors as rows of their own. ==Record== and stop, the buffer size, ==Save CSV== to keep it. For long recordings use the [Data logger](data-logger.md), which writes to the SD card in MDF4, BLF, candump or ASC.
 
 ## Settings
 

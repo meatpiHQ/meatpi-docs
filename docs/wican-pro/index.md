@@ -50,7 +50,7 @@ WiCAN PRO plugs into the OBD-II port and brings vehicle data to Home Assistant, 
 
     ---
 
-    AutoPID, vehicle profiles, trouble codes, J1939 trucks, the data logger.
+    AutoPID, vehicle profiles, trouble codes, J1939 trucks.
 
     [:octicons-arrow-right-24: AutoPID](vehicle-data/autopid.md)
 
@@ -66,7 +66,7 @@ WiCAN PRO plugs into the OBD-II port and brings vehicle data to Home Assistant, 
 
     ---
 
-    CAN Monitor, UDS Tool, scripts, rules, files, logs.
+    CAN Monitor, UDS Tool, scripts, rules, files, the data logger, logs.
 
     [:octicons-arrow-right-24: CAN Monitor](tools/can-monitor.md)
 

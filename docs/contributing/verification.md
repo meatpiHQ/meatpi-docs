@@ -49,6 +49,7 @@ title: Verification log
 | Pinout (WiCAN OBD, WiCAN USB) | - | 2026-10-17 | pins and terminal positions from the pinout figures of the wican-fw README (WiCAN-OBD2 Pinout, WiCAN-USB Pinout); the OBD plug redrawn from its figure, the USB board render taken from it | matches the README; not checked against a board |
 | Videos (WiCAN PRO) and the home page videos | - | 2026-10-17 | three YouTube embeds, titles and authors read from YouTube's oEmbed data | not a device page |
 | Recovery over USB (WiCAN PRO) | - | 2026-10-17 | the steps of the legacy documentation (USB Flashing WiCAN PRO Firmware); the four files from the v4.51p release zip; the addresses from that page's ESP Tool picture and from the v6.00p_alfa-06 build's `flasher_args.json` (0x0, 0x8000, 0xd000, 0x10000) | matches; not exercised on a device |
+| SD card recommendation (Data logger, Files, Datasheet) | - | 2026-10-25 | the supported card stated by Ali: 32 GB or less, formatted FAT32; larger cards come as exFAT | written into the three pages; the Data logger chapter moved from Vehicle data to Tools the same day |
 
 ### WiCAN OBD and WiCAN USB
 

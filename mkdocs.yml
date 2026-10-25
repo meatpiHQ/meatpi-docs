@@ -130,7 +130,6 @@ nav:
           - Vehicle profiles: wican-pro/vehicle-data/vehicle-profiles.md
           - Trouble codes: wican-pro/vehicle-data/trouble-codes.md
           - J1939 and WWH-OBD: wican-pro/vehicle-data/j1939-wwh-obd.md
-          - Data logger: wican-pro/vehicle-data/data-logger.md
       - Send data:
           - Home Assistant: wican-pro/send-data/home-assistant.md
           - MQTT: wican-pro/send-data/mqtt.md
@@ -143,6 +142,7 @@ nav:
           - Scripts: wican-pro/tools/scripts.md
           - Automate rules: wican-pro/tools/automate-rules.md
           - Files: wican-pro/tools/files.md
+          - Data logger: wican-pro/tools/data-logger.md
           - Logs and system monitor: wican-pro/tools/logs-and-monitor.md
       - Power Saving:
           - Sleep and wake: wican-pro/power/sleep-and-wake.md

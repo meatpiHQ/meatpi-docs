@@ -78,7 +78,7 @@ The OBD chip needs about 53 ms per request. Three parameters every second are co
 - The [Dashboard](../getting-started/web-interface.md#the-device-pages): one tile per parameter, a sparkline, the age of the value.
 - [Home Assistant](../send-data/home-assistant.md): one entity per parameter, pushed every few seconds.
 - [MQTT](../send-data/mqtt.md) and [Data destinations](../send-data/data-destinations.md): the snapshot of all values, on a cycle.
-- The [Data logger](data-logger.md): every value, or only changes, to the SD card.
+- The [Data logger](../tools/data-logger.md): every value, or only changes, to the SD card.
 - [Automate rules](../tools/automate-rules.md): `autopid.param` events to react to, `${autopid.<name>}` values to read.
 - Scripts and the API: `GET /api/autopid/data` is the flat snapshot `{"RPM": 848.5, "Speed": 0.45, ...}`.
 

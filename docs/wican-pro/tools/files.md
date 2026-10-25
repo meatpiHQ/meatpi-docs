@@ -26,7 +26,7 @@ Folders you will meet:
 | `/data/certs` | certificate sets (==System== › ==Certificates==); the keys are never readable through the page |
 | `/data/scripts` | Berry scripts (==Scripts==) |
 | `/data/cache` | the web libraries the browser installed on demand (code editor, charts); safe to delete, they are fetched again when needed |
-| `/sd/logs` | the [Data logger](../vehicle-data/data-logger.md)'s files |
+| `/sd/logs` | the [Data logger](data-logger.md)'s files |
 
 The settings themselves are not files here: they live on a partition of their own and travel as one document, see [Backup and restore](../firmware/backup-and-restore.md).
 
@@ -40,7 +40,7 @@ The settings themselves are not files here: they live on a partition of their ow
 
 ## The SD card
 
-Any card formatted FAT, as cards come. WiCAN mounts it when it is seated and releases it when it is pulled, also while running; the Status page's ==SD card== row and the Logger's status chip say whether it is mounted. WiCAN never formats a card: an unreadable one stays unmounted and the log says why.
+A card of 32 GB or less, formatted FAT32, which is how cards of that size come; larger cards come formatted exFAT and are not supported. WiCAN mounts it when it is seated and releases it when it is pulled, also while running; the Status page's ==SD card== row and the Logger's status chip say whether it is mounted. WiCAN never formats a card: an unreadable one stays unmounted and the log says why.
 
 ## By API
 
@@ -50,7 +50,7 @@ The same operations are routes, for scripts on a PC: list a folder, read the cap
 
 | Symptom | Likely cause | What to do |
 | --- | --- | --- |
-| `/sd` says `backend unavailable` | no card, or the card is not readable | seat the card; format it FAT on a PC |
+| `/sd` says `backend unavailable` | no card, or the card is not readable | seat the card; a card of 32 GB or less, formatted FAT32 on a PC |
 | Upload refused at 2 MB | the per-file limit | split the file, or keep it on the SD card by other means (a card reader) |
 | `file in use` | the logger is writing that file | ==Pause== on the Logger page, then download |
 | Internal flash nearly full | cached libraries, old scripts | delete `/data/cache`; the browser fetches a library again when a page needs it |
