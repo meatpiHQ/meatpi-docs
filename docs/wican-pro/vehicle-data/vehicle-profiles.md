@@ -28,7 +28,7 @@ The cars that have a profile today are listed on [Supported vehicles](../support
 
 2.  **==Use this profile==**
 
-    Nothing is sent yet. The profile's PIDs replace the vehicle-specific rows on the page (standard and custom rows are kept), and the ==Vehicle profile== name and ==Vehicle init commands== are filled in. The page shows an `Unsaved edits` chip and a banner with ==Discard==.
+    Nothing is sent yet. The profile's PIDs replace the vehicle-specific rows on the page (standard and custom rows are kept), and the ==Vehicle profile== name and ==Vehicle init commands== are filled in. A profile that reads frames the car broadcasts (the Leaf ZE1's speed, motor speed and odometer, for example) brings those as passive CAN filters: they replace the filters the last profile brought, filters you made by hand stay, and the banner counts them. The page shows an `Unsaved edits` chip and a banner with ==Discard==.
 
 3.  **Test a row (optional)**
 
@@ -36,7 +36,7 @@ The cars that have a profile today are listed on [Supported vehicles](../support
 
 4.  **==Apply Configuration==**
 
-    The PIDs go to the device and take effect at once; the name and init commands are saved with the settings and take effect after the restart the page offers.
+    The PIDs and filters go to the device and take effect at once; the name and init commands are saved with the settings and take effect after the restart the page offers. Firmware up to 6.0.0-beta.4 sent the PIDs alone and left a profile's filters behind: update the firmware if the broadcast values stay empty.
 
 </div>
 
@@ -52,7 +52,7 @@ The cars that have a profile today are listed on [Supported vehicles](../support
 
 ## During Quick Setup
 
-The vehicle step detects the car first (protocol, VIN, the standard PIDs it supports), then offers profiles. ==Test profile== sends every request of a profile once and shows each parameter with its value; ==Use this profile== picks it, ==keep it without a profile== is a fine answer for a car that only needs standard PIDs. A car saved without a profile is listed as `Profile pending` until you give it one.
+The vehicle step detects the car first (protocol, VIN, the standard PIDs it supports), then offers profiles. ==Test profile== sends every request of a profile once and shows each parameter with its value (a profile's broadcast-frame filters are named there, nothing to request for them: they come along at Finish like the PIDs); ==Use this profile== picks it, ==keep it without a profile== is a fine answer for a car that only needs standard PIDs. A car saved without a profile is listed as `Profile pending` until you give it one.
 
 <figure class="shot" markdown>
 ![Quick Setup's vehicle step after detection: the detected car, the profile suggestions and the name field](../img/quick-setup-2/03-vehicle-detected.png){ width="640" }
@@ -69,7 +69,7 @@ WiCAN keeps a record of up to 8 vehicles, each with its protocol, its tables (st
 
 ## What a profile contains
 
-A profile is a JSON object with the car's name, an init chain sent once before polling, and the PIDs with their decode expressions:
+A profile is a JSON object with the car's name, an init chain sent once before polling, the PIDs with their decode expressions and, when the car broadcasts what matters, passive `filters`:
 
 ```json
 {
@@ -83,6 +83,15 @@ A profile is a JSON object with the car's name, an init chain sent once before p
         { "name": "Charging", "expression": "B14:7", "unit": "", "class": "" }
       ]
     }
+  ],
+  "filters": [
+    {
+      "frame_id": "0x284",
+      "monitor_ms": 500,
+      "parameters": [
+        { "name": "SPEED", "expression": "[B4:B5]/98", "unit": "km/h", "class": "speed" }
+      ]
+    }
   ]
 }
 ```
@@ -92,11 +101,12 @@ A profile is a JSON object with the car's name, an init chain sent once before p
 <dt>init</dt><dd>AT commands sent once before the profile's PIDs are polled, separated by `;`. A PID can carry its own `pid_init` as well.</dd>
 <dt>pid</dt><dd>The request as sent to the ECU, `2101` or `220101`, optionally followed by the number of reply frames expected.</dd>
 <dt>expression</dt><dd>How a parameter is computed from the reply bytes: `B09` is byte 9, `[B33:B34]` two bytes as one number, `B14:7` bit 7 of byte 14, with arithmetic around it (`[B33:B34]/10`).</dd>
+<dt>filters</dt><dd>Frames the car broadcasts without being asked (the Leaf ZE1 profile is the first published one with them): `frame_id` is the CAN id, `monitor_ms` how long WiCAN listens for it in each cycle, and the parameters read the frame's data bytes, `B0` being the first.</dd>
 <dt>unit, class</dt><dd>The unit shown, and the Home Assistant device class the entity gets (`battery`, `temperature`, `voltage`, `power`, `speed` ...).</dd>
 </dl>
 
-!!! note "Two things the importer does for you"
-    Published profiles count reply bytes from the start of the frame as older WiCAN firmware saw it; WiCAN PRO's reply starts one byte later, and the importer shifts every byte index when it loads a published profile. Parameter names must be unique across the whole table: a repeat (some community profiles have one) is renamed with a `_2` suffix and the page tells you.
+!!! note "What the importer does for you"
+    Expressions go in exactly as published: since the firmware of 24 October 2026 WiCAN PRO reads every reply the way the chip prints it with headers on, which is the frame of reference the profiles were written in (firmware before that date shifted every byte index on import, right for single-frame replies only). Parameter names must be unique across the whole table, PIDs and filters together: a repeat (some community profiles have one) is renamed with a `_2` suffix and the page tells you.
 
 ## Contribute a profile
 
