@@ -158,7 +158,7 @@ The full WiCAN command line, the same registry as the serial console and `/ws/cl
 | --- | --- |
 | `ble_manager` (reboot to apply) | `enabled` (default off), `passkey` (123456), `tx_power_dbm` (9), `pairing_at_boot` (on), `bonding` (on), `sc_only` (on), `conn_profile` (`ios`, `android_fast`), `phy` (`1m`, `2m`, `coded`, `auto`), `advertising` (`legacy`, `extended`, `both`) |
 | `ble_http` | `enabled` (on), `cli` |
-| `j2534_server` | `enabled` (off) gates the J2534 channel, `exclusive`, `allow_reflash` |
+| `j2534_server` | `enabled` (off) gates the J2534 channel, `exclusive`, `allow_lan` (the TCP listener only; `allow_reflash` was removed 2026-10-27: every write is forwarded) |
 | `interface_manager` | `sta_ble_handover`, `ap_ble_exclusive` |
 
 `GET /api/ble` mirrors the settings and the live link.

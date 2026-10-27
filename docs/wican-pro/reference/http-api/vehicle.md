@@ -199,4 +199,4 @@ The listener needs the native CAN bus enabled, bit rate `auto`, silent. Settings
 --8<-- "wican-pro/reference/http-api/examples/j2534.json"
 ```
 
-Settings: `j2534_server` (`enabled` default off, `port` 6809, `allow_reflash` default off, `allow_lan` default off: accepts only on the access point and the USB device link, `exclusive`). The Windows driver and the wire protocol are covered under [J2534 PassThru](../../send-data/j2534.md).
+Settings: `j2534_server` (`enabled` default off, `port` 6809, `allow_lan` default off: accepts only on the access point and the USB device link, `exclusive`; the `allow_reflash` gate was removed in the firmware of 2026-10-27, every write is forwarded and the status counts the reprogramming services it saw as `reflash_seen`). The Windows driver and the wire protocol are covered under [J2534 PassThru](../../send-data/j2534.md).

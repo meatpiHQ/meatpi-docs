@@ -11,10 +11,6 @@
       "maximum": 65535,
       "default": 6809
     },
-    "allow_reflash": {
-      "type": "boolean",
-      "default": false
-    },
     "allow_lan": {
       "type": "boolean",
       "default": false

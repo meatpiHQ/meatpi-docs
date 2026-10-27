@@ -1,7 +1,6 @@
 {
   "enabled": false,
   "port": 6809,
-  "allow_reflash": false,
   "allow_lan": false,
   "exclusive": true,
   "cli": true,
