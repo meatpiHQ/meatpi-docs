@@ -6,8 +6,15 @@ title: Quick Setup
 
 <p class="lead">Quick Setup gets a new WiCAN PRO onto your home WiFi, talking to Home Assistant or your MQTT broker, reading your vehicle and sleeping when the car is parked. It takes about six minutes and runs in your phone's browser.</p>
 
-!!! warning "Firmware version 6 or later"
-    Quick Setup exists from firmware 6.0.0 on. If the page at the setup address looks nothing like the pictures here, the device runs the older 4.x firmware: [update it first](../firmware/update.md#coming-from-the-4x-firmware).
+<!-- v6-beta-notice: temporary. The same box is on index.md and firmware/update.md;
+     remove all three when version 6 is available again. -->
+
+!!! danger "Do not update to firmware version 6 (beta) for now"
+    **Firmware version 6 is still in beta testing, and all version 6 firmware files have been temporarily removed because of a significant issue.**
+
+    - **Do not update your WiCAN PRO to version 6** until the issue is resolved. This notice will be removed when it is.
+    - **Quick Setup exists in version 6 only.** If the page at the setup address looks nothing like the pictures here, the device runs the stable 4.x firmware: leave it on 4.x and set it up with the legacy documentation at [meatpihq.github.io/wican-fw](https://meatpihq.github.io/wican-fw/).
+    - **Already running a version 6 beta?** Go back to the latest stable 4.5x release: see [Firmware update](../firmware/update.md).
 
 <dl class="facts" markdown>
 <dt>You need</dt><dd>A phone or laptop with WiFi, the password of your home WiFi, the car parked with the ignition on</dd>

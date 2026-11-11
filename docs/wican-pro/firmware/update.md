@@ -6,6 +6,17 @@ title: Firmware update
 
 <p class="lead">A firmware update is one file uploaded from the web interface. WiCAN writes it to its spare slot, checks it, switches to it and restarts; a failed or interrupted upload never touches the firmware that is running. Settings, files and the SD card stay as they are.</p>
 
+<!-- v6-beta-notice: temporary. The same box is on index.md and
+     getting-started/quick-setup.md; remove all three, and the line under
+     "Coming from the 4.x firmware", when version 6 is available again. -->
+
+!!! danger "Do not update to firmware version 6 (beta) for now"
+    **Firmware version 6 is still in beta testing, and all version 6 firmware files have been temporarily removed because of a significant issue.**
+
+    - **Do not update your WiCAN PRO to version 6** until the issue is resolved. This notice will be removed when it is.
+    - **Stay on the stable 4.x firmware.** Its manual is the legacy documentation at [meatpihq.github.io/wican-fw](https://meatpihq.github.io/wican-fw/), not this one.
+    - **Already running a version 6 beta?** Go back to the latest stable 4.5x release: download its WiCAN PRO `.bin` from the releases page and upload it with the steps under [Update](#update). The device then starts on 4.x with factory settings.
+
 ## Get the file
 
 Releases are at `https://github.com/meatpiHQ/wican-fw/releases`. Download the WiCAN PRO image, a `.bin` file named like `wican-fw_obd_pro_v6.00.bin`, and read the release notes. ==About== and ==System== › ==Firmware update== show the version installed now.
@@ -45,6 +56,8 @@ The answer names the partition written and the device restarts a second later; `
 <span class="pill">firmware 6.0.0-beta.1+</span> The same page updates a dongle on the USB port: the ==Firmware update== card gets a second row for the ESPNetLink with its installed version, ==Check now==, ==Release notes== and ==Update dongle==. WiCAN downloads the dongle's release over WiFi, checks it, sends it over the cable (or over the dongle's own WiFi in WiFi modem mode) and waits for the dongle to restart; keep the dongle plugged in until the row says ==Dongle updated==. Internet through the dongle pauses for about a minute meanwhile. A dongle on firmware 1.20 or older shows ==Needs a USB flash==: it is updated once from a computer, after which it installs from here. The dongle side, the timings and the failure texts are in the ESPNetLink manual: [Update](../../espnetlink/firmware/update.md).
 
 ## Coming from the 4.x firmware
+
+**Do not do this for now.** The version 6 firmware files have been temporarily removed because of a significant issue (see the notice at the top of this page), so a WiCAN PRO on 4.x stays on 4.x. The steps below apply again once version 6 is available.
 
 This manual describes firmware version 6 and later. A WiCAN PRO on the 4.x firmware is updated to version 6 through the 4.x interface itself: download the version 6 `.bin` from the releases page, then in the 4.x interface open ==System==, under ==Firmware Update== choose the file and click ==Update==.
 
